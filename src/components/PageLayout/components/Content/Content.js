@@ -5,9 +5,9 @@ import { TaskList } from '../../../../domains'
 const Content = () => {
   return (
     <>
-      <imput type="checkbox" />
+      <input type="checkbox" />
       <TaskList />
-      <imput type="checkbox" />
+      <input type="checkbox" />
       <input />
       <p>no remaindners</p>
       {/* text,flag, checkbox, createdAt, EditedAt, delete, dueDataTime  */}

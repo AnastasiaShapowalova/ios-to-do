@@ -2,7 +2,7 @@ import React from 'react'
 
 const CategorySimpleForm = () => {
   return (
-    // icon, imput
+    // icon, input
     <input />
   )
 }
