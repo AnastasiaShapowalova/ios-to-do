@@ -1,12 +1,11 @@
 import React from 'react'
+import { Input } from '../../../../components'
 
 const TaskSimpleForm = () => {
   return (
     // chekbox, dueDataTime, flag, input
     <>
-      <input type="checkbox"></input>
-      TaskSimpleForm
-      <input />
+      <Input note="note" placeholder="Notes" radio="radio" />
     </>
   )
 }
