@@ -8,7 +8,9 @@ export const InputWrapper = styled.div`
   border-bottom: 1px solid rgb(99, 99, 99);
   outline: none;
   border-radius: 4px;
-  padding: 4px 8px;
+  padding: 6px 8px;
+  padding-top: 6px;
+  padding-bottom: 4px;
   width: 256px;
   line-height: 16px;
   font-size: 8px;

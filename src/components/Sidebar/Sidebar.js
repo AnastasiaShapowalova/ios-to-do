@@ -9,12 +9,11 @@ const Sidebar = () => {
     <>
       <SearchInput />
       <Switcher />
-      <Button size="small" type="light">
-        <IoMdAddCircleOutline /> Add List
+      <Button size="small" color="light" icon={<IoMdAddCircleOutline />}>
+        Add List
       </Button>
       <CategoryList />
       <CategorySimpleForm />
-      <button></button>
     </>
   )
 }

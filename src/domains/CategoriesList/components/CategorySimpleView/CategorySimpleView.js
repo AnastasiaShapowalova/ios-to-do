@@ -8,9 +8,7 @@ const CategorySimpleView = () => {
     <>
       <h1>name</h1>
       <p>count</p>
-      <Button size="small" type="dark">
-        <IoCloseOutline />
-      </Button>
+      <Button size="small" color="dark" icon={<IoCloseOutline />}></Button>
     </>
   )
 }

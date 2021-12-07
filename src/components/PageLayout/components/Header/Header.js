@@ -6,9 +6,12 @@ const Header = () => {
   return (
     <>
       <h1>Header</h1>
-      <Button shape size="large" type="light" hover>
-        <IoAddOutline />
-      </Button>
+      <Button
+        shape
+        size="large"
+        color="light"
+        icon={<IoAddOutline />}
+        hover></Button>
       <p>count</p>
     </>
   )

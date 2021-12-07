@@ -8,9 +8,7 @@ const TaskSimpleView = () => {
     <>
       <input type="checkbox" />
       <p>text</p>
-      <Button size="small" type="dark">
-        <IoCloseOutline />
-      </Button>
+      <Button size="small" color="dark" icon={<IoCloseOutline />}></Button>
     </>
   )
 }

@@ -12,9 +12,11 @@ const SearchInput = () => {
         placeholder="Search"
         icon={<BsSearch />}
         button={
-          <Button size="small" type="light" focus="dark" tag="button">
-            <MdCancel />
-          </Button>
+          <Button
+            size="small"
+            color="light"
+            focus="dark"
+            icon={<MdCancel />}></Button>
         }></Input>
     </>
   )
