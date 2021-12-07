@@ -1,17 +1,35 @@
 import React from 'react'
-import { InputWrapper, CustomInput, IconWrapper } from './Input.style'
-// import { Button } from '../'
-import { MdCancel } from 'react-icons/md'
+import {
+  InputWrapper,
+  CustomInput,
+  IconWrapper,
+  AddInput,
+  Radio,
+  Wrapper,
+  EnterField
+} from './Input.style'
 
 const Input = (props) => {
-  const { placeholder, icon, button } = props
+  // const { color, children, size, focus, type } = props
+  const { placeholder, icon, button, count, note, radio } = props
   return (
     <>
-      <InputWrapper placeholder={placeholder}>
-        <IconWrapper>{icon && icon}</IconWrapper>
+      <Wrapper placeholder={placeholder}>
+        {icon && <IconWrapper>{icon}</IconWrapper>}
+        {/* {note && radio ? (
+          <InputWrapper>
+            <Radio />
+            <EnterField>
+              <CustomInput />
+              <AddInput placeholder={placeholder} />
+            </EnterField>
+          </InputWrapper>
+        ) : ( */}
         <CustomInput />
+        {/* )} */}
+        {count && count}
         {button && button}
-      </InputWrapper>
+      </Wrapper>
     </>
   )
 }

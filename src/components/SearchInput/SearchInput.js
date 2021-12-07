@@ -13,6 +13,7 @@ const SearchInput = () => {
         icon={<BsSearch />}
         button={
           <Button
+            shape="rounded"
             size="small"
             color="light"
             focus="dark"

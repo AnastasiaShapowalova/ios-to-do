@@ -1,14 +1,12 @@
 import React from 'react'
 import { SearchInput } from '../../..'
-import { TaskList } from '../../../../domains'
+import { TaskList, TaskSimpleForm } from '../../../../domains'
 
 const Content = () => {
   return (
     <>
-      <input type="checkbox" />
       <TaskList />
-      <input type="checkbox" />
-      <input />
+      <TaskSimpleForm />
       <p>no remaindners</p>
       {/* text,flag, checkbox, createdAt, EditedAt, delete, dueDataTime  */}
       {/* Checkbox, Input, flag, dueDataTime */}

@@ -17,7 +17,7 @@ const Button = (props) => {
       hover={hover}
       focus={focus}
       icon={icon}
-      warning>
+      warning={warning}>
       {icon && children ? (
         <>
           <IconWrapper>{icon}</IconWrapper>

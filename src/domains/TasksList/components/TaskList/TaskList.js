@@ -13,7 +13,7 @@ const TaskList = () => {
         type="fill"
         size="small"
         color="light"
-        warning
+        warning="warning"
         shape
       />
     </>
