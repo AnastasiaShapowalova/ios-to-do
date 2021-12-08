@@ -16,7 +16,7 @@ const Input = (props) => {
   return (
     <>
       <Wrapper fill={fill} size={size} placeholder={placeholder}>
-        {icon && <IconWrapper>{icon}</IconWrapper>}
+        {icon && <IconWrapper size={size}>{icon}</IconWrapper>}
         {note && radio ? (
           <InputWrapper>
             <Radio />

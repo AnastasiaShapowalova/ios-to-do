@@ -1,5 +1,5 @@
 import React from 'react'
-import { Input, Text } from '../../../../components'
+import { Input, Text, Icon } from '../../../../components'
 import { AiOutlineUnorderedList } from 'react-icons/ai'
 
 const CategorySimpleForm = () => {
@@ -11,7 +11,7 @@ const CategorySimpleForm = () => {
           0
         </Text>
       }
-      icon={<AiOutlineUnorderedList />}
+      icon={<Icon icon={<AiOutlineUnorderedList />} />}
       fill="true"
       outline="true"
       // {...inputStyles}

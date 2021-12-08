@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
   ${(props) =>
     props.size === 'small' &&
     css`
-      border-radius: 4px;
+      border-radius: 6px;
       width: 256px;
       padding: 8px 10px;
     `}
@@ -48,6 +48,7 @@ export const CustomInput = styled.input`
   ${(props) =>
     props.size === 'small' &&
     css`
+      height: 18px;
       width: auto;
       line-height: 8px;
       margin: 0px 10px;
@@ -63,7 +64,7 @@ export const CustomInput = styled.input`
   width: ${(props) => props.size === 'large' && '100%'};
 `
 export const IconWrapper = styled.div`
-  padding-top: 3px;
+  padding-top: ${(props) => props.size === 'medium' && '3px'};
   font-size: small;
 `
 

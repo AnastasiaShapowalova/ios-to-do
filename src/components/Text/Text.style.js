@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Txt = styled.p`
-  margin: 0;
+  margin: auto 0;
   font-size: ${(props) =>
     props.type === 'h1'
       ? '32px'
