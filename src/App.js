@@ -1,12 +1,13 @@
 import './App.css'
 import { Navigator } from './pages'
 import moment from 'moment'
-import { Text } from './components'
+import { Icon } from './components'
 
 function App() {
   return (
     <div className="App">
       <Navigator />
+      <Icon />
     </div>
   )
 }
