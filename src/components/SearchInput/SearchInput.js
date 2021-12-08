@@ -9,7 +9,10 @@ const SearchInput = () => {
     // input, icon
     <>
       <Input
+        fill="false"
+        outline="false"
         placeholder="Search"
+        size="medium"
         icon={<BsSearch />}
         button={
           <Button

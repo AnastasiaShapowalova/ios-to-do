@@ -11,12 +11,13 @@ import {
 
 const Input = (props) => {
   // const { color, children, size, focus, type } = props
-  const { placeholder, icon, button, count, note, radio } = props
+  const { placeholder, icon, button, count, note, radio, fill, outline, size } =
+    props
   return (
     <>
-      <Wrapper placeholder={placeholder}>
+      <Wrapper fill={fill} size={size} placeholder={placeholder}>
         {icon && <IconWrapper>{icon}</IconWrapper>}
-        {/* {note && radio ? (
+        {note && radio ? (
           <InputWrapper>
             <Radio />
             <EnterField>
@@ -24,9 +25,9 @@ const Input = (props) => {
               <AddInput placeholder={placeholder} />
             </EnterField>
           </InputWrapper>
-        ) : ( */}
-        <CustomInput />
-        {/* )} */}
+        ) : (
+          <CustomInput fill={fill} outline={outline} size={size} />
+        )}
         {count && count}
         {button && button}
       </Wrapper>

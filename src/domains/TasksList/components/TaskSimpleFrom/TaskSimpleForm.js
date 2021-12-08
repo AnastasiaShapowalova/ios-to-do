@@ -5,7 +5,13 @@ const TaskSimpleForm = () => {
   return (
     // chekbox, dueDataTime, flag, input
     <>
-      <Input note="note" placeholder="Notes" radio="radio" />
+      <Input
+        note="note"
+        placeholder="Notes"
+        radio="radio"
+        outline="false"
+        size="large"
+      />
     </>
   )
 }
