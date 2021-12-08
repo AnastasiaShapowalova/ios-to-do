@@ -1,10 +1,15 @@
 import React from 'react'
 import { CategorySimpleView } from '..'
+import { Text } from '../../../../components'
 
 const CategoryList = () => {
   return (
-    // tasks list
-    <CategorySimpleView />
+    <>
+      <Text type="p" fw="unset" color="darken">
+        My lists
+      </Text>
+      <CategorySimpleView />
+    </>
   )
 }
 

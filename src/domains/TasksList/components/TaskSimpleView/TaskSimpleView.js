@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '../../../../components'
+import { Button, Text } from '../../../../components'
 import { IoCloseOutline } from 'react-icons/io5'
 
 const TaskSimpleView = () => {
@@ -7,7 +7,9 @@ const TaskSimpleView = () => {
     //  text,flag, checkbox, createdAt, EditedAt, delete, dueDataTime
     <>
       <input type="checkbox" />
-      <p>text</p>
+      <Text type="h4" fw="normal" color="lighten">
+        Task text
+      </Text>
       <Button size="small" color="dark" icon={<IoCloseOutline />}></Button>
     </>
   )

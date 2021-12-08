@@ -1,13 +1,17 @@
 import React from 'react'
-import { Button } from '../../../../components'
+import { Button, Text } from '../../../../components'
 import { IoCloseOutline } from 'react-icons/io5'
 
 const CategorySimpleView = () => {
   return (
     // icon, name, count
     <>
-      <h1>name</h1>
-      <p>count</p>
+      <Text type="h4" fw="normal" color="lighten">
+        Categorie name
+      </Text>
+      <Text type="h4" fw="normal" color="darken">
+        0
+      </Text>
       <Button size="small" color="dark" icon={<IoCloseOutline />}></Button>
     </>
   )

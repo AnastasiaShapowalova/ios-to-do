@@ -1,18 +1,22 @@
 import React from 'react'
-import { Button } from '../../../'
+import { Button, Text } from '../../../'
 import { IoAddOutline } from 'react-icons/io5'
 
 const Header = () => {
   return (
     <>
-      <h1>Header</h1>
+      <Text type="h1" fw="bold" color="diff">
+        Header
+      </Text>
+      <Text type="h1" color="diff">
+        1
+      </Text>
       <Button
         shape
         size="large"
         color="light"
         icon={<IoAddOutline />}
         hover></Button>
-      <p>count</p>
     </>
   )
 }

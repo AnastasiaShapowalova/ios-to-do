@@ -1,5 +1,5 @@
 import React from 'react'
-import { SearchInput } from '../../..'
+import { SearchInput, Text } from '../../..'
 import { TaskList, TaskSimpleForm } from '../../../../domains'
 
 const Content = () => {
@@ -7,7 +7,9 @@ const Content = () => {
     <>
       <TaskList />
       <TaskSimpleForm />
-      <p>no remaindners</p>
+      <Text type="h2" color="darken">
+        No Remainders
+      </Text>
       {/* text,flag, checkbox, createdAt, EditedAt, delete, dueDataTime  */}
       {/* Checkbox, Input, flag, dueDataTime */}
       {/* no remaindners  */}
