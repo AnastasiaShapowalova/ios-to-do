@@ -64,8 +64,12 @@ export const CustomInput = styled.input`
   width: ${(props) => props.size === 'large' && '100%'};
 `
 export const IconWrapper = styled.div`
-  padding-top: ${(props) => props.size === 'medium' && '3px'};
-  font-size: small;
+  ${(props) =>
+    props.size === 'medium' &&
+    css`
+      padding-top: 3px;
+      font-size: small;
+    `};
 `
 
 export const AddInput = styled.input`

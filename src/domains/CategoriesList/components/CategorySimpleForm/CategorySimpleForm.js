@@ -11,7 +11,9 @@ const CategorySimpleForm = () => {
           0
         </Text>
       }
-      icon={<Icon icon={<AiOutlineUnorderedList />} />}
+      icon={
+        <Icon icon={<AiOutlineUnorderedList />} size="small" change="false" />
+      }
       fill="true"
       outline="true"
       // {...inputStyles}

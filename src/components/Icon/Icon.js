@@ -2,10 +2,10 @@ import React from 'react'
 import { IconItem, IconWrapper } from './Icon.style'
 
 const Icon = (props) => {
-  const { icon } = props
+  const { icon, size, change } = props
   return (
-    <IconWrapper>
-      <IconItem>{icon}</IconItem>
+    <IconWrapper size={size} change={change}>
+      <IconItem size={size}>{icon}</IconItem>
     </IconWrapper>
   )
 }
