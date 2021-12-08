@@ -27,7 +27,7 @@ export const Btn = styled.button`
   }
   &:focus {
     color: ${(props) =>
-      (props.focus = 'dark' ? 'rgb(15, 15, 15)' : 'rgb(228, 228, 228)')};
+      props.focus === 'dark' ? 'rgb(15, 15, 15)' : ' rgb(228, 228, 228)'};
     color: ${(props) => props.warning && 'rgb(255,158,11)'};
   }
 `
