@@ -1,0 +1,103 @@
+.root {
+/* colors */
+--orange: rgb(255, 158, 11);
+
+--white: rgb(255, 255, 255);
+
+--blue: rgb(17, 107, 255);
+--blue-darken: rgb(26, 109, 197);
+
+--gray-lighten4: rgb(228, 228, 228);
+--gray-lighten3: rgb(218, 225, 231);
+--gray-lighten2: rgb(154, 154, 154);
+--gray-lighten1: rgb(149, 149, 149);
+--gray-default: rgb(110, 114, 120);
+--gray-darken1: rgb(95, 95, 95);
+--gray-darken2: rgb(65, 65, 65);
+--gray-darken3: rgb(54, 54, 54);
+--gray-darken4: rgb(15, 15, 15);
+
+--transparent: transparent;
+
+/* border-radius */
+--br-circle: 50%;
+--br-sm: 5px;
+--br-md: 4px;
+--br-lg: 6px;
+
+/* font-weight */
+--fw-bold: bold;
+--fw-normal: normal;
+--fw-unset: unset;
+
+/* font-size  */
+--h1: 32px;
+--h2: 24px;
+--h3: 18px;
+--h4: 14px;
+--p: 12px;
+/* 16 - 24, 20 - 30, 10 - 15*/
+
+/* line-height */
+--lh: 100%;
+
+--h1: 48px; /* 32 */
+--h2: 36px; /* 24 */
+--h3: 27px; /* 18 */
+--h4: 21px; /* 14 */
+--p: 18px; /* 12 */
+/* 16 - 24, 20 - 30, 10 - 15*/
+
+
+
+/* padding  */
+--p-0: 0;
+--p-1: 1px;
+--p-2: 2px;
+--p-4: 4px;
+
+--p-y: 8px;
+--p-x: 10px;
+
+--p-t: 6px;
+--p-t: 3px;
+--p-t: 0;
+
+--p-b: 4px;
+--p-b: 0;
+
+--p-r: 0;
+--p-r: 8px;
+
+--p-l: 8px;
+--p-l: 6px;
+
+
+/* margin  */
+--m-0: 0;
+--m-auto: auto;
+
+--m-x: 0;
+--m-x: auto;
+--m-y: 10px;
+
+--m: 5px;
+--m-l: 10px;
+
+
+/* width  */
+--w-i-sm: 20px;
+--w-i-lg: 25px;
+
+--w: 100%;
+--w-auto: auto;
+
+--w-sm: 229px;
+--w-lg: 256px;
+
+/* height */
+--h-sm: 18px;
+--h-lg: 25px;
+
+
+}

@@ -14,6 +14,18 @@ export const Txt = styled.p`
       : props.type === 'p'
       ? '12px'
       : 'null'};
+  line-height: ${(props) =>
+    props.type === 'h1'
+      ? '48px'
+      : props.type === 'h2'
+      ? '36px'
+      : props.type === 'h3'
+      ? '27px'
+      : props.type === 'h4'
+      ? '21px'
+      : props.type === 'p'
+      ? '18px'
+      : 'null'};
   color: ${(props) =>
     props.color === 'darken'
       ? 'rgb(95, 95, 95)'

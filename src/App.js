@@ -1,4 +1,5 @@
 import './App.css'
+import './style/config.style.css'
 import { Navigator } from './pages'
 import moment from 'moment'
 

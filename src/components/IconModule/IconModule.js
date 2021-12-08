@@ -1,7 +1,7 @@
 import React from 'react'
-import { IconItem, IconWrapper } from './Icon.style'
+import { IconItem, IconWrapper } from './IconModule.style'
 
-const Icon = (props) => {
+const IconModule = (props) => {
   const { icon, size, change } = props
   return (
     <IconWrapper size={size} change={change}>
@@ -10,4 +10,4 @@ const Icon = (props) => {
   )
 }
 
-export default Icon
+export default IconModule
