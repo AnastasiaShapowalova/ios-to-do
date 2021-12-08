@@ -4,42 +4,42 @@ export const Txt = styled.p`
   margin: auto 0;
   font-size: ${(props) =>
     props.type === 'h1'
-      ? '32px'
+      ? 'var(--h1)'
       : props.type === 'h2'
-      ? '24px'
+      ? 'var(--h2)'
       : props.type === 'h3'
-      ? '18px'
+      ? 'var(--h3)'
       : props.type === 'h4'
-      ? '14px'
+      ? 'var(--h4)'
       : props.type === 'p'
-      ? '12px'
-      : 'null'};
+      ? 'var(--p)'
+      : 'var(--p)'};
   line-height: ${(props) =>
     props.type === 'h1'
-      ? '48px'
+      ? 'var(--h1)'
       : props.type === 'h2'
-      ? '36px'
+      ? 'var(--h2)'
       : props.type === 'h3'
-      ? '27px'
+      ? 'var(--h3)'
       : props.type === 'h4'
-      ? '21px'
+      ? 'var(--h4)'
       : props.type === 'p'
-      ? '18px'
-      : 'null'};
+      ? 'var(--p)'
+      : 'var(--p)'};
   color: ${(props) =>
     props.color === 'darken'
-      ? 'rgb(95, 95, 95)'
+      ? 'var(--gray-darken1)'
       : props.color === 'dark'
-      ? 'rgb(110, 114, 120)'
+      ? 'var(--gray-default)'
       : props.color === 'lighten'
-      ? 'rgb(218, 225, 231)'
-      : 'rgb(255, 255, 255)'};
+      ? 'var(--gray-lighten3)'
+      : 'var(--white)'};
   font-weight: ${(props) =>
     props.fw === 'unset'
-      ? 'unset'
+      ? 'var(--fw-unset)'
       : props.fw === 'normal'
-      ? 'normal'
+      ? 'var(--fw-normal)'
       : props.fw === 'bold'
-      ? 'bold'
-      : 'normal'};
+      ? 'var(--fw-bold)'
+      : 'var(--fw-normal)'};
 `
