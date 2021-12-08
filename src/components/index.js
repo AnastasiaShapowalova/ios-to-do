@@ -5,5 +5,15 @@ import { Switcher } from './Switcher'
 import { Sidebar } from './Sidebar'
 import { Button } from './Button'
 import { Input } from './Input'
+import { Text } from './Text'
 
-export { PageLayout, AppLayout, SearchInput, Switcher, Sidebar, Button, Input }
+export {
+  PageLayout,
+  AppLayout,
+  SearchInput,
+  Switcher,
+  Sidebar,
+  Button,
+  Input,
+  Text
+}
