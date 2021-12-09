@@ -16,16 +16,16 @@ export const Txt = styled.p`
       : 'var(--p)'};
   line-height: ${(props) =>
     props.type === 'h1'
-      ? 'var(--h1)'
+      ? 'var(--lh-h1)'
       : props.type === 'h2'
-      ? 'var(--h2)'
+      ? 'var(--lh-h2)'
       : props.type === 'h3'
-      ? 'var(--h3)'
+      ? 'var(--lh-h3)'
       : props.type === 'h4'
-      ? 'var(--h4)'
+      ? 'var(--lh-h4)'
       : props.type === 'p'
-      ? 'var(--p)'
-      : 'var(--p)'};
+      ? 'var(--lh-p)'
+      : 'var(--lh-p)'};
   color: ${(props) =>
     props.color === 'darken'
       ? 'var(--gray-darken1)'

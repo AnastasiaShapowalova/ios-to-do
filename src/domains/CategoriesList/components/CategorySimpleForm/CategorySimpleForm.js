@@ -14,14 +14,14 @@ const CategorySimpleForm = () => {
       icon={
         <IconModule
           icon={<AiOutlineUnorderedList />}
-          size="small"
+          size="sm"
           change="false"
         />
       }
       fill="true"
       outline="true"
       // {...inputStyles}
-      size="small"
+      size="sm"
     />
     // count
   )

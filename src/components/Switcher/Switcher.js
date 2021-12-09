@@ -6,11 +6,7 @@ const Switcher = () => {
   return (
     // switcher items : name, count, icon
     <>
-      <IconModule
-        icon={<AiOutlineUnorderedList />}
-        size="large"
-        change="true"
-      />
+      <IconModule icon={<AiOutlineUnorderedList />} size="lg" change="true" />
       <Text type="h3" fw="bold" color="dark">
         0
       </Text>

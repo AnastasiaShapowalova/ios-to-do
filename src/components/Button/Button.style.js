@@ -2,36 +2,38 @@ import styled from 'styled-components'
 
 export const Btn = styled.button`
   cursor: pointer;
-  padding: 2px;
+  padding: var(--p-xm);
   border: none;
   outline: none;
   display: flex;
   //shape
-  border-radius: ${(props) => props.shape && '5px'};
+  border-radius: ${(props) => props.shape && 'var(--br-sm)'};
   //type
   background-color: ${(props) =>
-    props.type ? 'rgb(54, 54, 54)' : 'transparent'};
-  padding: ${(props) => props.type && '4px'};
+    props.type ? 'var(--gray-darken3)' : 'var(--transparent)'};
+  padding: ${(props) => props.type && 'var(--p-sm)'};
   //color
-  color: ${(props) => (props.color === 'dark' ? 'rgb(15, 15, 15)' : 'default')};
   color: ${(props) =>
-    props.color === 'light' ? 'rgb(154, 154, 154)' : 'default'};
+    props.color === 'dark' ? 'var(--gray-darken4)' : 'default'};
+  color: ${(props) =>
+    props.color === 'light' ? 'var(--gray-lighten2)' : 'default'};
   //size
-  line-height: ${(props) => props.size === 'small' && '15px'};
-  line-height: ${(props) => (props.size === 'large' ? '20px' : '15px')};
-  font-size: ${(props) => props.size === 'small' && '15px'};
-  font-size: ${(props) => (props.size === 'large' ? '20px' : '15px')};
+  line-height: ${(props) => props.size === 'sm' && 'var(--lh-h4)'};
+  line-height: ${(props) =>
+    props.size === 'lg' ? 'var(--lh-h3)' : 'var(--lh-h4)'};
+  font-size: ${(props) => props.size === 'sm' && 'var(--h4)'};
+  font-size: ${(props) => (props.size === 'lg' ? 'var(--h3)' : 'var(--h4)')};
 
   &:hover {
-    background-color: ${(props) => props.hover && 'rgb(54,54,54)'};
+    background-color: ${(props) => props.hover && 'var(--gray-darken3)'};
   }
   &:focus {
     color: ${(props) =>
-      props.focus === 'dark' ? 'rgb(15, 15, 15)' : ' rgb(228, 228, 228)'};
-    color: ${(props) => props.warning && 'rgb(255,158,11)'};
+      props.focus === 'dark' ? 'var(--gray-darken4)' : 'var(--gray-lighten4)'};
+    color: ${(props) => props.warning && 'var(--orange)'};
   }
 `
 
 export const IconWrapper = styled.div`
-  padding-right: 8px;
+  padding-right: var(--p-md);
 `

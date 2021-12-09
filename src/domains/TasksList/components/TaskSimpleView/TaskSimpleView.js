@@ -10,7 +10,7 @@ const TaskSimpleView = () => {
       <Text type="h4" fw="normal" color="lighten">
         Task text
       </Text>
-      <Button size="small" color="dark" icon={<IoCloseOutline />}></Button>
+      <Button size="sm" color="dark" icon={<IoCloseOutline />}></Button>
     </>
   )
 }

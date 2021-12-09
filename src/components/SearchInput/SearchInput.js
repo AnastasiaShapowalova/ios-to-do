@@ -12,12 +12,12 @@ const SearchInput = () => {
         fill="false"
         outline="false"
         placeholder="Search"
-        size="medium"
+        size="md"
         icon={<BsSearch />}
         button={
           <Button
             shape="rounded"
-            size="small"
+            size="sm"
             color="light"
             focus="dark"
             icon={<MdCancel />}></Button>

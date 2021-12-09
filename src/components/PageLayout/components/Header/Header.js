@@ -13,7 +13,7 @@ const Header = () => {
       </Text>
       <Button
         shape
-        size="large"
+        size="lg"
         color="light"
         icon={<IoAddOutline />}
         hover></Button>

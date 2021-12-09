@@ -2,35 +2,41 @@ import styled from 'styled-components'
 import { css } from 'styled-components'
 
 export const IconWrapper = styled.div`
-  padding: 0;
-  margin: 0;
+  padding: var(--p-0);
+  margin: var(--m-0);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: var(--br-circle);
 
   width: ${(props) =>
-    props.size === 'small' ? '20px' : props.size === 'large' ? '25px' : 'null'};
+    props.size === 'sm' ? '20px' : props.size === 'lg' ? '25px' : 'null'};
   height: ${(props) =>
-    props.size === 'small' ? '20px' : props.size === 'large' ? '25px' : 'null'};
-  color: white;
-  background: rgb(17, 107, 255);
+    props.size === 'sm' ? '20px' : props.size === 'lg' ? '25px' : 'null'};
+  color: var(--white);
+  background: var(--blue);
 
   //will be improved when adding functional
   ${(props) =>
     props.change === 'true' &&
     css`
-      color: white;
-      background-color: rgb(17, 107, 255);
+      color: var(--white);
+      background-color: var(--blue);
       &:hover {
-        background-color: white;
-        color: rgb(17, 107, 255);
+        background-color: var(--white);
+        color: var(--blue);
       }
     `}
 `
 
 export const IconItem = styled.p`
   font-size: ${(props) =>
-    props.size === 'small' ? '10px' : props.size === 'large' ? '14px' : 'null'};
-  line-height: 100%;
+    props.size === 'sm'
+      ? 'var(--p)'
+      : props.size === 'lg'
+      ? 'var(--h4)'
+      : 'null'};
+  line-height: var(--lh);
 `
+
+// size

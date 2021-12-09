@@ -5,80 +5,81 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: baseline;
   outline: none;
-  color: white;
+  color: var(--white);
   ${(props) =>
-    props.size === 'large' &&
+    props.size === 'lg' &&
     css`
       flex-direction: column;
       width: 100%;
     `}
   ${(props) =>
-    props.size === 'small' &&
+    props.size === 'sm' &&
     css`
-      border-radius: 6px;
+      border-radius: var(--br-lg);
       width: 256px;
-      padding: 8px 10px;
+      padding: var(--p-md) var(--p-lg);
     `}
 		${(props) =>
-    props.size === 'medium' &&
+    props.size === 'md' &&
     css`
-      border-bottom: 1px solid rgb(99, 99, 99);
-      border-radius: 4px;
+      border-bottom: 1px solid var(--gray-darken1);
+      border-radius: var(--br-md);
       width: 256px;
-      padding: 6px 8px 4px 6px;
+      padding: var(--p-sm) var(--p-md) var(--p-xm) var(--p-md);
       &:focus-within {
-        outline: 2px solid rgb(11, 132, 255);
+        outline: 2px solid var(--blue-lighten);
       }
     `}
   background-color: ${(props) =>
     props.fill === 'true'
-      ? 'rgb(26, 109, 197)'
+      ? 'var(--blue-darken)'
       : props.fill === 'false'
-      ? 'rgb(65, 65, 65)'
-      : 'transparent'};
+      ? 'var(--gray-darken2)'
+      : 'var(--transparent)'};
 `
 
 export const CustomInput = styled.input`
   border: none;
   color: white;
+  line-height: var(--lh-h4);
+  font-size: var(--h4);
   background-color: ${(props) =>
-    props.fill === 'true' ? 'rgb(65, 65, 65)' : 'transparent'};
+    props.fill === 'true' ? 'var(--gray-darken2)' : 'var(--transparent)'};
   outline: ${(props) =>
-    props.outline === 'true' ? '2px solid rgb(26, 132, 255)' : 'none'};
+    props.outline === 'true' ? '2px solid var(--blue-lighten)' : 'none'};
   ${(props) =>
-    props.size === 'small' &&
+    props.size === 'sm' &&
     css`
       height: 18px;
       width: auto;
-      line-height: 8px;
-      margin: 0px 10px;
+      margin: var(--m-0) var(--m-lg);
       flex: 1;
-      padding: 1px;
     `}
   ${(props) =>
-    props.size === 'medium' &&
+    props.size === 'md' &&
     css`
       width: 220px;
-      padding: 0 0 0 8px;
+      padding: var(--p-0) var(--p-0) var(--p-0) var(--p-md);
     `}
-  width: ${(props) => props.size === 'large' && '100%'};
+  width: ${(props) => props.size === 'lg' && '100%'};
 `
 export const IconWrapper = styled.div`
   ${(props) =>
-    props.size === 'medium' &&
+    props.size === 'md' &&
     css`
-      padding-top: 3px;
-      font-size: small;
+      padding-top: var(--p-xm);
+      font-size: var(--h4);
     `};
 `
 
 export const AddInput = styled.input`
-  line-height: 5px;
+  line-height: var(--lh-h4);
+  font-size: var(--h4);
   border: none;
   outline: none;
   background: none;
-  color: rgb(149, 149, 149);
-  padding-bottom: 4px;
+  color: var(--gray-lighten1);
+  padding-bottom: var(--p-sm);
 `
 export const InputWrapper = styled.div`
   display: flex;
@@ -88,11 +89,13 @@ export const EnterField = styled.div`
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  margin-left: 10px;
+  margin-left: var(--m-lg);
   flex-direction: column;
-  border-bottom: 1px solid rgb(64, 64, 64);
+  border-bottom: 1px solid var(--gray-darken2);
 `
 export const Radio = styled.input.attrs((/* props */) => ({ type: 'radio' }))`
-  margin: 5px;
+  margin: var(--m-sm);
 `
 /* width: ${(props) => props.size || '200px'}; */
+
+// size

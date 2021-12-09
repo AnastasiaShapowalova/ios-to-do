@@ -10,7 +10,7 @@ const TaskSimpleForm = () => {
         placeholder="Notes"
         radio="radio"
         outline="false"
-        size="large"
+        size="lg"
       />
     </>
   )
