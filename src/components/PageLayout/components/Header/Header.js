@@ -1,16 +1,11 @@
-import React from 'react'
-import { Button, Text } from '../../../'
+import { Button, Title } from '../../../'
 import { IoAddOutline } from 'react-icons/io5'
 
 const Header = () => {
   return (
     <>
-      <Text type="h1" fw="bold" color="diff">
-        Header
-      </Text>
-      <Text type="h1" color="diff">
-        1
-      </Text>
+      <Title variant="title-body-2">Header</Title>
+      <Title variant="title-body-3">1</Title>
       <Button
         shape
         size="lg"

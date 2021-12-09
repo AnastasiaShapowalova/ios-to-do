@@ -1,23 +1,23 @@
 import styled from 'styled-components'
 
-export const Btn = styled.button`
+export const ButtonStyled = styled.button`
   cursor: pointer;
-  padding: var(--p-xm);
+  padding: var(--p-xs);
   border: none;
   outline: none;
   display: flex;
-  //shape
-  border-radius: ${(props) => props.shape && 'var(--br-sm)'};
-  //type
+
+  border-radius: ${(props) => props.shape && 'var(--border-radius-sm)'};
+
   background-color: ${(props) =>
     props.type ? 'var(--gray-darken3)' : 'var(--transparent)'};
   padding: ${(props) => props.type && 'var(--p-sm)'};
-  //color
+
   color: ${(props) =>
     props.color === 'dark' ? 'var(--gray-darken4)' : 'default'};
   color: ${(props) =>
     props.color === 'light' ? 'var(--gray-lighten2)' : 'default'};
-  //size
+
   line-height: ${(props) => props.size === 'sm' && 'var(--lh-h4)'};
   line-height: ${(props) =>
     props.size === 'lg' ? 'var(--lh-h3)' : 'var(--lh-h4)'};

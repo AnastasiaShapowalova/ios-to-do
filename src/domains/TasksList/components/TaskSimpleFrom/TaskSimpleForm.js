@@ -1,18 +1,14 @@
-import React from 'react'
 import { Input } from '../../../../components'
+import { TaskSimpleFormWrapper } from './TaskSimpleForm.style'
 
 const TaskSimpleForm = () => {
   return (
     // chekbox, dueDataTime, flag, input
-    <>
-      <Input
-        note="note"
-        placeholder="Notes"
-        radio="radio"
-        outline="false"
-        size="lg"
-      />
-    </>
+    <TaskSimpleFormWrapper>
+      {/* checkbox  */}
+      <Input variant="taskInput" />
+      <Input variant="taskInput" placeholder="Notes" />
+    </TaskSimpleFormWrapper>
   )
 }
 

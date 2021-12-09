@@ -1,4 +1,3 @@
-import React from 'react'
 import { SearchInput, Switcher } from '..'
 import { CategoryList, CategorySimpleForm } from '../../domains'
 import { Button } from '../'

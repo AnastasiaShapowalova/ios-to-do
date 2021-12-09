@@ -2,41 +2,61 @@ import styled from 'styled-components'
 import { css } from 'styled-components'
 
 export const IconWrapper = styled.div`
-  padding: var(--p-0);
-  margin: var(--m-0);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--br-circle);
-
-  width: ${(props) =>
-    props.size === 'sm' ? '22px' : props.size === 'lg' ? '25px' : 'null'};
-  height: ${(props) =>
-    props.size === 'sm' ? '22px' : props.size === 'lg' ? '25px' : 'null'};
+  width: 26px;
+  height: 26px;
+  font-size: var(--fs-text-md);
+  line-height: var(--lh-text-md);
+  border-radius: var(--border-radius-circle);
+  padding: var(--p-0);
+  margin: var(--m-0);
   color: var(--white);
-  background: var(--blue);
+  background-color: var(--blue);
 
-  //will be improved when adding functional
   ${(props) =>
-    props.change === 'true' &&
+    props.color === 'red' &&
+    props.variant === 'isChangeable' &&
+    css`
+      color: var(--white);
+      background-color: var(--red);
+      &:active {
+        background-color: var(--white);
+        color: var(--red);
+      }
+    `}
+  ${(props) =>
+    props.color === 'blue' &&
+    props.variant === 'isChangeable' &&
     css`
       color: var(--white);
       background-color: var(--blue);
-      &:hover {
+      &:active {
         background-color: var(--white);
         color: var(--blue);
       }
     `}
+		 ${(props) =>
+    props.color === 'gray' &&
+    props.variant === 'isChangeable' &&
+    css`
+      color: var(--white);
+      background-color: var(--gray);
+      &:active {
+        background-color: var(--white);
+        color: var(--gray);
+      }
+    `}
+		 ${(props) =>
+    props.color === 'orange' &&
+    props.variant === 'isChangeable' &&
+    css`
+      color: var(--white);
+      background-color: var(--orange);
+      &:active {
+        background-color: var(--white);
+        color: var(--orange);
+      }
+    `}
 `
-
-export const IconItem = styled.p`
-  font-size: ${(props) =>
-    props.size === 'sm'
-      ? 'var(--fs)'
-      : props.size === 'lg'
-      ? 'var(--fs-h4)'
-      : 'null'};
-  line-height: var(--lh);
-`
-
-// size

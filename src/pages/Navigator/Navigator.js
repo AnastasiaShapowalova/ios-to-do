@@ -1,4 +1,3 @@
-import React from 'react'
 import AppLayout from '../../components/AppLayout/AppLayout'
 import { TasksAll } from '../'
 import { Sidebar } from '../../components'

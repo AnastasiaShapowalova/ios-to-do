@@ -1,11 +1,10 @@
 import { Button } from '../../../../components'
-import React from 'react'
 import { TaskSimpleView } from '..'
 import { BsFlag } from 'react-icons/bs'
 
 const TaskList = () => {
   return (
-    // checbox, text, flag, delete
+    // checbox, Title, flag, delete
     <>
       <TaskSimpleView />
       <Button

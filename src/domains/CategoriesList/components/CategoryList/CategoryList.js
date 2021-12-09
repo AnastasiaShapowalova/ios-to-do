@@ -1,13 +1,12 @@
-import React from 'react'
 import { CategorySimpleView } from '..'
-import { Text } from '../../../../components'
+import { Title } from '../../../../components'
 
 const CategoryList = () => {
   return (
     <>
-      <Text type="p" fw="unset" color="darken">
+      <Title variant="title-caption-2" color="darken">
         My lists
-      </Text>
+      </Title>
       <CategorySimpleView />
     </>
   )

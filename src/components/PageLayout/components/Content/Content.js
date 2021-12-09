@@ -1,5 +1,4 @@
-import React from 'react'
-import { SearchInput, Text } from '../../..'
+import { Title } from '../../..'
 import { TaskList, TaskSimpleForm } from '../../../../domains'
 
 const Content = () => {
@@ -7,10 +6,10 @@ const Content = () => {
     <>
       <TaskList />
       <TaskSimpleForm />
-      <Text type="h2" color="darken">
+      <Title variant="title-body-3" color="darken">
         No Remainders
-      </Text>
-      {/* text,flag, checkbox, createdAt, EditedAt, delete, dueDataTime  */}
+      </Title>
+      {/* Title,flag, checkbox, createdAt, EditedAt, delete, dueDataTime  */}
       {/* Checkbox, Input, flag, dueDataTime */}
       {/* no remaindners  */}
     </>

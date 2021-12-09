@@ -1,4 +1,3 @@
-import React from 'react'
 import { Header, Content } from './'
 
 const PageLayout = () => {
@@ -11,6 +10,3 @@ const PageLayout = () => {
 }
 
 export default PageLayout
-
-// header
-// content

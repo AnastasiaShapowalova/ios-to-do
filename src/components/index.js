@@ -6,7 +6,9 @@ import { Switcher } from './Switcher'
 import { Sidebar } from './Sidebar'
 import { Button } from './Button'
 import { Input } from './Input'
+import { Title } from './Title'
 import { Text } from './Text'
+import { Checkbox } from './Checkbox'
 
 export {
   SearchInput,
@@ -17,5 +19,7 @@ export {
   Sidebar,
   Button,
   Input,
-  Text
+  Title,
+  Text,
+  Checkbox
 }

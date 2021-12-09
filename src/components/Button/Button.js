@@ -1,19 +1,15 @@
-import React from 'react'
-import { Btn, IconWrapper } from './Button.style'
+import { ButtonStyled, IconWrapper } from './Button.style'
 
 const Button = (props) => {
   const { shape, color, children, size, hover, focus, icon, type, warning } =
     props
+
   return (
-    <Btn
+    <ButtonStyled
       shape={shape}
-      //rounded, circle
       color={color}
-      //light, dark
       size={size}
-      //large, small
       type={type}
-      //fill
       hover={hover}
       focus={focus}
       icon={icon}
@@ -28,7 +24,7 @@ const Button = (props) => {
       ) : children ? (
         children
       ) : null}
-    </Btn>
+    </ButtonStyled>
   )
 }
 

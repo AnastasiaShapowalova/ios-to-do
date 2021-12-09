@@ -1,29 +1,17 @@
-import React from 'react'
 import { Input, Text, IconModule } from '../../../../components'
 import { AiOutlineUnorderedList } from 'react-icons/ai'
+import { CategorySimpleFormWrapper } from './CategorySimpleForm.style'
 
 const CategorySimpleForm = () => {
   return (
     // icon, input
-    <Input
-      count={
-        <Text type="h4" fw="normal" color="darken">
-          0
-        </Text>
-      }
-      icon={
-        <IconModule
-          icon={<AiOutlineUnorderedList />}
-          size="sm"
-          change="false"
-        />
-      }
-      fill="true"
-      outline="true"
-      // {...inputStyles}
-      size="sm"
-    />
-    // count
+    <CategorySimpleFormWrapper>
+      <IconModule icon={<AiOutlineUnorderedList />} size="sm" change="false" />
+      <Input variant="categoryInput" />
+      <Text size="md" color="dark">
+        0
+      </Text>
+    </CategorySimpleFormWrapper>
   )
 }
 
