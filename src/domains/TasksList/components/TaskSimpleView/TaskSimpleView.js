@@ -5,9 +5,13 @@ const TaskSimpleView = () => {
   return (
     //  Title,flag, checkbox, createdAt, EditedAt, delete, dueDataTime
     <>
-      <input type="checkbox" />
+      {/* checkbox  */}
       <Text variant="h4">Task Title</Text>
-      <Button size="sm" color="dark" icon={<IoCloseOutline />}></Button>
+      <Button
+        variant="deleteCategoryButton"
+        size="md"
+        color="dark"
+        icon={<IoCloseOutline />}></Button>
     </>
   )
 }

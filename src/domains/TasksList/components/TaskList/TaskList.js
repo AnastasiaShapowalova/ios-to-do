@@ -1,6 +1,6 @@
 import { Button } from '../../../../components'
 import { TaskSimpleView } from '..'
-import { BsFlag } from 'react-icons/bs'
+import { BsFlagFill } from 'react-icons/bs'
 
 const TaskList = () => {
   return (
@@ -8,12 +8,11 @@ const TaskList = () => {
     <>
       <TaskSimpleView />
       <Button
-        icon={<BsFlag />}
-        type="fill"
-        size="small"
+        icon={<BsFlagFill />}
+        size="md"
         color="light"
-        warning="warning"
-        shape
+        shape="rounded"
+        variant="flagTaskButton"
       />
     </>
   )

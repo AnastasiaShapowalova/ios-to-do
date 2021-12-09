@@ -13,7 +13,11 @@ const CategorySimpleView = () => {
       <Text variant="title-caption-2" color="darken">
         0
       </Text>
-      <Button size="sm" color="dark" icon={<IoCloseOutline />}></Button>
+      <Button
+        variant="deleteCategoryButton"
+        size="md"
+        color="dark"
+        icon={<IoCloseOutline />}></Button>
     </>
   )
 }

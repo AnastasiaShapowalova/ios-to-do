@@ -7,7 +7,8 @@ const Header = () => {
       <Title variant="title-body-2">Header</Title>
       <Title variant="title-body-3">1</Title>
       <Button
-        shape
+        shape="rounded"
+        variant="addTaskButton"
         size="lg"
         color="light"
         icon={<IoAddOutline />}

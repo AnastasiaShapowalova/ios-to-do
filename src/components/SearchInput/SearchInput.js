@@ -12,9 +12,9 @@ const SearchInput = () => {
         <Input variant="searchInput" placeholder="Search"></Input>
         <Button
           shape="rounded"
-          size="sm"
+          size="md"
           color="light"
-          focus="dark"
+          variant="clearInputButton"
           icon={<MdCancel />}></Button>
       </SearchInputWrapper>
     </>

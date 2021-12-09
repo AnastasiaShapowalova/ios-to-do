@@ -2,14 +2,21 @@ import './App.css'
 import './style/config.style.css'
 import { Navigator } from './pages'
 // import moment from 'moment'
-import { Title, Text, IconModule, SearchInput, Checkbox } from './components'
+import {
+  Title,
+  Text,
+  IconModule,
+  SearchInput,
+  Checkbox,
+  Sidebar
+} from './components'
 import { BsWalletFill } from 'react-icons/bs'
 import { CategorySimpleForm, TaskSimpleForm } from './domains'
 
 function App() {
   return (
     <div className="App">
-      {/* <Navigator /> */}
+      <Navigator />
       <Checkbox isChecked="isChecked" />
       <Checkbox isChecked="isChecked" color="red" />
       <Checkbox color="gray" />
