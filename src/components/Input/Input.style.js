@@ -42,7 +42,7 @@ export const CustomInput = styled.input`
   border: none;
   color: white;
   line-height: var(--lh-h4);
-  font-size: var(--h4);
+  font-size: var(--fs-h4);
   background-color: ${(props) =>
     props.fill === 'true' ? 'var(--gray-darken2)' : 'var(--transparent)'};
   outline: ${(props) =>
@@ -68,13 +68,13 @@ export const IconWrapper = styled.div`
     props.size === 'md' &&
     css`
       padding-top: var(--p-xm);
-      font-size: var(--h4);
+      font-size: var(--fs-h4);
     `};
 `
 
 export const AddInput = styled.input`
   line-height: var(--lh-h4);
-  font-size: var(--h4);
+  font-size: var(--fs-h4);
   border: none;
   outline: none;
   background: none;

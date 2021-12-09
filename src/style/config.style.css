@@ -28,11 +28,12 @@
 --fw-unset: unset;
 
 /* font-size  */
---h1: 32px;
---h2: 24px;
---h3: 18px;
---h4: 14px;
---p: 12px;
+--fs-h1: 32px;
+--fs-h2: 24px;
+--fs-h3: 18px;
+--fs-h4: 14px;
+--fs-p: 12px;
+--fs: 10px;
 
 /* line-height */
 --lh: 100%;

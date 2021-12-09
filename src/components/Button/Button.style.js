@@ -21,8 +21,9 @@ export const Btn = styled.button`
   line-height: ${(props) => props.size === 'sm' && 'var(--lh-h4)'};
   line-height: ${(props) =>
     props.size === 'lg' ? 'var(--lh-h3)' : 'var(--lh-h4)'};
-  font-size: ${(props) => props.size === 'sm' && 'var(--h4)'};
-  font-size: ${(props) => (props.size === 'lg' ? 'var(--h3)' : 'var(--h4)')};
+  font-size: ${(props) => props.size === 'sm' && 'var(--fs-h4)'};
+  font-size: ${(props) =>
+    props.size === 'lg' ? 'var(--fs-h3)' : 'var(--fs-h4)'};
 
   &:hover {
     background-color: ${(props) => props.hover && 'var(--gray-darken3)'};

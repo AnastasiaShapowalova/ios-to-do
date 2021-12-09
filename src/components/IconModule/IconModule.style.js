@@ -10,9 +10,9 @@ export const IconWrapper = styled.div`
   border-radius: var(--br-circle);
 
   width: ${(props) =>
-    props.size === 'sm' ? '20px' : props.size === 'lg' ? '25px' : 'null'};
+    props.size === 'sm' ? '22px' : props.size === 'lg' ? '25px' : 'null'};
   height: ${(props) =>
-    props.size === 'sm' ? '20px' : props.size === 'lg' ? '25px' : 'null'};
+    props.size === 'sm' ? '22px' : props.size === 'lg' ? '25px' : 'null'};
   color: var(--white);
   background: var(--blue);
 
@@ -32,9 +32,9 @@ export const IconWrapper = styled.div`
 export const IconItem = styled.p`
   font-size: ${(props) =>
     props.size === 'sm'
-      ? 'var(--p)'
+      ? 'var(--fs)'
       : props.size === 'lg'
-      ? 'var(--h4)'
+      ? 'var(--fs-h4)'
       : 'null'};
   line-height: var(--lh);
 `
