@@ -10,7 +10,7 @@ const CategorySimpleView = () => {
       <Text size="md" color="lighten">
         Categorie name
       </Text>
-      <Text variant="title-caption-2" color="darken">
+      <Text variant="h6" color="darken">
         0
       </Text>
       <Button

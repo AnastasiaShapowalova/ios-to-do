@@ -8,41 +8,41 @@ export const TitleStyled = styled.div`
   line-height: var(--lh-h1);
 
   ${(props) =>
-    props.variant === 'title-body-1' &&
+    props.variant === 'h1' &&
     css`
       font-size: var(--fs-h1);
       line-height: var(--lh-h1);
     `}
   ${(props) =>
-    props.variant === 'title-body-2' &&
+    props.variant === 'h2' &&
     css`
       font-weight: var(--font-weight-bold);
       font-size: var(--fs-h2);
       line-height: var(--lh-h2);
     `}
 	${(props) =>
-    props.variant === 'title-body-3' &&
+    props.variant === 'h3' &&
     css`
       font-size: var(--fs-h3);
       line-height: var(--lh-h3);
       font-weight: var(--font-weight-normal);
     `}
 	${(props) =>
-    props.variant === 'title-body-4' &&
+    props.variant === 'h4' &&
     css`
       font-size: var(--fs-h4);
       line-height: var(--lh-h4);
       font-weight: var(--font-weight-bold);
     `}
 	${(props) =>
-    props.variant === 'title-caption-1' &&
+    props.variant === 'h5' &&
     css`
       font-size: var(--fs-h5);
       line-height: var(--lh-h5);
       font-weight: var(--font-weight-normal);
     `}
 	${(props) =>
-    props.variant === 'title-caption-2' &&
+    props.variant === 'h6' &&
     css`
       font-size: var(--fs-h6);
       line-height: var(--lh-h6);

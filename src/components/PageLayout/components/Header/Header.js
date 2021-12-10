@@ -4,8 +4,8 @@ import { IoAddOutline } from 'react-icons/io5'
 const Header = () => {
   return (
     <>
-      <Title variant="title-body-2">Header</Title>
-      <Title variant="title-body-3">1</Title>
+      <Title variant="h2">Header</Title>
+      <Title variant="h3">1</Title>
       <Button
         shape="rounded"
         variant="addTaskButton"

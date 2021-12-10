@@ -4,7 +4,7 @@ import { Title } from '../../../../components'
 const CategoryList = () => {
   return (
     <>
-      <Title variant="title-caption-2" color="darken">
+      <Title variant="h6" color="darken">
         My lists
       </Title>
       <CategorySimpleView />

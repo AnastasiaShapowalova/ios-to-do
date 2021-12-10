@@ -6,7 +6,7 @@ const Content = () => {
     <>
       <TaskList />
       <TaskSimpleForm />
-      <Title variant="title-body-3" color="darken">
+      <Title variant="h3" color="darken">
         No Remainders
       </Title>
       {/* Title,flag, checkbox, createdAt, EditedAt, delete, dueDataTime  */}

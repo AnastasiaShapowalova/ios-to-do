@@ -33,18 +33,18 @@ function App() {
       <Checkbox isChecked="isChecked" color="red" />
       <Checkbox color="gray" />
       <Checkbox />
-      <Title variant="title-body-1" color="lighten">
+      <Title variant="h1" color="lighten">
         h1
       </Title>
-      <Title variant="title-body-2" color="darken">
+      <Title variant="h2" color="darken">
         h2
       </Title>
-      <Title variant="title-body-3" color="dark">
+      <Title variant="h3" color="dark">
         h3
       </Title>
-      <Title variant="title-body-4">h4</Title>
-      <Title variant="title-caption-1">h5</Title>
-      <Title variant="title-caption-2">h6</Title>
+      <Title variant="h4">h4</Title>
+      <Title variant="h5">h5</Title>
+      <Title variant="h6">h6</Title>
       <Text size="sm" color="dark">
         Text
       </Text>
