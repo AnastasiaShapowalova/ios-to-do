@@ -1,5 +1,5 @@
-.App {
-  Title-align: center;
+html, body {
+	min-height: 100%;
 }
 
 body {

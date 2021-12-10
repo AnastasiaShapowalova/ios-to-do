@@ -8,7 +8,10 @@ import {
   IconModule,
   SearchInput,
   Checkbox,
-  Sidebar
+  Sidebar,
+  Container,
+  Row,
+  Col
 } from './components'
 import { BsWalletFill } from 'react-icons/bs'
 import { CategorySimpleForm, TaskSimpleForm } from './domains'
@@ -16,8 +19,17 @@ import { CategorySimpleForm, TaskSimpleForm } from './domains'
 function App() {
   return (
     <div className="App">
-      <Navigator />
+      {/* <Container>
+        <Row>
+          <Col>JSHFDkjhsdf</Col>
+          <Col>KJSDfhksjdf</Col>
+          <Col>KJSH</Col>
+        </Row> */}
+      {/* <Navigator /> */}
       <Checkbox isChecked="isChecked" />
+      <Text size="md" color="darken">
+        Text
+      </Text>
       <Checkbox isChecked="isChecked" color="red" />
       <Checkbox color="gray" />
       <Checkbox />
@@ -62,6 +74,7 @@ function App() {
       <SearchInput />
       <TaskSimpleForm />
       <CategorySimpleForm />
+      {/* </Container> */}
     </div>
   )
 }

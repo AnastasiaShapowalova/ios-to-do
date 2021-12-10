@@ -9,6 +9,7 @@ import { Input } from './Input'
 import { Title } from './Title'
 import { Text } from './Text'
 import { Checkbox } from './Checkbox'
+import { Container, Row, Col } from './Grid'
 
 export {
   SearchInput,
@@ -21,5 +22,8 @@ export {
   Input,
   Title,
   Text,
-  Checkbox
+  Checkbox,
+  Container,
+  Row,
+  Col
 }
