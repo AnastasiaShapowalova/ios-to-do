@@ -38,14 +38,14 @@ export const IconWrapper = styled.div`
       }
     `}
 		 ${(props) =>
-    props.color === 'gray' &&
+    props.color === 'dark' &&
     props.variant === 'isChangeable' &&
     css`
       color: var(--white);
-      background-color: var(--gray);
+      background-color: var(--dark);
       &:active {
         background-color: var(--white);
-        color: var(--gray);
+        color: var(--dark);
       }
     `}
 		 ${(props) =>

@@ -5,10 +5,10 @@ const Switcher = () => {
   return (
     <>
       <IconModule icon={<AiOutlineUnorderedList />} size="lg" change="true" />
-      <Title variant="h5" fw="bold" color="dark">
+      <Title variant="h5" fw="bold" color="gray">
         0
       </Title>
-      <Title variant="h5" fw="bold" color="dark">
+      <Title variant="h5" fw="bold" color="gray">
         Switcher
       </Title>
     </>

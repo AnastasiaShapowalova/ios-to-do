@@ -10,7 +10,7 @@ const TaskSimpleView = () => {
       <Button
         variant="deleteCategoryButton"
         size="md"
-        color="dark"
+        color="gray"
         icon={<IoCloseOutline />}></Button>
     </>
   )

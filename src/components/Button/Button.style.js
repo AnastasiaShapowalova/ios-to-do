@@ -10,7 +10,7 @@ export const ButtonStyled = styled.button`
   outline: none;
   cursor: pointer;
   color: white;
-  background-color: var(--gray-darken3);
+  background-color: var(--dark-darken3);
   min-height: 18px;
   min-width: 18px;
   width: auto;
@@ -41,14 +41,14 @@ export const ButtonStyled = styled.button`
       color: orange;
     `}
 		${(props) =>
-    props.color === 'dark' &&
+    props.color === 'gray' &&
     css`
-      color: var(--gray-darken4);
+      color: var(--dark-darken4);
     `}
 		${(props) =>
-    props.color === 'light' &&
+    props.color === 'gray-light' &&
     css`
-      color: var(--gray-lighten2);
+      color: var(--dark-lighten2);
     `}
 
 		${(props) =>
@@ -75,7 +75,7 @@ export const ButtonStyled = styled.button`
     css`
       background-color: var(--transparent);
       &:active {
-        color: var(--gray-lighten4);
+        color: var(--dark-lighten4);
       }
     `}
 		${(props) =>
@@ -83,7 +83,7 @@ export const ButtonStyled = styled.button`
     css`
       background-color: var(--transparent);
       &:active {
-        color: var(--gray-lighten4);
+        color: var(--dark-lighten4);
       }
     `}
 		${(props) =>
@@ -96,7 +96,7 @@ export const ButtonStyled = styled.button`
     css`
       background-color: var(--transparent);
       &:active {
-        color: var(--gray-darken4);
+        color: var(--dark-darken4);
       }
     `}
 		${(props) =>
@@ -111,10 +111,10 @@ export const ButtonStyled = styled.button`
     css`
       background-color: var(--background-transparent);
       &:hover {
-        background-color: var(--gray-darken3);
+        background-color: var(--dark-darken3);
       }
       &:active {
-        color: var(--gray-lighten4);
+        color: var(--dark-lighten4);
       }
     `}
 `

@@ -7,10 +7,10 @@ const CategorySimpleView = () => {
     // icon, name, count
     <>
       <IconModule icon={<AiOutlineUnorderedList />} size="sm" change="false" />
-      <Text size="md" color="lighten">
+      <Text size="md" color="gray-lighten">
         Categorie name
       </Text>
-      <Text variant="h6" color="darken">
+      <Text variant="h6" color="gray-darken">
         0
       </Text>
       <Button

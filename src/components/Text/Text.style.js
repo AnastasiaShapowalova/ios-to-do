@@ -26,17 +26,17 @@ export const TextStyled = styled.div`
     `}
 
 	${(props) =>
-    props.color === 'darken' &&
+    props.color === 'gray-darken' &&
     css`
       color: var(--gray-darken2);
     `}
 	${(props) =>
-    props.color === 'dark' &&
+    props.color === 'gray' &&
     css`
       color: var(--gray);
     `}
 	${(props) =>
-    props.color === 'lighten' &&
+    props.color === 'gray-lighten' &&
     css`
       color: var(--gray-lighten2);
     `}

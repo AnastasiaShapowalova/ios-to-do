@@ -27,31 +27,28 @@ function App() {
         </Row> */}
       {/* <Navigator /> */}
       <Checkbox isChecked="isChecked" />
-      <Text size="md" color="darken">
-        Text
-      </Text>
       <Checkbox isChecked="isChecked" color="red" />
       <Checkbox color="gray" />
       <Checkbox />
       <Title variant="h1" color="lighten">
         h1
       </Title>
-      <Title variant="h2" color="darken">
+      <Title variant="h2" color="gray-darken">
         h2
       </Title>
-      <Title variant="h3" color="dark">
+      <Title variant="h3" color="gray">
         h3
       </Title>
       <Title variant="h4">h4</Title>
       <Title variant="h5">h5</Title>
       <Title variant="h6">h6</Title>
-      <Text size="sm" color="dark">
+      <Text size="sm" color="gray">
         Text
       </Text>
-      <Text size="md" color="darken">
+      <Text size="md" color="gray-darken">
         Text
       </Text>
-      <Text size="lg" color="lighten">
+      <Text size="lg" color="gray-lighten">
         Text
       </Text>
       <IconModule
