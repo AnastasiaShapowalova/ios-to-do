@@ -4,11 +4,10 @@ import { CategorySimpleFormWrapper } from './CategorySimpleForm.style'
 
 const CategorySimpleForm = () => {
   return (
-    // icon, input
     <CategorySimpleFormWrapper>
       <IconModule icon={<AiOutlineUnorderedList />} size="sm" change="false" />
       <Input variant="categoryInput" />
-      <Text size="md" color="dark">
+      <Text size="md" color="lighten">
         0
       </Text>
     </CategorySimpleFormWrapper>

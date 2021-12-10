@@ -17,8 +17,9 @@ export const InputStyled = styled.input`
   ${(props) =>
     props.variant === 'categoryInput' &&
     css`
-      background-color: var(--gray-darken2);
+      background-color: var(--gray-darken4);
       outline: 2px solid var(--blue-lighten);
+      border-radius: var(--border-radius-xs);
     `}
   ${(props) =>
     props.variant === 'taskInput' &&

@@ -20,6 +20,7 @@
 --background-transparent: transparent;
 
 /* border-radius */
+--border-radius-xs: 1px;
 --border-radius-sm: 4px;
 --border-radius-md: 5px;
 --border-radius-lg: 6px;
