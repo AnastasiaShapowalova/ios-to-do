@@ -53,23 +53,14 @@ function App() {
       <Text size="lg" color="gray-lighten">
         Text
       </Text>
+      <IconModule changeable color="red" icon={<BsWalletFill />}></IconModule>
+      <IconModule changeable color="gray" icon={<BsWalletFill />}></IconModule>
       <IconModule
-        variant="isChangeable"
-        color="red"
-        icon={<BsWalletFill />}></IconModule>
-      <IconModule
-        variant="isChangeable"
-        color="gray"
-        icon={<BsWalletFill />}></IconModule>
-      <IconModule
-        variant="isChangeable"
+        changeable
         color="orange"
         icon={<BsWalletFill />}></IconModule>
-      <IconModule
-        variant="isChangeable"
-        color="blue"
-        icon={<BsWalletFill />}></IconModule>
-      <IconModule variant="isUnchangeable" icon={<BsWalletFill />}></IconModule>
+      <IconModule color="blue" icon={<BsWalletFill />}></IconModule>
+      <IconModule icon={<BsWalletFill />}></IconModule>
       <SearchInput />
       <TaskSimpleForm />
       <CategorySimpleForm />

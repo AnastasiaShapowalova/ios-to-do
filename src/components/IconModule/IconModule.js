@@ -1,9 +1,9 @@
 import { IconWrapper } from './IconModule.style'
 
 const IconModule = (props) => {
-  const { icon, variant, color } = props
+  const { icon, color, changeable } = props
   return (
-    <IconWrapper variant={variant} color={color}>
+    <IconWrapper color={color || 'blue'} changeable={changeable}>
       {icon}
     </IconWrapper>
   )

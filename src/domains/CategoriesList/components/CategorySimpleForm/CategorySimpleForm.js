@@ -5,8 +5,8 @@ import { CategorySimpleFormWrapper } from './CategorySimpleForm.style'
 const CategorySimpleForm = () => {
   return (
     <CategorySimpleFormWrapper>
-      <IconModule icon={<AiOutlineUnorderedList />} size="sm" change="false" />
-      <Input variant="input-isFilled" />
+      <IconModule icon={<AiOutlineUnorderedList />} />
+      <Input color="blue" variant="input-isFilled" />
       <Text size="md" color="lighten">
         0
       </Text>

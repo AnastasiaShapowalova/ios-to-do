@@ -1,6 +1,13 @@
 import styled from 'styled-components'
 import { css } from 'styled-components'
 
+const iconColors = {
+  blue: 'var(--blue)',
+  red: 'var(--red)',
+  orange: 'var(--orange)',
+  gray: 'var(--gray)'
+}
+
 export const IconWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -13,50 +20,13 @@ export const IconWrapper = styled.div`
   padding: var(--p-0);
   margin: var(--m-0);
   color: var(--white);
-  background-color: var(--blue);
+  background-color: ${(props) => iconColors[props.color]};
 
-  ${(props) =>
-    props.color === 'red' &&
-    props.variant === 'isChangeable' &&
-    css`
-      color: var(--white);
-      background-color: var(--red);
-      &:active {
+  &:active {
+    ${(props) =>
+      props.changeable &&
+      css`
         background-color: var(--white);
-        color: var(--red);
-      }
-    `}
-  ${(props) =>
-    props.color === 'blue' &&
-    props.variant === 'isChangeable' &&
-    css`
-      color: var(--white);
-      background-color: var(--blue);
-      &:active {
-        background-color: var(--white);
-        color: var(--blue);
-      }
-    `}
-		 ${(props) =>
-    props.color === 'dark' &&
-    props.variant === 'isChangeable' &&
-    css`
-      color: var(--white);
-      background-color: var(--dark);
-      &:active {
-        background-color: var(--white);
-        color: var(--dark);
-      }
-    `}
-		 ${(props) =>
-    props.color === 'orange' &&
-    props.variant === 'isChangeable' &&
-    css`
-      color: var(--white);
-      background-color: var(--orange);
-      &:active {
-        background-color: var(--white);
-        color: var(--orange);
-      }
-    `}
+        color: ${(props) => iconColors[props.color]};
+      `}
 `

@@ -4,7 +4,7 @@ import { AiOutlineUnorderedList } from 'react-icons/ai'
 const Switcher = () => {
   return (
     <>
-      <IconModule icon={<AiOutlineUnorderedList />} size="lg" change="true" />
+      <IconModule changeable icon={<AiOutlineUnorderedList />} />
       <Title variant="h5" fw="bold" color="gray">
         0
       </Title>
