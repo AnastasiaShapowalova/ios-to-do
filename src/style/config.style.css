@@ -2,10 +2,20 @@
 /* colors */
 --red: rgb(253, 43, 45);
 --orange: rgb(255, 158, 11);
+--yellow: rgb(255,207, 15);
+--green: rgb(47, 204, 74);
+--violet: rgb(75, 64, 224);
+--brown: rgb(189, 149, 99);
+--peach: rgb(229, 165, 159);
+--pink: rgb(252, 52, 102);
+--purple: rgb(201, 98, 243);
+
 --white: rgb(255, 255, 255);
+
 --blue-lighten: rgb(11, 132, 255);
 --blue: rgb(4, 98, 248);
 --blue-darken: rgb(26, 109, 197);
+
 --gray-lighten4: rgb(228, 228, 228);
 --gray-lighten3: rgb(218, 225, 231);
 --gray-lighten2: rgb(154, 154, 154);

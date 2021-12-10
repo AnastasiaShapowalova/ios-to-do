@@ -5,7 +5,14 @@ const iconColors = {
   blue: 'var(--blue)',
   red: 'var(--red)',
   orange: 'var(--orange)',
-  gray: 'var(--gray)'
+  gray: 'var(--gray)',
+  yellow: 'var(--yellow)',
+  green: 'var(--green)',
+  violet: 'var(--violet)',
+  brown: 'var(--brown)',
+  peach: 'var(--peach)',
+  pink: 'var(--pink)',
+  purple: 'var(--purple)'
 }
 
 export const IconWrapper = styled.div`

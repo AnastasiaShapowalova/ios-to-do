@@ -1,13 +1,15 @@
-import { Input } from '../../../../components'
-import { TaskSimpleFormWrapper } from './TaskSimpleForm.style'
+import { Input, Checkbox } from '../../../../components'
+import { TaskSimpleFormWrapper, InputWrapper } from './TaskSimpleForm.style'
 
 const TaskSimpleForm = () => {
   return (
     // chekbox, dueDataTime, flag, input
     <TaskSimpleFormWrapper>
-      {/* checkbox  */}
-      <Input />
-      <Input variant="input-isMuted" placeholder="Notes" />
+      <Checkbox isChecked="isChecked" color="green" />
+      <InputWrapper>
+        <Input />
+        <Input variant="input-isMuted" placeholder="Notes" />
+      </InputWrapper>
     </TaskSimpleFormWrapper>
   )
 }

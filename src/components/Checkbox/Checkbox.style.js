@@ -1,58 +1,56 @@
 import styled from 'styled-components'
 import { css } from 'styled-components'
 
+const iconColors = {
+  blue: 'var(--blue)',
+  red: 'var(--red)',
+  orange: 'var(--orange)',
+  gray: 'var(--gray)',
+  yellow: 'var(--yellow)',
+  green: 'var(--green)',
+  violet: 'var(--violet)',
+  brown: 'var(--brown)',
+  peach: 'var(--peach)',
+  pink: 'var(--pink)',
+  purple: 'var(--purple)'
+}
+
 export const CheckboxStyled = styled.input.attrs({ type: 'checkbox' })`
   opacity: 0%;
-  margin: 0;
-  margin-right: 16px;
 `
+
 export const Label = styled.div`
   position: relative;
   cursor: pointer;
-
   &:before {
     content: '';
     position: absolute;
     display: block;
-    top: 8px;
-    left: 0;
-    width: 18px;
-    height: 18px;
+    top: -18px;
+    left: 1px;
+    width: 16px;
+    height: 16px;
     border-radius: var(--border-radius-circle);
     background: var(--background-transparent);
-    border: 1px solid var(--blue);
-    ${(props) =>
-      props.color === 'gray' &&
-      css`
-        border-color: var(--gray-darken2);
-      `}
-    ${(props) =>
-      props.color === 'red' &&
-      css`
-        border-color: var(--red);
-      `}
+    border: 1px solid ${(props) => iconColors[props.color]};
   }
+
   &:after {
     content: '';
     position: absolute;
-    top: 11px;
-    left: 3px;
-    width: 14px;
-    height: 14px;
+    top: -15px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
     border-radius: var(--border-radius-circle);
-    background: ${(props) => props.isChecked && 'var(--blue)'};
-
     ${(props) =>
       props.isChecked &&
-      props.color === 'red' &&
       css`
-        background-color: var(--red);
-      `}
-    ${(props) =>
-      props.isChecked &&
-      props.color === 'gray' &&
-      css`
-        background-color: var(--gray-darken2);
-      `}
+        background: ${(props) => iconColors[props.color]};
+      `};
   }
+`
+
+export const CheckboxWrapper = styled.div`
+  height: 20px;
 `
