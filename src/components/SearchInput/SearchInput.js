@@ -9,12 +9,12 @@ const SearchInput = () => {
     <>
       <SearchInputWrapper size="md" fill="false" outline="false">
         <BsSearch />
-        <Input variant="searchInput" placeholder="Search"></Input>
+        <Input placeholder="Search"></Input>
         <Button
           shape="rounded"
           size="lg"
-          color="light"
-          variant="clearInputButton"
+          color="gray-lighten"
+          variant="button-isBlanck"
           icon={<MdCancel />}></Button>
       </SearchInputWrapper>
     </>

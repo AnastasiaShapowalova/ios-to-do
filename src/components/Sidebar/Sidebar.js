@@ -11,7 +11,7 @@ const Sidebar = () => {
       <Button
         size="md"
         color="light"
-        variant="addListButton"
+        variant="button-isBlanck"
         icon={<IoMdAddCircleOutline />}>
         Add List
       </Button>

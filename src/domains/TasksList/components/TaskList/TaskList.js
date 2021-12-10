@@ -10,9 +10,9 @@ const TaskList = () => {
       <Button
         icon={<BsFlagFill />}
         size="md"
-        color="light"
+        color="orange"
         shape="rounded"
-        variant="flagTaskButton"
+        variant="button-isFilled"
       />
     </>
   )

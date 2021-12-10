@@ -6,8 +6,8 @@ const TaskSimpleForm = () => {
     // chekbox, dueDataTime, flag, input
     <TaskSimpleFormWrapper>
       {/* checkbox  */}
-      <Input variant="taskInput" />
-      <Input variant="taskInput" placeholder="Notes" />
+      <Input />
+      <Input variant="input-isMuted" placeholder="Notes" />
     </TaskSimpleFormWrapper>
   )
 }

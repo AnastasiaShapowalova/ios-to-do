@@ -4,13 +4,9 @@ import { css } from 'styled-components'
 export const ButtonStyled = styled.button`
   display: flex;
   align-items: flex-end;
-  /* align-items: center; */
-  /* justify-content: center; */
   border: none;
   outline: none;
   cursor: pointer;
-  color: white;
-  background-color: var(--dark-darken3);
   min-height: 18px;
   min-width: 18px;
   width: auto;
@@ -18,6 +14,14 @@ export const ButtonStyled = styled.button`
   border-radius: var(--border-radius-sm);
   font-size: 12px;
   line-height: 18px;
+  color: var(--gray-lighten2);
+  background-color: var(--background-transparent);
+  &:hover {
+    background-color: var(--gray-darken3);
+  }
+  &:active {
+    color: var(--gray-lighten4);
+  }
 
   ${(props) =>
     props.shape === 'rounded' &&
@@ -38,18 +42,23 @@ export const ButtonStyled = styled.button`
 		${(props) =>
     props.color === 'orange' &&
     css`
-      color: orange;
+      &:active {
+        color: orange;
+      }
     `}
 		${(props) =>
-    props.color === 'gray' &&
+    props.color === 'gray-darken' &&
     css`
-      color: var(--dark-darken4);
+      color: var(--gray-darken4);
     `}
 		${(props) =>
-    props.color === 'gray-light' &&
+    props.color === 'gray-lighten' &&
     css`
-      color: var(--dark-lighten2);
+      &:active {
+        color: var(--gray-darken4);
+      }
     `}
+
 
 		${(props) =>
     props.size === 'sm' &&
@@ -70,51 +79,21 @@ export const ButtonStyled = styled.button`
       font-size: var(--fs-text-lg);
     `}
 
+
 		${(props) =>
-    props.variant === 'addListButton' &&
+    props.variant === 'button-isBlanck' &&
     css`
       background-color: var(--transparent);
-      &:active {
-        color: var(--dark-lighten4);
-      }
-    `}
-		${(props) =>
-    props.variant === 'deleteCategoryButton' &&
-    css`
-      background-color: var(--transparent);
-      &:active {
-        color: var(--dark-lighten4);
-      }
-    `}
-		${(props) =>
-    props.variant === 'deleteCategoryButton' &&
-    css`
-      background-color: var(--transparent);
-    `}
-		${(props) =>
-    props.variant === 'clearInputButton' &&
-    css`
-      background-color: var(--transparent);
-      &:active {
-        color: var(--dark-darken4);
-      }
-    `}
-		${(props) =>
-    props.variant === 'flagTaskButton' &&
-    css`
-      &:active {
-        color: var(--orange);
-      }
-    `}
-		${(props) =>
-    props.variant === 'addTaskButton' &&
-    css`
-      background-color: var(--background-transparent);
       &:hover {
-        background-color: var(--dark-darken3);
+        background-color: var(--transparent);
       }
-      &:active {
-        color: var(--dark-lighten4);
+    `}
+		${(props) =>
+    props.variant === 'button-isFilled' &&
+    css`
+      background-color: var(--gray-darken3);
+      &:hover {
+        background-color: var(--gray-darken3);
       }
     `}
 `

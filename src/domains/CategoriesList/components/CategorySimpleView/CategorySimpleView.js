@@ -14,9 +14,9 @@ const CategorySimpleView = () => {
         0
       </Text>
       <Button
-        variant="deleteCategoryButton"
         size="md"
-        color="dark"
+        color="gray-darken"
+        variant="button-isBlanck"
         icon={<IoCloseOutline />}></Button>
     </>
   )

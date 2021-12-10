@@ -15,22 +15,16 @@ export const InputStyled = styled.input`
   cursor: pointer;
 
   ${(props) =>
-    props.variant === 'categoryInput' &&
+    props.variant === 'input-isFilled' &&
     css`
       background-color: var(--gray-darken4);
       outline: 2px solid var(--blue-lighten);
       border-radius: var(--border-radius-xs);
     `}
+
   ${(props) =>
-    props.variant === 'taskInput' &&
+    props.variant === 'input-isMuted' &&
     css`
-      margin: var(--m-0);
-      background-color: var(--background-transparent);
-    `}
-	${(props) =>
-    props.variant === 'taskInput-muted' &&
-    css`
-      margin: var(--m-0);
-      background-color: var(--background-transparent);
+      color: var(--gray-lighten2);
     `}
 `

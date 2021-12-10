@@ -11,7 +11,8 @@ import {
   Sidebar,
   Container,
   Row,
-  Col
+  Col,
+  Input
 } from './components'
 import { BsWalletFill } from 'react-icons/bs'
 import { CategorySimpleForm, TaskSimpleForm } from './domains'
@@ -19,13 +20,14 @@ import { CategorySimpleForm, TaskSimpleForm } from './domains'
 function App() {
   return (
     <div className="App">
+      <Input />
       {/* <Container>
         <Row>
           <Col>JSHFDkjhsdf</Col>
           <Col>KJSDfhksjdf</Col>
           <Col>KJSH</Col>
         </Row> */}
-      {/* <Navigator /> */}
+      <Navigator />
       <Checkbox isChecked="isChecked" />
       <Checkbox isChecked="isChecked" color="red" />
       <Checkbox color="gray" />

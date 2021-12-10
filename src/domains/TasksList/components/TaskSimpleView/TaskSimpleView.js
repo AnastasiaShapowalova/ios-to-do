@@ -8,9 +8,9 @@ const TaskSimpleView = () => {
       {/* checkbox  */}
       <Text variant="h4">Task Title</Text>
       <Button
-        variant="deleteCategoryButton"
+        variant="button-isBlanck"
         size="md"
-        color="gray"
+        color="gray-darken"
         icon={<IoCloseOutline />}></Button>
     </>
   )
