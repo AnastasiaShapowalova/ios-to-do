@@ -1,8 +1,8 @@
 import { ContainerWrapper } from './Container.style'
 
 const Container = (props) => {
-  const { children } = props
-  return <ContainerWrapper>{children}</ContainerWrapper>
+  const { children, variant } = props
+  return <ContainerWrapper variant={variant}>{children}</ContainerWrapper>
 }
 
 export default Container
