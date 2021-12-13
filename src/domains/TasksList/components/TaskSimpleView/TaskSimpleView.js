@@ -1,4 +1,4 @@
-import { Button, Text } from '../../../../components'
+import { Button, Col, Row, Text } from '../../../../components'
 import { IoCloseOutline } from 'react-icons/io5'
 
 const TaskSimpleView = () => {
@@ -6,12 +6,18 @@ const TaskSimpleView = () => {
     //  Title,flag, checkbox, createdAt, EditedAt, delete, dueDataTime
     <>
       {/* checkbox  */}
-      <Text variant="h4">Task Title</Text>
-      <Button
-        variant="button-isBlanck"
-        size="md"
-        color="gray-darken"
-        icon={<IoCloseOutline />}></Button>
+      <Row>
+        <Col>
+          <Text variant="h4">Task Title</Text>
+        </Col>
+        <Col>
+          <Button
+            variant="button-isBlanck"
+            size="md"
+            color="gray-darken"
+            icon={<IoCloseOutline />}></Button>
+        </Col>
+      </Row>
     </>
   )
 }

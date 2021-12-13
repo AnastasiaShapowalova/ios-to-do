@@ -3,11 +3,11 @@ import { css } from 'styled-components'
 
 export const ColWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   box-sizing: border-box;
-  padding: 24px;
-  margin: 0;
+  padding: var(--p-md);
+  margin: var(--m-0);
   max-width: 100%;
-  background-color: cadetblue;
 
   flex: 1 0 0%;
 

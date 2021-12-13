@@ -13,6 +13,7 @@ export const SearchInputWrapper = styled.div`
   line-height: var(--lh-h5);
   padding: var(--p-xs) var(--p-md);
   font-size: var(--fs-text-md);
+  margin: var(--m-xl) 0;
   &:focus-within {
     outline: 2px solid var(--blue-lighten);
   }

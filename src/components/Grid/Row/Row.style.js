@@ -5,13 +5,14 @@ export const RowWrapper = styled.div`
   box-sizing: border-box;
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--p-0));
-  margin-right: calc(-0.5 * 24px);
-  margin-left: calc(-0.5 * 24px);
+  margin-right: calc(-0.5 * 20px);
+  margin-left: calc(-0.5 * 20px);
+  padding: 0;
 
   & > * & {
     flex-shrink: 0;
     width: 100%;
     max-width: 100%;
-    margin-top: 0;
+    margin-top: var(--m-0);
   }
 `

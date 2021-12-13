@@ -7,6 +7,3 @@ const Navigator = () => {
 }
 
 export default Navigator
-{
-  /* <applayout left={SIdewbare} right={Routes}/>> */
-}
