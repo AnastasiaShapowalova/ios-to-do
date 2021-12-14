@@ -3,7 +3,9 @@ import { TasksAll } from '../'
 import { Sidebar } from '../../components'
 
 const Navigator = () => {
-  return <AppLayout left={<Sidebar />} right={<TasksAll />} />
+  return (
+    <AppLayout className="AppLayout" left={<Sidebar />} right={<TasksAll />} />
+  )
 }
 
 export default Navigator

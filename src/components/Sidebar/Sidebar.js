@@ -1,16 +1,22 @@
-import { Row, SearchInput, Switcher, Col } from '..'
+import { Row, SearchInput, Switcher, Col, Container } from '..'
 import { CategoryList, CategorySimpleForm } from '../../domains'
 import { Button } from '../'
 import { IoMdAddCircleOutline } from 'react-icons/io'
 
 const Sidebar = () => {
   return (
-    <>
+    <Container variant="sm">
       <SearchInput />
-      <Switcher />
-      <Switcher />
-      <Switcher />
-      <Switcher />
+      <Row>
+        <Col>
+          <Switcher />
+          <Switcher />
+        </Col>
+        <Col>
+          <Switcher />
+          <Switcher />
+        </Col>
+      </Row>
       <CategoryList />
       <CategorySimpleForm />
       <Button
@@ -20,7 +26,7 @@ const Sidebar = () => {
         icon={<IoMdAddCircleOutline />}>
         Add List
       </Button>
-    </>
+    </Container>
   )
 }
 
