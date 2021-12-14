@@ -1,10 +1,10 @@
 import { Title, IconModule, Text } from '..'
 import { AiOutlineUnorderedList } from 'react-icons/ai'
-import { SwitcherWrapper, HeadingWrapper } from './Switcher.style'
+import { HeadingWrapper, SwitcherStyled } from './Switcher.style'
 
 const Switcher = () => {
   return (
-    <SwitcherWrapper>
+    <SwitcherStyled>
       <HeadingWrapper>
         <IconModule changeable icon={<AiOutlineUnorderedList />} />
         <Title variant="h5" color="gray-lighten">
@@ -14,7 +14,7 @@ const Switcher = () => {
       <Text size="sm" color="gray-lighten">
         Switcher
       </Text>
-    </SwitcherWrapper>
+    </SwitcherStyled>
   )
 }
 

@@ -6,7 +6,6 @@ export const ContainerWrapper = styled.div`
   flex-direction: column;
   max-width: 100%;
   margin: 0 auto;
-  padding: 12px;
   height: inherit;
   padding: 0 10px;
   box-sizing: border-box;

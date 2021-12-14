@@ -1,22 +1,23 @@
-import { Row, SearchInput, Switcher, Col, Container } from '..'
+import { SearchInput, Switcher } from '..'
 import { CategoryList, CategorySimpleForm } from '../../domains'
 import { Button } from '../'
 import { IoMdAddCircleOutline } from 'react-icons/io'
+import { SwitcherWrapper } from './Sidebar.style'
 
 const Sidebar = () => {
   return (
-    <Container variant="sm">
+    <>
       <SearchInput />
-      <Row>
-        <Col>
-          <Switcher />
-          <Switcher />
-        </Col>
-        <Col>
-          <Switcher />
-          <Switcher />
-        </Col>
-      </Row>
+      <SwitcherWrapper>
+        <Switcher />
+        <Switcher />
+      </SwitcherWrapper>
+
+      <SwitcherWrapper>
+        <Switcher />
+        <Switcher />
+      </SwitcherWrapper>
+
       <CategoryList />
       <CategorySimpleForm />
       <Button
@@ -26,7 +27,7 @@ const Sidebar = () => {
         icon={<IoMdAddCircleOutline />}>
         Add List
       </Button>
-    </Container>
+    </>
   )
 }
 
