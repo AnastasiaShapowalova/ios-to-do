@@ -17,6 +17,7 @@ export const InputStyled = styled.input`
   ${(props) =>
     props.variant === 'input-isFilled' &&
     css`
+      margin-right: 18px;
       background-color: var(--gray-darken4);
       outline: 2px solid var(--blue-lighten);
       border-radius: var(--border-radius-xs);

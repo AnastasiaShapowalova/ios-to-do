@@ -7,22 +7,18 @@ const CategorySimpleView = () => {
   return (
     // icon, name, count
     <CategorySimpleViewWrapper>
-      <Row>
-        <>
-          <IconModule icon={<AiOutlineUnorderedList />} />
-          <Text size="md">Categorie name</Text>
-        </>
-        <>
-          <Text variant="h6" color="gray">
-            0
-          </Text>
-          <Button
-            size="md"
-            color="gray-darken"
-            variant="button-isBlanck"
-            icon={<IoCloseOutline />}></Button>
-        </>
-      </Row>
+      <IconModule icon={<AiOutlineUnorderedList />} />
+      <Text style={{ margin: '8px' }} size="md">
+        Categorie name
+      </Text>
+      <Text style={{ marginLeft: 'auto' }} variant="h6" color="gray">
+        0
+      </Text>
+      <Button
+        size="md"
+        color="gray-darken"
+        variant="button-isBlanck"
+        icon={<IoCloseOutline />}></Button>
     </CategorySimpleViewWrapper>
   )
 }

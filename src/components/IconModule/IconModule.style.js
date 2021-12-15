@@ -26,6 +26,7 @@ export const IconWrapper = styled.div`
   background-color: ${(props) => iconColors[props.color]};
 	line-height: var(--lh-text-md);
   font-size: var(--fs-text-md);
+	
 
   &:active {
     ${(props) =>
