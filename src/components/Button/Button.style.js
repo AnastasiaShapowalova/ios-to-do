@@ -1,6 +1,12 @@
 import styled from 'styled-components'
 import { css } from 'styled-components'
 
+const buttonShape = {
+  rounded: ' var(--border-radius-sm)',
+  circle: 'var(--border-radius-circle)',
+  square: '0'
+}
+
 export const ButtonStyled = styled.button`
   display: flex;
   align-items: flex-end;
@@ -23,50 +29,35 @@ export const ButtonStyled = styled.button`
     color: var(--gray-lighten4);
   }
 
-  ${(props) =>
-    props.shape === 'rounded' &&
-    css`
-      border-radius: var(--border-radius-sm);
-    `}
-  ${(props) =>
-    props.shape === 'circle' &&
-    css`
-      border-radius: var(--border-radius-circle);
-    `}
-	${(props) =>
-    props.shape === 'square' &&
-    css`
-      border-radius: 0;
-    `}
+  border-radius: ${(props) => buttonShape[props.shape]};
 
-		${(props) =>
+  ${(props) =>
+    props.color === 'gray-darken' &&
+    css`
+      color: var(--gray-darken4);
+    `}
+  ${(props) =>
+    props.color === 'gray-lighten' &&
+    css`
+      &:active {
+        color: var(--gray-darken4);
+      }
+    `} 
+  ${(props) =>
     props.color === 'orange' &&
     css`
       &:active {
         color: orange;
       }
     `}
-		${(props) =>
-    props.color === 'gray-darken' &&
-    css`
-      color: var(--gray-darken4);
-    `}
-		${(props) =>
-    props.color === 'gray-lighten' &&
-    css`
-      &:active {
-        color: var(--gray-darken4);
-      }
-    `}
 
-
-		${(props) =>
+  ${(props) =>
     props.size === 'sm' &&
     css`
       padding: 0;
       font-size: var(--fs-text-sm);
     `}
-		${(props) =>
+  ${(props) =>
     props.size === 'md' &&
     css`
       padding: 4px;
