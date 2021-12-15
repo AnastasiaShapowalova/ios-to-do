@@ -1,9 +1,9 @@
 import { Header, Content } from './'
-import { Row, Col } from '..'
+import { Row, Col, Container } from '..'
 
 const PageLayout = () => {
   return (
-    <>
+    <Container variant="fluid">
       <Row>
         <Col>
           <Header />
@@ -14,7 +14,7 @@ const PageLayout = () => {
           <Content />
         </Col>
       </Row>
-    </>
+    </Container>
   )
 }
 

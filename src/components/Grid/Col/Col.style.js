@@ -5,7 +5,6 @@ export const ColWrapper = styled.div`
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding: var(--p-md);
   margin: var(--m-0);
   max-width: 100%;
 

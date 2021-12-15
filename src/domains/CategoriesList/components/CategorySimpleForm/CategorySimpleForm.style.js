@@ -9,4 +9,5 @@ export const CategorySimpleFormWrapper = styled.div`
   padding: var(--p-sm) var(--p-xl) var(--p-sm) var(--p-md);
   align-items: center;
   background-color: var(--blue-darken);
+  margin: var(--m-0) var(--m-sm);
 `

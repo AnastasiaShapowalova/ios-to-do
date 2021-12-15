@@ -5,9 +5,9 @@ export const ContainerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  margin: 0 auto;
+  margin: var(--m-0) var(--m-auto);
   height: inherit;
-  padding: 0 10px;
+  padding: var(--p-0);
   box-sizing: border-box;
 
   @media (min-width: 576px) {

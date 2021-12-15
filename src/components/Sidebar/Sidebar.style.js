@@ -1,14 +1,15 @@
 import styled from 'styled-components'
 
-export const SwitcherWrapper = styled.div`
-  display: flex;
-  margin: 0 -4px;
-`
-
 export const TitleWrapper = styled.div`
-  margin: 20px 0 0 10px;
+  margin: var(--m-xl) var(--m-0) var(--m-sm) var(--m-lg);
 `
 export const ButtonWrapper = styled.div`
   position: absolute;
-  bottom: 6px;
+  bottom: 12px;
+  left: 12px;
+`
+
+export const SidebarWrapper = styled.div`
+  margin: var(--m-md);
+  height: inherit;
 `

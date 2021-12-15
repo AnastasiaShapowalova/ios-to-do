@@ -19,15 +19,13 @@ export const IconWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 26px;
-  height: 26px;
-  font-size: var(--fs-text-md);
-  line-height: var(--lh-text-md);
   border-radius: var(--border-radius-circle);
-  padding: var(--p-0);
+  padding: var(--p-md);
   margin: var(--m-0);
   color: var(--white);
   background-color: ${(props) => iconColors[props.color]};
+	line-height: var(--lh-text-md);
+  font-size: var(--fs-text-md);
 
   &:active {
     ${(props) =>

@@ -7,20 +7,22 @@ const Header = () => {
     <>
       <Row>
         <Col>
-          <Button
-            shape="rounded"
-            variant="addTaskButton"
-            size="lg"
-            color="light"
-            icon={<IoAddOutline />}
-            hover></Button>
+          <div>
+            <Button
+              shape="rounded"
+              variant="addTaskButton"
+              size="lg"
+              color="light"
+              icon={<IoAddOutline />}
+              hover></Button>
+          </div>
         </Col>
       </Row>
       <Row>
-        <Col>
+        <Col col="11">
           <Title variant="h2">Header</Title>
         </Col>
-        <Col>
+        <Col col="1">
           <Title variant="h3">1</Title>
         </Col>
       </Row>
