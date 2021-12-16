@@ -343,7 +343,7 @@
 	background-color: var(--background-transparent)
 }
 
-
+/* border radius  */
 .border-radius-xs {
 	border-radius: var(--border-radius-xs);
 }
@@ -363,6 +363,7 @@
   border-radius: var(--border-radius-circle);
 }
 
+/* font size */
 .fs-h6 {
 	font-size: var(--fs-h6);
 }
@@ -382,6 +383,17 @@
   font-size: var(--fs-h1);
 }
 
+.fs-text-sm {
+  font-size: var(--fs-text-sm);
+}
+.fs-text-md {
+  font-size: var(--fs-text-md);
+}
+.fs-text-lg {
+  font-size: var(--fs-text-lg);
+}
+
+/* line height  */
 .lh-h6 {
   font-size: var(--lh-h6);
 }
@@ -402,16 +414,6 @@
 }
 .lh-100 {
   font-size: var(--lh-100);
-}
-
-.fs-text-sm {
-  font-size: var(--fs-text-sm);
-}
-.fs-text-md {
-  font-size: var(--fs-text-md);
-}
-.fs-text-lg {
-  font-size: var(--fs-text-lg);
 }
 
 .lh-text-sm {
