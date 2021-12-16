@@ -334,6 +334,97 @@
 .color-gray-darken4 {
   color: var(--gray-darken4);
 }
+.color-black {
+  color: var(--black);
+}
+
+
+.background-transparent {
+	background-color: var(--background-transparent)
+}
+
+
+.border-radius-xs {
+	border-radius: var(--border-radius-xs);
+}
+.border-radius-sm {
+  border-radius: var(--border-radius-sm);
+}
+.border-radius-md {
+  border-radius: var(--border-radius-md);
+}
+.border-radius-lg {
+  border-radius: var(--border-radius-lg);
+}
+.border-radius-xl {
+  border-radius: var(--border-radius-xl);
+}
+.border-radius-circle {
+  border-radius: var(--border-radius-circle);
+}
+
+.fs-h6 {
+	font-size: var(--fs-h6);
+}
+.fs-h5 {
+  font-size: var(--fs-h5);
+}
+.fs-h4 {
+  font-size: var(--fs-h4);
+}
+.fs-h3 {
+  font-size: var(--fs-h3);
+}
+.fs-h2 {
+  font-size: var(--fs-h2);
+}
+.fs-h1 {
+  font-size: var(--fs-h1);
+}
+
+.lh-h6 {
+  font-size: var(--lh-h6);
+}
+.lh-h5 {
+  font-size: var(--lh-h5);
+}
+.lh-h4 {
+  font-size: var(--lh-h4);
+}
+.lh-h3 {
+  font-size: var(--lh-h3);
+}
+.lh-h2 {
+  font-size: var(--lh-h2);
+}
+.lh-h1 {
+  font-size: var(--lh-h1);
+}
+.lh-100 {
+  font-size: var(--lh-100);
+}
+
+.fs-text-sm {
+  font-size: var(--fs-text-sm);
+}
+.fs-text-md {
+  font-size: var(--fs-text-md);
+}
+.fs-text-lg {
+  font-size: var(--fs-text-lg);
+}
+
+.lh-text-sm {
+  font-size: var(--lh-text-sm);
+}
+.lh-text-md {
+  font-size: var(--lh-text-md);
+}
+.lh-text-lg {
+  font-size: var(--lh-text-lg);
+}
+
+
 
 
 
