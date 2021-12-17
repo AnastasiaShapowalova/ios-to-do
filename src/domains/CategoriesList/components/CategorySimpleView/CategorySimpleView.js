@@ -10,7 +10,7 @@ const CategorySimpleView = (props) => {
     // icon, name, count
     <CategorySimpleViewWrapper>
       <IconModule icon={<AiOutlineUnorderedList />} />
-      <Text className="m-md overflow-ellipsis" size="md">
+      <Text className="my-md overflow-ellipsis" size="md">
         {children}
       </Text>
       <Text className="ml-auto" variant="h6" color="gray">
