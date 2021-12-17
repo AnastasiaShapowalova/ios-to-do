@@ -33,13 +33,13 @@ const Header = () => {
         <Row>
           <Col col="2" className="direction-row">
             <Text color="gray-lighten">0 completed •</Text>
-            <Button variant="button-isBlanck" color="red">
+            <Button variant="button-isBlanck" color="gray">
               Clear
             </Button>
           </Col>
           <Col>
             <PositionWrapper className="mr-sm">
-              <Button variant="button-isBlanck" color="red">
+              <Button variant="button-isBlanck" color="gray">
                 Show
               </Button>
             </PositionWrapper>

@@ -1,4 +1,3 @@
-import { Title } from '../../..'
 import { TaskList, TaskSimpleForm } from '../../../../domains'
 import { Row, Col } from '../../..'
 
@@ -13,13 +12,6 @@ const Content = () => {
       <Row>
         <Col>
           <TaskSimpleForm />
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <Title variant="h3" color="gray-darken">
-            No Remainders
-          </Title>
         </Col>
       </Row>
 

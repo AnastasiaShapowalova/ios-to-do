@@ -447,7 +447,7 @@
   font-size: var(--lh-text-lg);
 }
 
-/* heigth  */
+
 .height-100 {
 	height: 100%;
 }
@@ -466,4 +466,13 @@
 .align-center{
 	align-items: center;
 	justify-content: center;
+}
+
+.overflow-ellipsis {
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.flex-basis {
+	flex-basis: calc(100% - 55px);
 }

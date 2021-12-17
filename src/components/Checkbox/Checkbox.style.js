@@ -53,5 +53,5 @@ export const Label = styled.div`
 
 export const CheckboxWrapper = styled.div`
   height: 20px;
-  margin: var(--m-sm) var(--m-md) var(--m-0) var(--m-0);
+  margin: var(--m-md) var(--m-md) var(--m-0) var(--m-0);
 `

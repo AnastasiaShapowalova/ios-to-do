@@ -8,7 +8,7 @@ const TaskSimpleForm = () => {
       <Row>
         <Col className="direction-row">
           <Checkbox isChecked="isChecked" color="green" />
-          <InputWrapper>
+          <InputWrapper className="pt-sm pb-md">
             <Input />
             <Input variant="input-isMuted" placeholder="Notes" />
           </InputWrapper>

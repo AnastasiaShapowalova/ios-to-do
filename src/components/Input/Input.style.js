@@ -9,7 +9,7 @@ export const InputStyled = styled.input`
   outline: none;
   width: 100%;
   line-height: var(--lh-text-sm);
-  font-size: var(--fs-text-sm);
+  font-size: var(--fs-text-md);
   padding: var(--p-0);
   cursor: pointer;
 

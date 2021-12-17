@@ -1,6 +1,22 @@
 import styled from 'styled-components'
 import { css } from 'styled-components'
 
+const titleColor = {
+  blue: 'var(--blue)',
+  red: 'var(--red)',
+  orange: 'var(--orange)',
+  gray: 'var(--gray)',
+  yellow: 'var(--yellow)',
+  green: 'var(--green)',
+  violet: 'var(--violet)',
+  brown: 'var(--brown)',
+  peach: 'var(--peach)',
+  pink: 'var(--pink)',
+  purple: 'var(--purple)',
+  'gray-darken': 'var(--gray-darken2)',
+  'gray-lighten': 'var(--gray-lighten2) '
+}
+
 export const TitleStyled = styled.div`
   margin: auto 0;
   color: white;
@@ -49,19 +65,6 @@ export const TitleStyled = styled.div`
       font-weight: var(--font-weight-normal);
     `}
 
-	${(props) =>
-    props.color === 'gray-darken' &&
-    css`
-      color: var(--gray-darken2);
-    `}
-	${(props) =>
-    props.color === 'gray' &&
-    css`
-      color: var(--gray);
-    `}
-	${(props) =>
-    props.color === 'gray-lighten' &&
-    css`
-      color: var(--gray-lighten2);
-    `}
+
+	color: ${(props) => titleColor[props.color]};
 `

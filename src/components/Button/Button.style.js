@@ -47,12 +47,6 @@ export const ButtonStyled = styled.button`
   border-radius: ${(props) => buttonShape[props.shape]};
 
   ${(props) =>
-    props.color === 'gray-darken' &&
-    css`
-      color: var(--gray-darken4);
-    `}
-
-  ${(props) =>
     buttonColors[props.color] &&
     css`
       color: ${(props) => buttonColors[props.color]};
@@ -64,8 +58,20 @@ export const ButtonStyled = styled.button`
     `};
 
   ${(props) =>
+    props.color === 'gray-darken' &&
+    css`
+      color: var(--gray-darken4);
+
+      &:active {
+        color: var(--gray-lighten2);
+      }
+    `}
+
+  ${(props) =>
     props.color === 'gray-lighten' &&
     css`
+      color: var(--gray-lighten2);
+
       &:active {
         color: var(--gray-darken4);
       }
@@ -73,6 +79,8 @@ export const ButtonStyled = styled.button`
   ${(props) =>
     props.color === 'orange' &&
     css`
+      color: var(--gray-lighten2);
+
       &:active {
         color: orange;
       }

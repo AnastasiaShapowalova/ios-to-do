@@ -1,23 +1,22 @@
-import { Button, Col, Row } from '../../../../components'
+import { Col, Row } from '../../../../components'
 import { TaskSimpleView } from '..'
-import { BsFlagFill } from 'react-icons/bs'
 
 const TaskList = () => {
   return (
-    // checbox, Title, flag, delete
     <>
       <Row>
         <Col>
-          <TaskSimpleView />
+          <TaskSimpleView>Walk with dog</TaskSimpleView>
         </Col>
+      </Row>
+      <Row>
         <Col>
-          <Button
-            icon={<BsFlagFill />}
-            size="md"
-            color="orange"
-            shape="rounded"
-            variant="button-isFilled"
-          />
+          <TaskSimpleView>Wash dishes</TaskSimpleView>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <TaskSimpleView>Play the guitar</TaskSimpleView>
         </Col>
       </Row>
     </>
