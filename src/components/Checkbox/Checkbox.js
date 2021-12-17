@@ -1,12 +1,11 @@
 import { CheckboxStyled, Label, CheckboxWrapper } from './Checkbox.style'
 
 const Checkbox = (props) => {
-  const { isChecked, color } = props
+  const { color } = props
 
   return (
     <CheckboxWrapper data-testid="checkbox">
-      <CheckboxStyled />
-      <Label isChecked={isChecked} color={color || 'blue'} />
+      <CheckboxStyled color={color || 'blue'} />
     </CheckboxWrapper>
   )
 }

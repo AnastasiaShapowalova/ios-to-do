@@ -10,9 +10,9 @@ const TaskSimpleView = (props) => {
     <>
       <Row>
         <Col className="direction-row">
-          <Checkbox isChecked="isChecked" color="green" />
+          <Checkbox color="green" />
           <TaskWrapper className="display-flex">
-            <Text className="flex-basis" variant="h4">
+            <Text className="flex-basis pb-xs" variant="h4">
               {children}
             </Text>
             <Button

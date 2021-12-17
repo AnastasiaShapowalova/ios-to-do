@@ -7,7 +7,7 @@ const TaskSimpleForm = () => {
     <TaskSimpleFormWrapper>
       <Row>
         <Col className="direction-row">
-          <Checkbox isChecked="isChecked" color="green" />
+          <Checkbox color="green" />
           <InputWrapper className="pt-sm pb-md">
             <Input />
             <Input variant="input-isMuted" placeholder="Notes" />
