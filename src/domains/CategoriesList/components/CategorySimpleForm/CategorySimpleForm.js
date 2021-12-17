@@ -7,7 +7,7 @@ const CategorySimpleForm = () => {
     <CategorySimpleFormWrapper>
       <IconModule icon={<AiOutlineUnorderedList />} />
       <Input color="blue" variant="input-isFilled" />
-      <Text style={{ marginRight: '22px' }} variant="h6" color="gray">
+      <Text className="mr-xl" variant="h6" color="gray">
         0
       </Text>
     </CategorySimpleFormWrapper>

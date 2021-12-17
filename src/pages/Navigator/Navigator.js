@@ -4,7 +4,12 @@ import { Sidebar } from '../../components'
 
 const Navigator = () => {
   return (
-    <AppLayout className="AppLayout" left={<Sidebar />} right={<TasksAll />} />
+    <AppLayout
+      data-text-id="Navigator"
+      className="AppLayout"
+      left={<Sidebar />}
+      right={<TasksAll />}
+    />
   )
 }
 

@@ -2,9 +2,24 @@ import styled from 'styled-components'
 import { css } from 'styled-components'
 
 const buttonShape = {
-  rounded: ' var(--border-radius-sm)',
+  rounded: 'var(--border-radius-sm)',
   circle: 'var(--border-radius-circle)',
   square: '0'
+}
+
+const buttonColors = {
+  'gray-darken': 'var(--gray-darken4)',
+  orange: 'var(--orange)',
+  blue: 'var(--blue)',
+  red: 'var(--red)',
+  gray: 'var(--gray)',
+  yellow: 'var(--yellow)',
+  green: 'var(--green)',
+  violet: 'var(--violet)',
+  brown: 'var(--brown)',
+  peach: 'var(--peach)',
+  pink: 'var(--pink)',
+  purple: 'var(--purple)'
 }
 
 export const ButtonStyled = styled.button`
@@ -36,13 +51,25 @@ export const ButtonStyled = styled.button`
     css`
       color: var(--gray-darken4);
     `}
+
+  ${(props) =>
+    buttonColors[props.color] &&
+    css`
+      color: ${(props) => buttonColors[props.color]};
+      opacity: 0.8;
+      &:active {
+        color: ${(props) => buttonColors[props.color]};
+        opacity: 1;
+      }
+    `};
+
   ${(props) =>
     props.color === 'gray-lighten' &&
     css`
       &:active {
         color: var(--gray-darken4);
       }
-    `} 
+    `}
   ${(props) =>
     props.color === 'orange' &&
     css`

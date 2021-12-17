@@ -4,7 +4,7 @@ import { Row, Col } from '../../..'
 
 const Content = () => {
   return (
-    <>
+    <div>
       <Row>
         <Col>
           <TaskList />
@@ -26,7 +26,7 @@ const Content = () => {
       {/* Title,flag, checkbox, createdAt, EditedAt, delete, dueDataTime  */}
       {/* Checkbox, Input, flag, dueDataTime */}
       {/* no remaindners  */}
-    </>
+    </div>
   )
 }
 

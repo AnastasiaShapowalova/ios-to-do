@@ -5,7 +5,6 @@ export const InputStyled = styled.input`
   border: none;
   color: var(--white);
   height: 16px;
-  margin: var(--m-xs) var(--m-xl) var(--m-xs) var(--m-md);
   background: var(--background-transparent);
   outline: none;
   width: 100%;
@@ -17,7 +16,7 @@ export const InputStyled = styled.input`
   ${(props) =>
     props.variant === 'input-isFilled' &&
     css`
-      margin-right: 18px;
+      margin: var(--m-xs) var(--m-xl) var(--m-xs) var(--m-md);
       background-color: var(--gray-darken4);
       outline: 2px solid var(--blue-lighten);
       border-radius: var(--border-radius-xs);

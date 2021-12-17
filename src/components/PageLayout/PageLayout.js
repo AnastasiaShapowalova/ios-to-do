@@ -1,9 +1,10 @@
 import { Header, Content } from './'
-import { Row, Col, Container } from '..'
+import { Row, Col } from '..'
+import { PageLayoutWrapper } from './PageLayout.style'
 
 const PageLayout = () => {
   return (
-    <Container variant="fluid">
+    <PageLayoutWrapper className="height-100">
       <Row>
         <Col>
           <Header />
@@ -14,7 +15,7 @@ const PageLayout = () => {
           <Content />
         </Col>
       </Row>
-    </Container>
+    </PageLayoutWrapper>
   )
 }
 

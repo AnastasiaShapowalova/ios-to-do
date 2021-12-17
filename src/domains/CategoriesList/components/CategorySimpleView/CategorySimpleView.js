@@ -8,10 +8,10 @@ const CategorySimpleView = () => {
     // icon, name, count
     <CategorySimpleViewWrapper>
       <IconModule icon={<AiOutlineUnorderedList />} />
-      <Text style={{ margin: '8px' }} size="md">
+      <Text className="m-md" size="md">
         Categorie name
       </Text>
-      <Text style={{ marginLeft: 'auto' }} variant="h6" color="gray">
+      <Text className="ml-auto" variant="h6" color="gray">
         0
       </Text>
       <Button

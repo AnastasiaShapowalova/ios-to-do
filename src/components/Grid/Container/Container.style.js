@@ -99,18 +99,6 @@ export const ContainerWrapper = styled.div`
 		${(props) =>
     props.variant === 'fluid' &&
     css`
-      @media (min-width: 576px) {
-        max-width: 100%;
-      }
-      @media (min-width: 992px) {
-        max-width: 100%;
-      }
-      @media (min-width: 1200px) {
-        max-width: 100%;
-      }
-      @media (min-width: 1200px) {
-        max-width: 100%;
-      }
-      width: 100%;
+      min-width: 100%;
     `}
 `
