@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const TaskSimpleFormWrapper = styled.div`
+export const TaskSimpleFormWrapper = styled.form`
   display: flex;
   flex-direction: row;
   align-items: flex-start

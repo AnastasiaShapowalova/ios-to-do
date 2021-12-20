@@ -1,24 +1,27 @@
+import { useReducer } from 'react'
 import { TaskList, TaskSimpleForm } from '../../../../domains'
 import { Row, Col } from '../../..'
+import { initialState, reducer } from '../../../../contexts/reducer/reducer'
 
-const Content = () => {
+const Content = (props) => {
+  const { state, dispatch } = props
+  // const [state, dispatch] = useReducer(reducer, initialState)
+
   return (
-    <div>
+    <>
       <Row>
         <Col>
-          <TaskList />
+          <TaskList state={state} dispatch={dispatch} />
         </Col>
       </Row>
       <Row>
         <Col>
-          <TaskSimpleForm />
+          <TaskSimpleForm
+            add={(task) => dispatch({ type: 'add', task: task })}
+          />
         </Col>
       </Row>
-
-      {/* Title,flag, checkbox, createdAt, EditedAt, delete, dueDataTime  */}
-      {/* Checkbox, Input, flag, dueDataTime */}
-      {/* no remaindners  */}
-    </div>
+    </>
   )
 }
 

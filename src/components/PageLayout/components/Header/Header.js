@@ -3,7 +3,9 @@ import { IoAddOutline } from 'react-icons/io5'
 import { Row, Col } from '../../../'
 import { PositionWrapper, TitleWrapper } from './Header.styled'
 
-const Header = () => {
+const Header = (props) => {
+  const { state } = props
+
   return (
     <>
       <Row>
@@ -25,7 +27,7 @@ const Header = () => {
         </Col>
         <Col col="1">
           <PositionWrapper className="mr-sm">
-            <Title variant="h3">2</Title>
+            <Title variant="h3">{state.taskCount}</Title>
           </PositionWrapper>
         </Col>
       </Row>
@@ -39,7 +41,11 @@ const Header = () => {
           </Col>
           <Col>
             <PositionWrapper className="mr-sm">
-              <Button variant="button-isBlanck" color="gray">
+              <Button
+                variant="button-isBlanck"
+                color="gray"
+                // disabled={task === '' || task === ' '}
+              >
                 Show
               </Button>
             </PositionWrapper>

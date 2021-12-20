@@ -60,7 +60,7 @@
   padding-bottom: var(--p-0);
 }
 .pb-xs {
-  padding-bottom: var(--p-xs);
+  padding-bottom: var(--p-xs)!important;
 }
 .pb-sm {
   padding-bottom: var(--p-sm);
@@ -446,6 +446,15 @@
 .lh-text-lg {
   font-size: var(--lh-text-lg);
 }
+
+/* font-weight */
+.fw-bold {
+	font-weight: var(--font-weight-bold);
+}
+.fw-normal {
+  font-weight: var(--font-weight-normal);
+}
+
 
 
 .height-100 {

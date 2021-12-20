@@ -8,8 +8,8 @@ export const InputStyled = styled.input`
   background: var(--background-transparent);
   outline: none;
   width: 100%;
-  line-height: var(--lh-text-sm);
   font-size: var(--fs-text-md);
+  line-height: var(--lh-text-md);
   padding: var(--p-0);
   cursor: pointer;
 

@@ -6,9 +6,9 @@ import { Navigator } from './pages'
 
 function App() {
   return (
-    // <div className="App">
-    <Navigator />
-    // </div>
+    <>
+      <Navigator />
+    </>
   )
 }
 
