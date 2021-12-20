@@ -4,7 +4,7 @@ import { TaskSimpleFormWrapper, InputWrapper } from './TaskSimpleForm.style'
 const TaskSimpleForm = () => {
   return (
     // chekbox, dueDataTime, flag, input
-    <TaskSimpleFormWrapper>
+    <TaskSimpleFormWrapper id="taskSimpleForm">
       <Row>
         <Col className="direction-row">
           <Checkbox color="green" />

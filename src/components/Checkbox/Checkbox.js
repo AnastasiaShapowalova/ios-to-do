@@ -1,4 +1,4 @@
-import { CheckboxStyled, Label, CheckboxWrapper } from './Checkbox.style'
+import { CheckboxStyled, CheckboxWrapper } from './Checkbox.style'
 
 const Checkbox = (props) => {
   const { color } = props

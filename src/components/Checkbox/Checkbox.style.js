@@ -23,7 +23,6 @@ export const CheckboxStyled = styled.input.attrs({ type: 'checkbox' })`
   appearance: none;
   display: inline-block;
   vertical-align: middle;
-
   border: 1px solid #555;
   width: 20px;
   height: 20px;
