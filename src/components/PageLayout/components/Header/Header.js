@@ -12,6 +12,7 @@ const Header = () => {
         <Col>
           <PositionWrapper>
             <Button
+              // disabled={task === '' || task === ' '}
               shape="rounded"
               variant="addTaskButton"
               size="lg"
@@ -41,11 +42,7 @@ const Header = () => {
           </Col>
           <Col>
             <PositionWrapper className="mr-sm">
-              <Button
-                variant="button-isBlanck"
-                color="gray"
-                // disabled={task === '' || task === ' '}
-              >
+              <Button variant="button-isBlanck" color="gray">
                 Show
               </Button>
             </PositionWrapper>

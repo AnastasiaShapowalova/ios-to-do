@@ -3,12 +3,11 @@ import { useState } from 'react'
 const useSetEditTask = (todo) => {
   const [editTask, setEditTask] = useState(todo.task)
 
-  const setNewTask = (e) => {
+  const setEditedTask = (e) => {
     setEditTask(e.target.value)
-    console.log(e.target.value)
   }
 
-  return { editTask, setEditTask, setNewTask }
+  return { editTask, setEditTask, setEditedTask }
 }
 
 export default useSetEditTask
