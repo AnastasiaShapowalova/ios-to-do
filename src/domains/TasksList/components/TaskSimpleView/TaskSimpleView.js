@@ -1,20 +1,14 @@
-import { useState } from 'react'
 import { Button, Col, Row, Text, Checkbox, Input } from '../../../../components'
 import { IoCloseOutline } from 'react-icons/io5'
 import { TaskWrapper } from './TaskSimpleView.style'
 import { BsFlagFill } from 'react-icons/bs'
+import { useSetEditTask, useIsEditable } from '../../hooks'
 
 const TaskSimpleView = (props) => {
   const { todo, remove } = props
-  //use state
-  const [editTask, setEditTask] = useState(todo.task)
-  //use state
-  const [editable, isEditable] = useState(false)
+  const { editTask, setNewTask } = useSetEditTask(todo)
+  const { editable, isEditable } = useIsEditable()
 
-  const setNewTask = (e) => {
-    setEditTask(e.target.value)
-    console.log(e.target.value)
-  }
   return (
     <>
       {!editable ? (
