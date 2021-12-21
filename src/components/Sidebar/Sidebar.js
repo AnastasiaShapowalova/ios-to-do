@@ -43,7 +43,7 @@ const Sidebar = () => {
         </Col>
       </Row>
       <TitleWrapper>
-        <Title variant="h6" color="gray-darken">
+        <Title variant="h6" color="gray">
           My lists
         </Title>
       </TitleWrapper>

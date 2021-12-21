@@ -12,7 +12,7 @@ const Switcher = (props) => {
           0
         </Title>
       </HeadingWrapper>
-      <Text size="sm" color="gray-lighten">
+      <Text className="overflow-ellipsis" size="sm" color="gray-lighten">
         {children}
       </Text>
     </SwitcherStyled>

@@ -4,9 +4,11 @@ import { Row, Container, Col } from '..'
 const AppLayout = ({ left, right }) => {
   return (
     <BrowserRouter>
-      <Container variant="fluid">
-        <Row>
-          <Col col="2">{left}</Col>
+      <Container variant="fluid" className="height-100">
+        <Row className="height-100">
+          <Col col="2" className="height-100">
+            {left}
+          </Col>
           <Col col="10">
             <Routes>
               <Route path="/" element={right} />

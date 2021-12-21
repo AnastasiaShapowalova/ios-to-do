@@ -7,8 +7,8 @@ import { SearchInputWrapper } from './SearchInput.style'
 const SearchInput = () => {
   return (
     <SearchInputWrapper size="md" fill="false" outline="false">
-      <BsSearch />
-      <Input placeholder="Search"></Input>
+      <BsSearch className="mr-md" />
+      <Input placeholder="Search" type="search"></Input>
       <Button
         shape="rounded"
         size="lg"

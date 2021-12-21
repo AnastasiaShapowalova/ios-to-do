@@ -6,6 +6,7 @@ export const SwitcherStyled = styled.div`
   max-width: 100%;
   padding: var(--p-md) var(--p-md) var(--p-sm) var(--p-md);
   margin: var(--m-sm);
+  overflow: hidden;
 `
 
 export const HeadingWrapper = styled.div`

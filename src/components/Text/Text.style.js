@@ -1,6 +1,22 @@
 import styled from 'styled-components'
 import { css } from 'styled-components'
 
+const textColor = {
+  blue: 'var(--blue)',
+  red: 'var(--red)',
+  orange: 'var(--orange)',
+  gray: 'var(--gray)',
+  yellow: 'var(--yellow)',
+  green: 'var(--green)',
+  violet: 'var(--violet)',
+  brown: 'var(--brown)',
+  peach: 'var(--peach)',
+  pink: 'var(--pink)',
+  purple: 'var(--purple)',
+  'gray-darken': 'var(--gray-darken2)',
+  'gray-lighten': 'var(--gray-lighten2) '
+}
+
 export const TextStyled = styled.div`
   font-size: var(--fs-text-md);
   line-height: var(--fs-text-lg);
@@ -25,19 +41,5 @@ export const TextStyled = styled.div`
       line-height: var(--lh-text-lg);
     `}
 
-	${(props) =>
-    props.color === 'gray-darken' &&
-    css`
-      color: var(--gray-darken2);
-    `}
-	${(props) =>
-    props.color === 'gray' &&
-    css`
-      color: var(--gray);
-    `}
-	${(props) =>
-    props.color === 'gray-lighten' &&
-    css`
-      color: var(--gray-lighten2);
-    `}
+		color: ${(props) => textColor[props.color]};
 `

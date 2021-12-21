@@ -1,13 +1,16 @@
-import { Button, Title } from '../../../'
+import { Button, Title, Text } from '../../../'
 import { IoAddOutline } from 'react-icons/io5'
 import { Row, Col } from '../../../'
+import { PositionWrapper, TitleWrapper } from './Header.styled'
 
-const Header = () => {
+const Header = (props) => {
+  const { state } = props
+
   return (
     <>
       <Row>
         <Col>
-          <div>
+          <PositionWrapper>
             <Button
               shape="rounded"
               variant="addTaskButton"
@@ -15,7 +18,7 @@ const Header = () => {
               color="light"
               icon={<IoAddOutline />}
               hover></Button>
-          </div>
+          </PositionWrapper>
         </Col>
       </Row>
       <Row>
@@ -23,9 +26,32 @@ const Header = () => {
           <Title variant="h2">Header</Title>
         </Col>
         <Col col="1">
-          <Title variant="h3">1</Title>
+          <PositionWrapper className="mr-sm">
+            <Title variant="h3">{state.taskCount}</Title>
+          </PositionWrapper>
         </Col>
       </Row>
+      <TitleWrapper>
+        <Row>
+          <Col col="2" className="direction-row">
+            <Text color="gray-lighten">0 completed •</Text>
+            <Button variant="button-isBlanck" color="gray">
+              Clear
+            </Button>
+          </Col>
+          <Col>
+            <PositionWrapper className="mr-sm">
+              <Button
+                variant="button-isBlanck"
+                color="gray"
+                // disabled={task === '' || task === ' '}
+              >
+                Show
+              </Button>
+            </PositionWrapper>
+          </Col>
+        </Row>
+      </TitleWrapper>
     </>
   )
 }

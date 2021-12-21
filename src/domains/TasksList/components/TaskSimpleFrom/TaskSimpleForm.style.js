@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const TaskSimpleFormWrapper = styled.div`
+export const TaskSimpleFormWrapper = styled.form`
   display: flex;
   flex-direction: row;
   align-items: flex-start
@@ -10,7 +10,6 @@ export const TaskSimpleFormWrapper = styled.div`
 `
 
 export const InputWrapper = styled.div`
-  padding-left: var(--m-xm);
   border-bottom: 1px var(--gray-darken1) solid;
   width: 100%;
 `

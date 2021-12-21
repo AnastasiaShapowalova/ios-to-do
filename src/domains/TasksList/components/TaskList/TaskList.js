@@ -1,25 +1,23 @@
-import { Button, Col, Row } from '../../../../components'
+import { Col, Row } from '../../../../components'
 import { TaskSimpleView } from '..'
-import { BsFlagFill } from 'react-icons/bs'
 
-const TaskList = () => {
+const TaskList = (props) => {
+  const { state, dispatch } = props
+
   return (
-    // checbox, Title, flag, delete
     <>
-      <Row>
-        <Col>
-          <TaskSimpleView />
-        </Col>
-        <Col>
-          <Button
-            icon={<BsFlagFill />}
-            size="md"
-            color="orange"
-            shape="rounded"
-            variant="button-isFilled"
-          />
-        </Col>
-      </Row>
+      {state.tasks.map((el) => (
+        <Row key={el.id}>
+          <Col>
+            <TaskSimpleView
+              todo={el}
+              remove={() => dispatch({ type: 'remove', id: el.id })}
+              edit={(task) =>
+                dispatch({ type: 'edit', id: el.id, task: task })
+              }></TaskSimpleView>
+          </Col>
+        </Row>
+      ))}
     </>
   )
 }

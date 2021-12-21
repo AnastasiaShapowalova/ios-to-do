@@ -10,6 +10,8 @@ export const ButtonWrapper = styled.div`
 `
 
 export const SidebarWrapper = styled.div`
-  margin: var(--m-md);
+  padding: var(--m-md);
+  background-color: var(--gray-darken3);
   height: inherit;
+  border-right: 1px solid black;
 `
