@@ -6,15 +6,16 @@ import { BsFlagFill } from 'react-icons/bs'
 
 const TaskSimpleView = (props) => {
   const { todo, remove } = props
-  const [task, setTask] = useState(todo.task)
+  //use state
+  const [editTask, setEditTask] = useState(todo.task)
+  //use state
   const [editable, isEditable] = useState(false)
 
   const setNewTask = (e) => {
-    setTask(e.target.value)
+    setEditTask(e.target.value)
     console.log(e.target.value)
   }
   return (
-    //  Title,flag, checkbox, createdAt, EditedAt, delete, dueDataTime
     <>
       {!editable ? (
         <Row>
@@ -51,7 +52,7 @@ const TaskSimpleView = (props) => {
               <Input
                 onSubmit={() => isEditable(!editable)}
                 className="pb-xs"
-                value={task}
+                value={editTask}
                 onChange={(e) => setNewTask(e)}
                 onBlur={() => isEditable(!editable)}
                 autoFocus
