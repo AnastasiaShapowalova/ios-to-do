@@ -1,6 +1,6 @@
-import { Input, Checkbox, Col, Row } from '../../../../components'
+import { Input, Checkbox, Col, Row } from 'components'
 import { TaskSimpleFormWrapper, InputWrapper } from './TaskSimpleForm.style'
-import { useSetTask } from '../../hooks'
+import { useSetTask } from '../../../../contexts/hooks'
 
 const TaskSimpleForm = (props) => {
   const { add } = props

@@ -1,10 +1,10 @@
-import { Button, Title, Text } from '../../../'
+import { Button, Title, Text, Row, Col } from 'components'
 import { IoAddOutline } from 'react-icons/io5'
-import { Row, Col } from '../../../'
 import { PositionWrapper, TitleWrapper } from './Header.styled'
+import { useStore } from 'contexts/hooks'
 
-const Header = (props) => {
-  const { state } = props
+const Header = () => {
+  const { state } = useStore()
 
   return (
     <>

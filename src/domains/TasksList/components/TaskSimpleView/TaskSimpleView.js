@@ -1,8 +1,8 @@
-import { Button, Col, Row, Text, Checkbox, Input } from '../../../../components'
+import { Button, Col, Row, Text, Checkbox, Input } from 'components'
 import { IoCloseOutline } from 'react-icons/io5'
 import { TaskWrapper } from './TaskSimpleView.style'
 import { BsFlagFill } from 'react-icons/bs'
-import { useSetEditTask, useIsEditable } from '../../hooks'
+import { useSetEditTask, useIsEditable } from '../../../../contexts/hooks'
 
 const TaskSimpleView = (props) => {
   const { todo, remove } = props
