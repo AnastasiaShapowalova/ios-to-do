@@ -1,17 +1,15 @@
-import { useReducer } from 'react'
 import { TaskList, TaskSimpleForm } from '../../../../domains'
 import { Row, Col } from '../../..'
-import { initialState, reducer } from '../../../../contexts/reducer/reducer'
+import { useStore } from 'contexts/hooks'
 
-const Content = (props) => {
-  const { state, dispatch } = props
-  // const [state, dispatch] = useReducer(reducer, initialState)
+const Content = () => {
+  const { dispatch } = useStore()
 
   return (
     <>
       <Row>
         <Col>
-          <TaskList state={state} dispatch={dispatch} />
+          <TaskList />
         </Col>
       </Row>
       <Row>

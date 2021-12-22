@@ -6,8 +6,8 @@ export const RowWrapper = styled.div`
   flex-wrap: wrap;
   margin-top: calc(-1 * var(--p-0));
   padding: var(--p-0);
-
-  & > * & {
+  border: 1px green solid;
+  & > * {
     flex-shrink: 0;
     width: 100%;
     max-width: 100%;

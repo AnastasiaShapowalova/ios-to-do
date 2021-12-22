@@ -1,8 +1,9 @@
-import { Col, Row } from '../../../../components'
-import { TaskSimpleView } from '..'
+import { Col, Row } from 'components'
+import { TaskSimpleView } from '../'
+import { useStore } from 'contexts/hooks'
 
-const TaskList = (props) => {
-  const { state, dispatch } = props
+const TaskList = () => {
+  const { state, dispatch } = useStore()
 
   return (
     <>

@@ -1,17 +1,16 @@
-import { useReducer } from 'react'
 import { Header, Content } from './'
 import { Row, Col } from '..'
 import { PageLayoutWrapper } from './PageLayout.style'
-import { initialState, reducer } from '../../contexts/reducer/reducer'
+import { useStore } from 'contexts/hooks'
 
 const PageLayout = () => {
-  const [state, dispatch] = useReducer(reducer, initialState)
+  const { state, dispatch } = useStore()
 
   return (
     <PageLayoutWrapper className="height-100">
       <Row>
         <Col>
-          <Header state={state} />
+          <Header />
         </Col>
       </Row>
       <Row>
