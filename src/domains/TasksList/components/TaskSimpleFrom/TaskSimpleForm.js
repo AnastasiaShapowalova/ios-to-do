@@ -16,9 +16,9 @@ const TaskSimpleForm = () => {
   }
 
   return (
-    <TaskSimpleFormWrapper onKeyPress={myFunction}>
+    <TaskSimpleFormWrapper onKeyPress={myFunction} className="direction-column">
       <Row>
-        <Col className="direction-row" col="auto">
+        <Col className="direction-row">
           <Checkbox color="green" />
           <InputWrapper className="pt-sm pb-md">
             <Input

@@ -17,7 +17,7 @@ const StoreProvider = ({ children }) => {
       }
     ]
   })
-  // const { AddTask } = useSetTask(dispatch)
+
   const addTask = useAddTask(dispatch)
 
   return (

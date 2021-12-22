@@ -12,7 +12,6 @@ const Header = () => {
         <Col>
           <PositionWrapper>
             <Button
-              // disabled={task === '' || task === ' '}
               shape="rounded"
               variant="addTaskButton"
               size="lg"

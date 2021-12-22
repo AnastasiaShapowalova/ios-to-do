@@ -1,10 +1,7 @@
 import { TaskList, TaskSimpleForm } from '../../../../domains'
 import { Row, Col } from '../../..'
-import { useStore } from 'contexts/hooks'
 
 const Content = () => {
-  const { dispatch } = useStore()
-
   return (
     <>
       <Row>
@@ -14,9 +11,7 @@ const Content = () => {
       </Row>
       <Row>
         <Col>
-          <TaskSimpleForm
-          // add={(task) => dispatch({ type: 'add', task: task })}
-          />
+          <TaskSimpleForm />
         </Col>
       </Row>
     </>

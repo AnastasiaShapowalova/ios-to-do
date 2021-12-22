@@ -8,7 +8,6 @@ export const RowWrapper = styled.div`
   padding: var(--p-0);
   & > * {
     flex-shrink: 0;
-    width: 100%;
     max-width: 100%;
     margin-top: var(--m-0);
   }
