@@ -6,6 +6,8 @@ const useAddTask = (dispatch) => {
       type: 'addTask',
       payload
     })
+
+    return addTask
   }
   return addTask
 }

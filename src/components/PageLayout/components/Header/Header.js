@@ -1,7 +1,7 @@
 import { Button, Title, Text, Row, Col } from 'components'
 import { IoAddOutline } from 'react-icons/io5'
 import { PositionWrapper, TitleWrapper } from './Header.styled'
-import { useStore } from 'contexts/hooks'
+import { useStore } from 'context'
 
 const Header = () => {
   const { state } = useStore()

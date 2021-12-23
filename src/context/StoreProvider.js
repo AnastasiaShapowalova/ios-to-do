@@ -1,7 +1,8 @@
 import { useReducer } from 'react'
-import { StoreContext } from '.'
-import { reducer } from '../reducer/'
-import { useAddTask } from '../hooks'
+import StoreContext from './StoreContext'
+import { reducer } from './reducer'
+import { useAddTask } from './hook'
+import { useRemoveTask } from './hook'
 
 const StoreProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, {
@@ -19,13 +20,15 @@ const StoreProvider = ({ children }) => {
   })
 
   const addTask = useAddTask(dispatch)
+  const removeTask = useRemoveTask(dispatch)
 
   return (
     <StoreContext.Provider
       value={{
         state,
         dispatch,
-        addTask
+        addTask,
+        removeTask
       }}>
       {children}
     </StoreContext.Provider>
