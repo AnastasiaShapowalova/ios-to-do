@@ -1,11 +1,8 @@
 import { Header, Content } from './'
 import { Row, Col } from '..'
 import { PageLayoutWrapper } from './PageLayout.style'
-import { useStore } from 'contexts/hooks'
 
 const PageLayout = () => {
-  const { state, dispatch } = useStore()
-
   return (
     <PageLayoutWrapper className="height-100">
       <Row>
@@ -15,7 +12,7 @@ const PageLayout = () => {
       </Row>
       <Row>
         <Col>
-          <Content state={state} dispatch={dispatch} />
+          <Content />
         </Col>
       </Row>
     </PageLayoutWrapper>

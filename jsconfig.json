@@ -4,7 +4,7 @@
         "paths": {
             "components": ["./components/*"],
             "domains": ["./domains/*"],
-            "contexts": ["./contexts/*"]
+            "context": ["./context/*"]
         }
     }
 }

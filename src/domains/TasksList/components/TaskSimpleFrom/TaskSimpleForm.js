@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import { Input, Checkbox, Col, Row } from 'components'
-import { useStore } from 'contexts/hooks'
 import { TaskSimpleFormWrapper, InputWrapper } from './TaskSimpleForm.style'
+import { useStore } from 'context/hook/'
 
 const TaskSimpleForm = () => {
   const { addTask } = useStore()
   const [task, setTask] = useState('')
-
   const myFunction = (e) => {
     const newTask = task.trim()
     if (e.key === 'Enter' && newTask.length >= 1) {
