@@ -7,6 +7,7 @@ export const TaskSimpleFormWrapper = styled.form`
   outline: none;
   color: var(--white);
   margin-bottom: var(--m-lg);
+	width: 100%
 `
 
 export const InputWrapper = styled.div`

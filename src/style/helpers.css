@@ -466,7 +466,7 @@
 }
 
 .direction-column {
-  flex-direction: var(--column);
+  flex-direction: column!important;
 }
 .direction-row {
   flex-direction: row!important;

@@ -2,12 +2,13 @@ import { Button, Col, Row, Text, Checkbox, Input } from 'components'
 import { IoCloseOutline } from 'react-icons/io5'
 import { TaskWrapper } from './TaskSimpleView.style'
 import { BsFlagFill } from 'react-icons/bs'
-import { useSetEditTask, useIsEditable } from 'contexts/hooks'
+import { useSetEditTask, useIsEditable, useStore } from 'contexts/hooks'
 
 const TaskSimpleView = (props) => {
   const { todo, remove } = props
-  const { editTask, setEditedTask } = useSetEditTask(todo)
+  // const { editTask, setEditedTask } = useSetEditTask(todo)
   const { editable, isEditable } = useIsEditable()
+  const { state } = useStore()
 
   return (
     <>
@@ -20,7 +21,7 @@ const TaskSimpleView = (props) => {
                 className="flex-basis pb-xs"
                 size="md"
                 onClick={() => isEditable(!editable)}>
-                {todo.task}
+                {state.tasks}
               </Text>
               <Button
                 onClick={remove}
@@ -46,8 +47,8 @@ const TaskSimpleView = (props) => {
               <Input
                 onSubmit={() => isEditable(!editable)}
                 className="pb-xs"
-                value={editTask}
-                onChange={(e) => setEditedTask(e)}
+                // value={editTask}
+                // onChange={(e) => setEditedTask(e)}
                 onBlur={() => isEditable(!editable)}
                 autoFocus
               />
