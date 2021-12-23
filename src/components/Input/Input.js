@@ -1,36 +1,27 @@
-import React from 'react'
-import {
-  InputWrapper,
-  CustomInput,
-  IconWrapper,
-  AddInput,
-  Radio,
-  Wrapper,
-  EnterField
-} from './Input.style'
+import { InputStyled } from './Input.style'
 
 const Input = (props) => {
-  // const { color, children, size, focus, type } = props
-  const { placeholder, icon, button, count, note, radio } = props
+  const {
+    placeholder,
+    variant,
+    type,
+    value,
+    onChange,
+    onClick,
+    className,
+    autoFocus
+  } = props
   return (
-    <>
-      <Wrapper placeholder={placeholder}>
-        {icon && <IconWrapper>{icon}</IconWrapper>}
-        {/* {note && radio ? (
-          <InputWrapper>
-            <Radio />
-            <EnterField>
-              <CustomInput />
-              <AddInput placeholder={placeholder} />
-            </EnterField>
-          </InputWrapper>
-        ) : ( */}
-        <CustomInput />
-        {/* )} */}
-        {count && count}
-        {button && button}
-      </Wrapper>
-    </>
+    <InputStyled
+      autoFocus={autoFocus}
+      variant={variant}
+      placeholder={placeholder}
+      type={type}
+      onChange={onChange}
+      value={value}
+      onClick={onClick}
+      className={className}
+    />
   )
 }
 

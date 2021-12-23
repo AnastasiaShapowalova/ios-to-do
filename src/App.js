@@ -1,12 +1,15 @@
 import './App.css'
+import './style/config.style.css'
+import './style/helpers.css'
 import { Navigator } from './pages'
-import moment from 'moment'
+import { StoreProvider } from 'contexts/StoreContext'
+// import moment from 'moment'
 
 function App() {
   return (
-    <div className="App">
+    <StoreProvider>
       <Navigator />
-    </div>
+    </StoreProvider>
   )
 }
 

@@ -1,12 +1,21 @@
-import React from 'react'
+import { Title, IconModule, Text } from '..'
+import { HeadingWrapper, SwitcherStyled } from './Switcher.style'
 
-const Switcher = () => {
+const Switcher = (props) => {
+  const { icon, color, children } = props
+
   return (
-    // switcher items : name, count, icon
-    <>
-      <h1>switcher</h1>
-      <p>count</p>
-    </>
+    <SwitcherStyled>
+      <HeadingWrapper>
+        <IconModule changeable icon={icon} color={color} />
+        <Title variant="h5" color="gray-lighten">
+          0
+        </Title>
+      </HeadingWrapper>
+      <Text className="overflow-ellipsis" size="sm" color="gray-lighten">
+        {children}
+      </Text>
+    </SwitcherStyled>
   )
 }
 

@@ -1,25 +1,21 @@
-import React from 'react'
 import { Input } from '..'
 import { BsSearch } from 'react-icons/bs'
-import { Button } from '../'
 import { MdCancel } from 'react-icons/md'
+import { Button } from '../'
+import { SearchInputWrapper } from './SearchInput.style'
 
 const SearchInput = () => {
   return (
-    // input, icon
-    <>
-      <Input
-        placeholder="Search"
-        icon={<BsSearch />}
-        button={
-          <Button
-            shape="rounded"
-            size="small"
-            color="light"
-            focus="dark"
-            icon={<MdCancel />}></Button>
-        }></Input>
-    </>
+    <SearchInputWrapper size="md" fill="false" outline="false">
+      <BsSearch className="mr-md" />
+      <Input placeholder="Search" type="search"></Input>
+      <Button
+        shape="rounded"
+        size="lg"
+        color="gray-lighten"
+        variant="button-isBlanck"
+        icon={<MdCancel />}></Button>
+    </SearchInputWrapper>
   )
 }
 

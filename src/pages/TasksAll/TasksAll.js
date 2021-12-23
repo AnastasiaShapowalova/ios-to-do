@@ -1,8 +1,11 @@
-import React from 'react'
 import { PageLayout } from '../../components'
 
 const TasksAll = () => {
-  return <PageLayout />
+  return (
+    <>
+      <PageLayout />
+    </>
+  )
 }
 
 export default TasksAll

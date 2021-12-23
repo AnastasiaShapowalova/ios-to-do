@@ -1,34 +1,31 @@
-import React from 'react'
-import { Btn, IconWrapper } from './Button.style'
+import { ButtonStyled, IconWrapper } from './Button.style'
 
 const Button = (props) => {
-  const { shape, color, children, size, hover, focus, icon, type, warning } =
-    props
+  const { shape, color, children, size, icon, variant, onClick } = props
+
   return (
-    <Btn
-      shape={shape}
-      //rounded, circle
-      color={color}
-      //light, dark
-      size={size}
-      //large, small
-      type={type}
-      //fill
-      hover={hover}
-      focus={focus}
-      icon={icon}
-      warning={warning}>
+    <>
       {icon && children ? (
-        <>
+        <ButtonStyled
+          shape={shape}
+          color={color}
+          size={size}
+          variant={variant}
+          onClick={onClick}>
           <IconWrapper>{icon}</IconWrapper>
           {children}
-        </>
-      ) : icon ? (
-        icon
-      ) : children ? (
-        children
-      ) : null}
-    </Btn>
+        </ButtonStyled>
+      ) : (
+        <ButtonStyled
+          shape={shape}
+          color={color}
+          size={size}
+          variant={variant}
+          onClick={onClick}>
+          {icon || children}
+        </ButtonStyled>
+      )}
+    </>
   )
 }
 

@@ -1,21 +1,24 @@
-import { Button } from '../../../../components'
-import React from 'react'
-import { TaskSimpleView } from '..'
-import { BsFlag } from 'react-icons/bs'
+import { Col, Row } from 'components'
+import { TaskSimpleView } from '../'
+import { useStore } from 'contexts/hooks'
 
 const TaskList = () => {
+  const { state, dispatch } = useStore()
+
   return (
-    // checbox, text, flag, delete
     <>
-      <TaskSimpleView />
-      <Button
-        icon={<BsFlag />}
-        type="fill"
-        size="small"
-        color="light"
-        warning="warning"
-        shape
-      />
+      {state.tasks.map((el) => (
+        <Row key={el.id}>
+          <Col>
+            <TaskSimpleView
+              todo={el}
+              remove={() => dispatch({ type: 'remove', id: el.id })}
+              edit={(task) =>
+                dispatch({ type: 'edit', id: el.id, task: task })
+              }></TaskSimpleView>
+          </Col>
+        </Row>
+      ))}
     </>
   )
 }

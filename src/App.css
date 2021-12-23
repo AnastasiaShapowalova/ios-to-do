@@ -1,8 +1,22 @@
-.App {
-  text-align: center;
+html {
+	height: 100%;
 }
 
 body {
 	background-color: rgb(43, 43, 43);
+ 	font-family: -apple-system, BlinkMacSystemFont;
+	margin: 0;
+	height: inherit;
 }
 
+#root {
+	height: inherit;
+}
+
+.App {
+  height: inherit;
+}
+
+.AppLayout {
+	height: inherit;
+}

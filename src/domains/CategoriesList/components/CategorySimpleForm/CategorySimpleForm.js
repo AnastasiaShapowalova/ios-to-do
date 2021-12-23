@@ -1,12 +1,16 @@
-import React from 'react'
-import { Input } from '../../../../components'
+import { Input, Text, IconModule } from '../../../../components'
 import { AiOutlineUnorderedList } from 'react-icons/ai'
+import { CategorySimpleFormWrapper } from './CategorySimpleForm.style'
 
 const CategorySimpleForm = () => {
   return (
-    // icon, input
-    <Input count="0" icon={<AiOutlineUnorderedList />} />
-    // count
+    <CategorySimpleFormWrapper>
+      <IconModule icon={<AiOutlineUnorderedList />} />
+      <Input color="blue" variant="input-isFilled" autoFocus />
+      <Text className="mr-xl" variant="h6" color="gray">
+        0
+      </Text>
+    </CategorySimpleFormWrapper>
   )
 }
 
