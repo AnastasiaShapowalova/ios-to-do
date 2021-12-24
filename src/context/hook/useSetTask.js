@@ -6,10 +6,12 @@ const useSetTask = (add) => {
     setTask(e.target.value)
     console.log(e.target.value)
   }
+
   const AddTask = (event) => {
-    if (event.key === 'Enter') {
-      add(task)
-      console.log(`task: ${task}`)
+    const newTask = task.trim()
+    if (event.key === 'Enter' && newTask.length >= 1) {
+      add(newTask)
+      console.log(`task: ${newTask}`)
       setTask('')
     }
   }
