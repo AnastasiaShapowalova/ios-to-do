@@ -4,7 +4,7 @@ import { AiOutlineUnorderedList } from 'react-icons/ai'
 import { CategorySimpleViewWrapper } from './CategorySimpleView.style'
 
 const CategorySimpleView = (props) => {
-  const { category } = props
+  const { category, removeCategory } = props
 
   return (
     // icon, name, count
@@ -17,6 +17,7 @@ const CategorySimpleView = (props) => {
         {category.count}
       </Text>
       <Button
+        onClick={removeCategory}
         size="md"
         color="gray-darken"
         variant="button-isBlanck"

@@ -5,7 +5,7 @@ import { BsFlagFill } from 'react-icons/bs'
 import { useSetEditTask, useIsEditable } from 'context/hook'
 
 const TaskSimpleView = (props) => {
-  const { todo, remove } = props
+  const { todo, removeTask } = props
   const { editTask, setEditedTask } = useSetEditTask(todo.task)
   const { editable, isEditable } = useIsEditable()
   console.log(todo)
@@ -24,7 +24,7 @@ const TaskSimpleView = (props) => {
                 {todo.task}
               </Text>
               <Button
-                onClick={remove}
+                onClick={removeTask}
                 variant="button-isBlanck"
                 size="md"
                 color="gray-darken"
@@ -53,7 +53,7 @@ const TaskSimpleView = (props) => {
                 autoFocus
               />
               <Button
-                onClick={remove}
+                onClick={removeTask}
                 variant="button-isBlanck"
                 size="md"
                 color="gray-darken"

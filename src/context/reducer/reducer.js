@@ -32,7 +32,8 @@ export const reducer = (state, action) => {
       return {
         id: tasks.id,
         tasks: tasks,
-        taskCount: newCount
+        taskCount: newCount,
+        categories: [...state?.categories]
       }
     }
 
@@ -45,7 +46,8 @@ export const reducer = (state, action) => {
 
       return {
         id: tasks.id,
-        tasks: tasks
+        tasks: tasks,
+        categories: [...state?.categories]
       }
     }
 
@@ -64,16 +66,19 @@ export const reducer = (state, action) => {
       }
     }
 
-    // case 'removeCategory': {
-    //   const categoryId = state.tasks.findIndex((name) => name.id === action.id)
-    //   const categories = Object.assign([], state.categories)
-    //   categories.splice(categoryId, 1)
+    case 'removeCategory': {
+      const categoryId = state.tasks.findIndex((name) => name.id === action.id)
+      const categories = Object.assign([], state.categories)
+      categories.splice(categoryId, 1)
+      const newCount = state.taskCount
 
-    //   return {
-    //     id: categories.id,
-    //     categories: categories
-    //   }
-    // }
+      return {
+        id: categories.id,
+        categories: categories,
+        tasks: [...state?.tasks],
+        taskCount: newCount
+      }
+    }
 
     // case 'editCategory': {
     //   const categoryId = state.tasks.findIndex((name) => name.id === action.id)

@@ -11,10 +11,10 @@ const TaskList = (props) => {
           <Col>
             <TaskSimpleView
               todo={el}
-              remove={(task) =>
+              removeTask={(task) =>
                 dispatch({ type: 'removeTask', id: el.id, task: task })
               }
-              edit={(task) =>
+              editTask={(task) =>
                 dispatch({ type: 'editTask', id: el.id, task: task })
               }></TaskSimpleView>
           </Col>

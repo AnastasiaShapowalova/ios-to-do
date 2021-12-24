@@ -2,12 +2,17 @@ import { useStore } from 'context'
 import { CategorySimpleView } from '..'
 
 const CategoryList = () => {
-  const { state } = useStore()
+  const { state, dispatch } = useStore()
 
   return (
     <>
       {state.categories?.map((el, index) => (
-        <CategorySimpleView key={index} category={el}></CategorySimpleView>
+        <CategorySimpleView
+          key={index}
+          category={el}
+          removeCategory={(name) =>
+            dispatch({ type: 'removeCategory', name: name, id: el.id })
+          }></CategorySimpleView>
       ))}
     </>
   )
