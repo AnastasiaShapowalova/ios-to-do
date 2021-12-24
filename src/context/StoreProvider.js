@@ -1,22 +1,28 @@
 import { useReducer } from 'react'
-import StoreContext from './StoreContext'
-import { reducer } from './reducer'
-import { useAddTask } from './hook'
-import { useRemoveTask } from './hook'
+import { StoreContext } from '.'
+import { initialState, reducer } from 'context/reducer/reducer'
+import { useIsEditable, useSetEditTask, useSetTask } from './hook'
 
 const StoreProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, [])
-
-  const addTask = useAddTask(dispatch)
-  const removeTask = useRemoveTask(dispatch)
+  const [state, dispatch] = useReducer(reducer, initialState)
+  const { editable, isEditable } = useIsEditable()
+  const { editTask, setEditTask, setEditedTask } = useSetEditTask()
+  const { task, setTask, AddTask, setNewTask } = useSetTask()
 
   return (
     <StoreContext.Provider
       value={{
         state,
         dispatch,
-        addTask,
-        removeTask
+        editTask,
+        setEditTask,
+        setEditedTask,
+        editable,
+        isEditable,
+        task,
+        setTask,
+        AddTask,
+        setNewTask
       }}>
       {children}
     </StoreContext.Provider>

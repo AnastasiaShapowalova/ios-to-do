@@ -1,16 +1,22 @@
 import { Col, Row } from 'components'
 import { TaskSimpleView } from '../'
-import { useStore } from 'context/hook'
 
-const TaskList = () => {
-  const { state } = useStore()
-
+const TaskList = (props) => {
+  const { state, dispatch } = props
+  console.log(state.tasks)
   return (
     <>
-      {state.map((el) => (
-        <Row key={el.id}>
+      {state.tasks.map((el, index) => (
+        <Row key={index}>
           <Col>
-            <TaskSimpleView text={el.task}></TaskSimpleView>
+            <TaskSimpleView
+              todo={el}
+              remove={(task) =>
+                dispatch({ type: 'remove', id: el.id, task: task })
+              }
+              edit={(task) =>
+                dispatch({ type: 'edit', id: el.id, task: task })
+              }></TaskSimpleView>
           </Col>
         </Row>
       ))}
