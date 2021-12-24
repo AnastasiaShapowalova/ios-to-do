@@ -5,19 +5,7 @@ import { useAddTask } from './hook'
 import { useRemoveTask } from './hook'
 
 const StoreProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, {
-    taskCount: 2,
-    tasks: [
-      {
-        id: 1,
-        task: 'task 1'
-      },
-      {
-        id: 2,
-        task: 'task 2'
-      }
-    ]
-  })
+  const [state, dispatch] = useReducer(reducer, [])
 
   const addTask = useAddTask(dispatch)
   const removeTask = useRemoveTask(dispatch)

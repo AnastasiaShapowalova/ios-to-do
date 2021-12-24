@@ -1,4 +1,4 @@
-const removeTask = (state, payload) => {
+const removeTask = (payload) => {
   return payload
 }
 
