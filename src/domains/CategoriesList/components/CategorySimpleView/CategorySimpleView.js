@@ -4,17 +4,17 @@ import { AiOutlineUnorderedList } from 'react-icons/ai'
 import { CategorySimpleViewWrapper } from './CategorySimpleView.style'
 
 const CategorySimpleView = (props) => {
-  const { children } = props
+  const { category } = props
 
   return (
     // icon, name, count
     <CategorySimpleViewWrapper>
       <IconModule icon={<AiOutlineUnorderedList />} />
       <Text className="my-md overflow-ellipsis" size="md">
-        {children}
+        {category.name}
       </Text>
       <Text className="ml-auto" variant="h6" color="gray">
-        0
+        {category.count}
       </Text>
       <Button
         size="md"

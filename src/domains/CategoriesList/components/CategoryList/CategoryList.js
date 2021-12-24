@@ -1,13 +1,14 @@
+import { useStore } from 'context'
 import { CategorySimpleView } from '..'
 
 const CategoryList = () => {
+  const { state } = useStore()
+
   return (
     <>
-      <CategorySimpleView>Home</CategorySimpleView>
-      <CategorySimpleView>Work</CategorySimpleView>
-      <CategorySimpleView>Study</CategorySimpleView>
-      <CategorySimpleView>Holidays</CategorySimpleView>
-      <CategorySimpleView>Friends</CategorySimpleView>
+      {state.categories?.map((el, index) => (
+        <CategorySimpleView key={index} category={el}></CategorySimpleView>
+      ))}
     </>
   )
 }

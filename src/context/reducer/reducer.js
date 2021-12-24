@@ -1,20 +1,13 @@
 export const initialState = {
-  taskCount: 2,
-  tasks: [
-    {
-      id: 1,
-      task: 'task 1'
-    },
-    {
-      id: 2,
-      task: 'task 2'
-    }
-  ]
+  taskCount: 0,
+  tasks: [],
+  categories: []
 }
 
 export const reducer = (state, action) => {
+  console.log(action)
   switch (action.type) {
-    case 'add': {
+    case 'addTask': {
       const newCount = state.taskCount + 1
       const newId = Math.random()
       const newTask = {
@@ -23,13 +16,13 @@ export const reducer = (state, action) => {
       }
 
       return {
-        counter: newId,
         tasks: [...state.tasks, newTask],
+        categories: [...state?.categories],
         taskCount: newCount
       }
     }
 
-    case 'remove': {
+    case 'removeTask': {
       const taskId = state.tasks.findIndex((task) => task.id === action.id)
       //copy all objects
       const tasks = Object.assign([], state.tasks)
@@ -43,7 +36,7 @@ export const reducer = (state, action) => {
       }
     }
 
-    case 'edit': {
+    case 'editTask': {
       const taskId = state.tasks.findIndex((task) => task.id === action.id)
       const newTasks = Object.assign([], state.tasks)
       newTasks.task = action.task
@@ -55,6 +48,45 @@ export const reducer = (state, action) => {
         tasks: tasks
       }
     }
+
+    // category
+    case 'addCategory': {
+      const categoryId = Math.random()
+      const newCategory = {
+        id: categoryId,
+        name: action.category
+      }
+      const newCount = state.taskCount
+      return {
+        categories: [...state?.categories, newCategory],
+        tasks: [...state?.tasks],
+        taskCount: newCount
+      }
+    }
+
+    // case 'removeCategory': {
+    //   const categoryId = state.tasks.findIndex((name) => name.id === action.id)
+    //   const categories = Object.assign([], state.categories)
+    //   categories.splice(categoryId, 1)
+
+    //   return {
+    //     id: categories.id,
+    //     categories: categories
+    //   }
+    // }
+
+    // case 'editCategory': {
+    //   const categoryId = state.tasks.findIndex((name) => name.id === action.id)
+    //   const newCategories = Object.assign([], state.category)
+    //   newCategories.name = action.name
+    //   const categories = Object.assign([], state.category)
+    //   categories.splice(categoryId, 1, newCategories)
+
+    //   return {
+    //     id: categories.id,
+    //     name: categories
+    //   }
+    // }
 
     default:
       return state

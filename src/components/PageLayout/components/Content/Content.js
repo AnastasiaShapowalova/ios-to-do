@@ -15,7 +15,7 @@ const Content = () => {
       <Row>
         <Col>
           <TaskSimpleForm
-            add={(task) => dispatch({ type: 'add', task: task })}
+            addTask={(task) => dispatch({ type: 'addTask', task: task })}
           />
         </Col>
       </Row>

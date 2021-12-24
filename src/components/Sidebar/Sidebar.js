@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Col, Row, SearchInput, Switcher } from '..'
 import { CategoryList, CategorySimpleForm } from '../../domains'
 import { Button, Title } from '../'
@@ -9,8 +10,17 @@ import {
   BsFillFlagFill
 } from 'react-icons/bs'
 import { AiOutlineSchedule } from 'react-icons/ai'
+import { useStore } from 'context/hook'
 
 const Sidebar = () => {
+  const { dispatch } = useStore()
+
+  const [showInput, setShowInput] = useState(false)
+  const show = () => {
+    setShowInput(!showInput)
+    return { showInput }
+  }
+
   return (
     <SidebarWrapper>
       <Row>
@@ -48,9 +58,16 @@ const Sidebar = () => {
         </Title>
       </TitleWrapper>
       <CategoryList />
-      <CategorySimpleForm />
+      {showInput === true && (
+        <CategorySimpleForm
+          addCategory={(category) =>
+            dispatch({ type: 'addCategory', category: category })
+          }
+        />
+      )}
       <ButtonWrapper>
         <Button
+          onClick={show}
           size="md"
           color="light"
           variant="button-isBlanck"

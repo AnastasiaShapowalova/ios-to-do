@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const useSetTask = (add) => {
+const useSetTask = (addTask) => {
   const [task, setTask] = useState('')
   const setNewTask = (e) => {
     setTask(e.target.value)
@@ -10,7 +10,7 @@ const useSetTask = (add) => {
   const AddTask = (event) => {
     const newTask = task.trim()
     if (event.key === 'Enter' && newTask.length >= 1) {
-      add(newTask)
+      addTask(newTask)
       console.log(`task: ${newTask}`)
       setTask('')
     }

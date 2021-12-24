@@ -1,11 +1,10 @@
-import { useState } from 'react'
 import { Input, Checkbox, Col, Row } from 'components'
 import { TaskSimpleFormWrapper, InputWrapper } from './TaskSimpleForm.style'
 import { useSetTask } from 'context/hook'
 
 const TaskSimpleForm = (props) => {
-  const { add } = props
-  const { AddTask, task, setNewTask } = useSetTask(add)
+  const { addTask } = props
+  const { AddTask, task, setNewTask } = useSetTask(addTask)
 
   return (
     <TaskSimpleFormWrapper onKeyPress={AddTask} className="direction-column">
