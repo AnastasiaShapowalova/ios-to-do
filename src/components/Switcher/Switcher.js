@@ -5,7 +5,7 @@ const Switcher = (props) => {
   const { icon, color, children } = props
 
   return (
-    <SwitcherStyled>
+    <SwitcherStyled data-textId="Switcher">
       <HeadingWrapper>
         <IconModule changeable icon={icon} color={color} />
         <Title variant="h5" color="gray-lighten">

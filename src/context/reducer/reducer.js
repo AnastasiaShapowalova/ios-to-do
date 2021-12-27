@@ -1,6 +1,6 @@
 export const initialState = {
-  taskCount: 0,
-  tasks: [],
+  taskCount: 1,
+  tasks: [{ id: 0, task: 'Walk', categoryId: 0, createdAt: 0, editedAt: 0 }],
   categories: []
 }
 
@@ -39,30 +39,31 @@ export const reducer = (state, action) => {
 
     case 'editTask': {
       const taskId = state.tasks.findIndex((task) => task.id === action.id)
-      const newTasks = Object.assign([], state.tasks)
-      newTasks.task = action.task
+      const newTask = Object.assign([], state.tasks[taskId])
+      newTask.task = action.task
       const tasks = Object.assign([], state.tasks)
-      tasks.splice(taskId, 1, newTasks)
+      tasks.splice(taskId, 1, newTask)
 
       return {
         id: tasks.id,
         tasks: tasks,
-        categories: [...state?.categories]
+        categories: [...state?.categories],
+        taskCount: state.taskCount
       }
     }
 
     // category
     case 'addCategory': {
-      const categoryId = Math.random()
+      const categoryId = state.categories.id + 1
       const newCategory = {
         id: categoryId,
         name: action.category
       }
-      const newCount = state.taskCount
+
       return {
         categories: [...state?.categories, newCategory],
         tasks: [...state?.tasks],
-        taskCount: newCount
+        taskCount: state.taskCount
       }
     }
 
@@ -70,13 +71,12 @@ export const reducer = (state, action) => {
       const categoryId = state.tasks.findIndex((name) => name.id === action.id)
       const categories = Object.assign([], state.categories)
       categories.splice(categoryId, 1)
-      const newCount = state.taskCount
 
       return {
         id: categories.id,
         categories: categories,
         tasks: [...state?.tasks],
-        taskCount: newCount
+        taskCount: state.taskCount
       }
     }
 
@@ -89,7 +89,9 @@ export const reducer = (state, action) => {
 
     //   return {
     //     id: categories.id,
-    //     name: categories
+    //     categories: categories,
+    //     tasks: [...state?.tasks],
+    //     taskCount: state.taskCount
     //   }
     // }
 

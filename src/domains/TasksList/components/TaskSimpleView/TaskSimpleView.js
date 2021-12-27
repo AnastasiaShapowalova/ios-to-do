@@ -1,14 +1,19 @@
+import { useState } from 'react'
 import { Button, Col, Row, Text, Checkbox, Input } from 'components'
 import { IoCloseOutline } from 'react-icons/io5'
 import { TaskWrapper } from './TaskSimpleView.style'
 import { BsFlagFill } from 'react-icons/bs'
-import { useSetEditTask, useIsEditable } from 'context/hook'
+// import { useSetEditTask, useIsEditable } from 'context/hook'
 
 const TaskSimpleView = (props) => {
-  const { todo, removeTask } = props
-  const { editTask, setEditedTask } = useSetEditTask(todo.task)
-  const { editable, isEditable } = useIsEditable()
+  const { todo, removeTask, editTask } = props
+
+  // const { editable, isEditable } = useIsEditable()
+  // const { editedTask, setEditedTask } = useSetEditTask(todo.task)
   console.log(todo)
+
+  const [editable, isEditable] = useState(false)
+  const [task, setTask] = useState(todo.task)
 
   return (
     <>
@@ -45,11 +50,16 @@ const TaskSimpleView = (props) => {
             <Checkbox color="green" />
             <TaskWrapper className="display-flex">
               <Input
-                onSubmit={() => isEditable(!editable)}
                 className="pb-xs"
-                value={editTask}
-                onChange={(e) => setEditedTask(e)}
-                onBlur={() => isEditable(!editable)}
+                onSubmit={() => {
+                  editTask(task)
+                  isEditable(!editable)
+                }}
+                value={task}
+                onChange={(e) => setTask(e.target.value)}
+                onBlur={() => {
+                  isEditable(!editable)
+                }}
                 autoFocus
               />
               <Button
