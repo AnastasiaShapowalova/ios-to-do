@@ -20,6 +20,17 @@ const StoreProvider = ({ children }) => {
   const { showForm, setShowForm } = useShowForm()
   const { selectedCategory, setSelectedCategory } = useSelectedCategory()
 
+  let newTask = []
+  let i = 0
+  state.tasks.forEach(function (tasks) {
+    if (tasks.categotyName === selectedCategory) {
+      console.log(tasks.categotyName)
+      newTask[i] = tasks
+      i++
+    }
+  })
+  console.log(newTask.length)
+
   useEffect(() => {
     const getData = async () => {
       const dataTask = await firestoreService.queryDocuments('task')
@@ -35,6 +46,7 @@ const StoreProvider = ({ children }) => {
   return (
     <StoreContext.Provider
       value={{
+        newTask,
         state,
         dispatch,
         editTask,

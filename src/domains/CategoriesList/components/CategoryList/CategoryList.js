@@ -10,7 +10,6 @@ const CategoryList = () => {
         <CategorySimpleView
           key={index}
           category={el}
-          count={el.numOfTasks}
           removeCategory={(name) =>
             dispatch({ type: 'removeCategory', name: name, id: el.id })
           }

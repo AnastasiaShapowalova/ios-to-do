@@ -5,7 +5,7 @@ import { useStore } from 'context/hook'
 
 const Header = (props) => {
   const { title } = props
-  const { state } = useStore()
+  const { state, newTask } = useStore()
 
   return (
     <>
@@ -28,7 +28,7 @@ const Header = (props) => {
         </Col>
         <Col col="1">
           <PositionWrapper className="mr-sm">
-            <Title variant="h3">{state.taskCount}</Title>
+            <Title variant="h3">{newTask.length}</Title>
           </PositionWrapper>
         </Col>
       </Row>

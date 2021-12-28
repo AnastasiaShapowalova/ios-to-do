@@ -14,16 +14,6 @@ const CategorySimpleView = (props) => {
 
   const [edited, isEdited] = useState(false)
   const { setSelectedCategory } = useStore()
-  // const [focused, setFocused] = useState(false)
-
-  // useEffect(() => {
-  //   setFocused(
-  //     state?.currentCategory &&
-  //       category.id === state?.currentCategory?.category.id
-  //       ? true
-  //       : false
-  //   )
-  // }, [category.id, state?.currentCategory])
 
   return (
     <>
