@@ -3,7 +3,7 @@ import { TaskSimpleView } from '../'
 
 const TaskList = (props) => {
   const { state, dispatch } = props
-  console.log(state)
+  console.log('state --->', state)
   return (
     <>
       {state.tasks?.map((el, index) => (

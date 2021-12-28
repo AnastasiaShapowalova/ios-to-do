@@ -49,6 +49,7 @@ export const reducer = (state, action) => {
     }
 
     case 'editTask': {
+      console.log('action ---->', action)
       const taskId = state.tasks.findIndex((task) => task.id === action.id)
       const newTask = Object.assign([], state.tasks[taskId])
       newTask.task = action.task

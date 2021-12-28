@@ -1,31 +1,32 @@
 import { useState, useEffect } from 'react'
-import firestoreService from '../../services/firestoreService'
+import firebase from '../../services/index'
 
 const useCategory = (text) => {
   const [category, setCategory] = useState([])
 
-  const calculateTaskNum = (id, text) => {
-    return text.filter(text.categoryId === id).length
+  function calculateTaskNum(idOfCategory, text) {
+    return text.filter(text.categoryId === idOfCategory).length
   }
 
   useEffect(() => {
-    let unsubscribe = firestoreService.getDocument('category')
-
-    // .db
+    // let unsubscribe = firebase
+    //   .firestore()
     //   .collection('category')
     //   .onSnapshot((snapshot) => {
-    //     const data = snapshot.map((doc) => {
+    //     const data = snapshot.docs.map((doc) => {
     //       const categoryName = doc.data().name
+    //       const idOfCategory = doc.data().id
     //       return {
-    //         id: doc.id,
-    //         taskNum: calculateTaskNum(doc.id, text),
-    //         ...doc.data()
+    //         id: idOfCategory,
+    //         name: categoryName,
+    //         numOfTodos: calculateTaskNum(idOfCategory, text)
     //       }
-    //       setCategory(data)
     //     })
+    //     setCategory(data)
     //   })
-    return () => unsubscribe()
-  })
+    // return () => unsubscribe()
+  }, [])
+
   return category
 }
 

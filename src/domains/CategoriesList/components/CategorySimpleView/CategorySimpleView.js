@@ -13,7 +13,6 @@ const CategorySimpleView = (props) => {
   const { category, removeCategory, editCategory, count } = props
 
   const [edited, isEdited] = useState(false)
-  const [newName, setNewName] = useState(category.name)
   const { setSelectedCategory } = useStore()
   // const [focused, setFocused] = useState(false)
 
@@ -31,7 +30,7 @@ const CategorySimpleView = (props) => {
       <Link to={'/'}>
         {!edited ? (
           <CategorySimpleViewWrapper
-            onClick={() => setSelectedCategory(category.name)}>
+            onDoubleClick={() => setSelectedCategory(category.name)}>
             <IconModule icon={<AiOutlineUnorderedList />} />
             <Text
               className="my-md overflow-ellipsis"
@@ -54,11 +53,10 @@ const CategorySimpleView = (props) => {
             <IconModule icon={<AiOutlineUnorderedList />} />
             <Input
               variant="input-isFilled"
-              value={newName}
-              onChange={(e) => setNewName(e.target.value)}
+              value={category?.name}
+              onChange={(e) => editCategory(e.target.value)}
               onBlur={() => {
                 isEdited(!edited)
-                editCategory(newName)
               }}
               autoFocus
             />
