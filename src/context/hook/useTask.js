@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
-import firebase from '../../services/index'
+import { firestoreService, db } from 'services'
 
-const useTask = () => {
+const useTask = (getId) => {
   const [text, setText] = useState([])
 
   useEffect(() => {
-    // let unsubscribe = firebase
+    // let unsubscribe = firestoreService.db.getDocument()
     //   .firestore()
     //   .collection('task')
     //   .onSnapshot((snapshot) => {
@@ -17,9 +17,9 @@ const useTask = () => {
     //     })
     //     setText(data)
     //   })
-    // return () => unsubscribe()
+    // console.log(unsubscribe)
+    // return { unsubscribe }
   }, [])
-
   return text
 }
 

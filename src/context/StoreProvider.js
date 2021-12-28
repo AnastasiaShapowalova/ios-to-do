@@ -1,4 +1,4 @@
-import { useReducer } from 'react'
+import { useReducer, useEffect } from 'react'
 import { StoreContext } from '.'
 import { initialState, reducer } from 'context/reducer/reducer'
 import {
@@ -11,6 +11,7 @@ import {
   useTask,
   useCategory
 } from './hook'
+import firestoreService from 'services/firestoreService'
 
 const StoreProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState)
@@ -23,6 +24,18 @@ const StoreProvider = ({ children }) => {
 
   const { text } = useTask()
   const { category } = useCategory(text)
+
+  useEffect(() => {
+    const getData = async () => {
+      const dataTask = await firestoreService.queryDocuments('task')
+      const dataCategory = await firestoreService.queryDocuments('category')
+
+      dispatch({ type: 'updateData', payload: { dataTask, dataCategory } })
+      console.log(dataTask)
+    }
+
+    getData()
+  }, [])
 
   return (
     <StoreContext.Provider

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Button, Text, IconModule, Input } from '../../../../components'
 import { IoCloseOutline } from 'react-icons/io5'
 import { AiOutlineUnorderedList } from 'react-icons/ai'

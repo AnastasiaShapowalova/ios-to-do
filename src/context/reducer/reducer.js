@@ -17,6 +17,7 @@ export const initialState = {
 
 export const reducer = (state, action) => {
   console.log(action)
+  const { type, payload } = action
   switch (action.type) {
     case 'addTask': {
       const newCount = state.taskCount + 1
@@ -109,6 +110,17 @@ export const reducer = (state, action) => {
         tasks: [...state.tasks],
         taskCount: state.taskCount
       }
+    }
+
+    case 'updateData': {
+      let newState = { ...state }
+      newState = {
+        ...newState,
+        tasks: payload.dataTask,
+        categories: payload.dataCategory
+      }
+      console.log('newState ', newState)
+      return { ...newState }
     }
 
     default:
