@@ -1,5 +1,4 @@
 import { Switcher } from './'
-import { Row, Col } from 'components'
 import {
   BsFillCalendarDateFill,
   BsWalletFill,
@@ -7,6 +6,7 @@ import {
 } from 'react-icons/bs'
 import { AiOutlineSchedule } from 'react-icons/ai'
 import { SwitcherListWrapper } from './Switcher.style'
+import { useStore } from 'context/hook'
 
 const SWITCHER = [
   { name: 'Today', color: 'blue', icon: <BsFillCalendarDateFill /> },
@@ -16,12 +16,18 @@ const SWITCHER = [
 ]
 
 const SwitcherList = () => {
+  const { setSelectedCategory } = useStore()
   return (
     <SwitcherListWrapper data-textId="SwitcherList">
-      {SWITCHER.map(({ name, color, icon }) => (
-        <Switcher color={color} icon={icon}>
-          {name}
-        </Switcher>
+      {SWITCHER.map(({ name, color, icon }, index) => (
+        <Switcher
+          onClick={() => {
+            setSelectedCategory(name)
+          }}
+          color={color}
+          icon={icon}
+          key={index}
+          name={name}></Switcher>
       ))}
     </SwitcherListWrapper>
   )

@@ -1,12 +1,14 @@
 import { Input, Checkbox, Col, Row, Button } from 'components'
 import { TaskSimpleFormWrapper, InputWrapper } from './TaskSimpleForm.style'
-import { useSetTask } from 'context/hook'
+import { useSetTask, useStore } from 'context/hook'
 import { useState } from 'react'
 import { BsFlagFill } from 'react-icons/bs'
 
 const TaskSimpleForm = (props) => {
   const { addTask } = props
+
   const { AddTask, task, setNewTask } = useSetTask(addTask)
+
   const [text, setText] = useState('')
   // const [day, setDay] = useState(new Date())
 

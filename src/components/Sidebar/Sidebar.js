@@ -1,18 +1,10 @@
 import { useState } from 'react'
-import { Col, Row, SearchInput, Switcher } from '..'
+import { Col, Row, SearchInput, SwitcherList } from '..'
 import { CategoryList, CategorySimpleForm } from '../../domains'
 import { Button, Title } from '../'
 import { IoMdAddCircleOutline } from 'react-icons/io'
 import { TitleWrapper, ButtonWrapper, SidebarWrapper } from './Sidebar.style'
-import {
-  BsFillCalendarDateFill,
-  BsWalletFill,
-  BsFillFlagFill
-} from 'react-icons/bs'
-import { AiOutlineSchedule } from 'react-icons/ai'
 import { useStore } from 'context/hook'
-import { IoToday } from 'react-icons/io5'
-import { SwitcherList } from 'components'
 
 const Sidebar = () => {
   const { dispatch } = useStore()
@@ -29,6 +21,7 @@ const Sidebar = () => {
           <SearchInput />
         </Col>
       </Row>
+
       <SwitcherList />
 
       <TitleWrapper>

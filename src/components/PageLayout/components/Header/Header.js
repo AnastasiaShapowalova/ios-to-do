@@ -3,7 +3,8 @@ import { IoAddOutline } from 'react-icons/io5'
 import { PositionWrapper, TitleWrapper } from './Header.styled'
 import { useStore } from 'context/hook'
 
-const Header = () => {
+const Header = (props) => {
+  const { title } = props
   const { state } = useStore()
 
   return (
@@ -23,7 +24,7 @@ const Header = () => {
       </Row>
       <Row>
         <Col col="11">
-          <Title variant="h2">Header</Title>
+          <Title variant="h2">{title}</Title>
         </Col>
         <Col col="1">
           <PositionWrapper className="mr-sm">

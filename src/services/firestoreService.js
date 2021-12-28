@@ -25,7 +25,7 @@ const firebaseConfig = {
 }
 
 // Initialize Firebase
-// initializeApp(firebaseConfig)
+initializeApp(firebaseConfig)
 
 const db = getFirestore()
 

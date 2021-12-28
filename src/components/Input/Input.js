@@ -9,10 +9,12 @@ const Input = (props) => {
     onChange,
     onClick,
     className,
-    autoFocus
+    autoFocus,
+    onBlur
   } = props
   return (
     <InputStyled
+      onBlur={onBlur}
       autoFocus={autoFocus}
       variant={variant}
       placeholder={placeholder}

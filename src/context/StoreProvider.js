@@ -5,7 +5,11 @@ import {
   useIsEditable,
   useSetCategory,
   useSetEditTask,
-  useSetTask
+  useSetTask,
+  useShowForm,
+  useSelectedCategory,
+  useTask,
+  useCategory
 } from './hook'
 
 const StoreProvider = ({ children }) => {
@@ -13,8 +17,13 @@ const StoreProvider = ({ children }) => {
   const { editable, isEditable } = useIsEditable()
   const { editTask, setEditTask, setEditedTask } = useSetEditTask()
   const { task, setTask, AddTask, setNewTask } = useSetTask()
-  const { category, AddCategory, isSetCategory } = useSetCategory()
-  console.log(initialState)
+  const { AddCategory, isSetCategory } = useSetCategory()
+  const { showForm, setShowForm } = useShowForm()
+  const { selectedCategory, setSelectedCategory } = useSelectedCategory()
+
+  const { text } = useTask()
+  const { category } = useCategory(text)
+
   return (
     <StoreContext.Provider
       value={{
@@ -31,7 +40,12 @@ const StoreProvider = ({ children }) => {
         setNewTask,
         category,
         AddCategory,
-        isSetCategory
+        isSetCategory,
+        showForm,
+        setShowForm,
+        selectedCategory,
+        setSelectedCategory,
+        text
       }}>
       {children}
     </StoreContext.Provider>

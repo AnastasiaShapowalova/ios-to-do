@@ -1,7 +1,18 @@
 export const initialState = {
   taskCount: 1,
-  tasks: [{ id: 0, task: 'Walk', categoryId: 0, createdAt: 0, editedAt: 0 }],
-  categories: []
+  tasks: [
+    {
+      id: 0,
+      task: 'Walk',
+      categoryId: 0,
+      createdAt: 0,
+      editedAt: 0,
+      checked: false
+    }
+  ],
+  categories: [
+    { id: 0, name: 'Home', createdAt: 0, editedAt: 0, numOfTasks: 8 }
+  ]
 }
 
 export const reducer = (state, action) => {
@@ -68,7 +79,9 @@ export const reducer = (state, action) => {
     }
 
     case 'removeCategory': {
-      const categoryId = state.tasks.findIndex((name) => name.id === action.id)
+      const categoryId = state.categories.findIndex(
+        (name) => name.id === action.id
+      )
       const categories = Object.assign([], state.categories)
       categories.splice(categoryId, 1)
 
@@ -80,20 +93,22 @@ export const reducer = (state, action) => {
       }
     }
 
-    // case 'editCategory': {
-    //   const categoryId = state.tasks.findIndex((name) => name.id === action.id)
-    //   const newCategories = Object.assign([], state.category)
-    //   newCategories.name = action.name
-    //   const categories = Object.assign([], state.category)
-    //   categories.splice(categoryId, 1, newCategories)
+    case 'editCategory': {
+      const categoryId = state.categories.findIndex(
+        (name) => name.id === action.id
+      )
+      const newCategory = Object.assign([], state.categories[categoryId])
+      newCategory.name = action.name
+      const categories = Object.assign([], state.categories)
+      categories.splice(categoryId, 1, newCategory)
 
-    //   return {
-    //     id: categories.id,
-    //     categories: categories,
-    //     tasks: [...state?.tasks],
-    //     taskCount: state.taskCount
-    //   }
-    // }
+      return {
+        id: categories.id,
+        categories: categories,
+        tasks: [...state.tasks],
+        taskCount: state.taskCount
+      }
+    }
 
     default:
       return state

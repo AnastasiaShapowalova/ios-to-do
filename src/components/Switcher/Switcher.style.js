@@ -21,4 +21,5 @@ export const SwitcherListWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  cursor: pointer;
 `

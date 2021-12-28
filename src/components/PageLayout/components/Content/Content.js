@@ -2,8 +2,9 @@ import { TaskList, TaskSimpleForm } from '../../../../domains'
 import { Row, Col } from '../../..'
 import { useStore } from 'context/hook'
 
-const Content = ({ showForm, addTask }) => {
-  const { dispatch, state } = useStore()
+const Content = () => {
+  const { dispatch, state, showForm } = useStore()
+  const addTask = (task) => dispatch({ type: 'addTask', task: task })
 
   return (
     <>

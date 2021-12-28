@@ -10,17 +10,18 @@ const TaskSimpleView = (props) => {
 
   // const { editable, isEditable } = useIsEditable()
   // const { editedTask, setEditedTask } = useSetEditTask(todo.task)
-  console.log(todo)
 
   const [editable, isEditable] = useState(false)
   const [task, setTask] = useState(todo.task)
+  const [checked, setChecked] = useState(false)
 
+  console.log(checked)
   return (
     <>
       {!editable ? (
         <Row>
           <Col className="direction-row">
-            <Checkbox color="green" />
+            <Checkbox color="green" onClick={() => setChecked(!checked)} />
             <TaskWrapper className="display-flex">
               <Text
                 className="flex-basis pb-xs"
@@ -51,14 +52,11 @@ const TaskSimpleView = (props) => {
             <TaskWrapper className="display-flex">
               <Input
                 className="pb-xs"
-                onSubmit={() => {
-                  editTask(task)
-                  isEditable(!editable)
-                }}
                 value={task}
                 onChange={(e) => setTask(e.target.value)}
                 onBlur={() => {
                   isEditable(!editable)
+                  editTask(task)
                 }}
                 autoFocus
               />

@@ -9,14 +9,14 @@ const CategoryList = () => {
       {state.categories?.map((el, index) => (
         <CategorySimpleView
           key={index}
-          category={el.name}
+          category={el}
+          count={el.numOfTasks}
           removeCategory={(name) =>
             dispatch({ type: 'removeCategory', name: name, id: el.id })
           }
-          // editCategory={(name) =>
-          //   dispatch({ type: 'editCategory', name: name, id: el.id })
-          // }
-        ></CategorySimpleView>
+          editCategory={(name) =>
+            dispatch({ type: 'editCategory', name: name, id: el.id })
+          }></CategorySimpleView>
       ))}
     </>
   )

@@ -1,11 +1,9 @@
 import { useState } from 'react'
-import { firestoreService } from 'services'
 
 const useSetTask = (addTask) => {
   const [task, setTask] = useState('')
   const setNewTask = (e) => {
     setTask(e.target.value)
-    console.log(e.target.value)
   }
 
   const AddTask = (event) => {

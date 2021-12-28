@@ -1,13 +1,9 @@
-import { useState } from 'react'
-import { Header, Content } from './'
 import { Row, Col } from '..'
 import { PageLayoutWrapper } from './PageLayout.style'
-import { useStore } from 'context'
+import { useStore } from 'context/hook'
 
-const PageLayout = () => {
-  const [showForm, setShowForm] = useState(false)
-  const { dispatch } = useStore()
-  const addTask = (task) => dispatch({ type: 'addTask', task: task })
+const PageLayout = ({ header, content }) => {
+  const { setShowForm } = useStore()
 
   return (
     <PageLayoutWrapper
@@ -16,14 +12,10 @@ const PageLayout = () => {
         setShowForm(true)
       }}>
       <Row>
-        <Col>
-          <Header />
-        </Col>
+        <Col>{header}</Col>
       </Row>
       <Row>
-        <Col>
-          <Content showForm={showForm} addTask={addTask} />
-        </Col>
+        <Col>{content}</Col>
       </Row>
     </PageLayoutWrapper>
   )
