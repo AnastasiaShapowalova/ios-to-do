@@ -30,6 +30,9 @@ initializeApp(firebaseConfig)
 const db = getFirestore()
 
 const createDocument = async (collectionPath, id, documentData) => {
+  console.log('collectionPath ----> ', collectionPath)
+  console.log('id ----> ', id)
+  console.log('documentData ----> ', documentData)
   const ref = doc(db, collectionPath, id)
   const result = await setDoc(ref, documentData)
   return result

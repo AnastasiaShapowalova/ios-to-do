@@ -1,5 +1,3 @@
-export { default as useTask } from './useTask'
-export { default as useCategory } from './useCategory'
 export { default as useStore } from './useStore'
 export { default as useIsEditable } from './useIsEditable'
 export { default as useSetEditTask } from './useSetEditTask.js'

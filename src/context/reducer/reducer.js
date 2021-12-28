@@ -1,18 +1,9 @@
+import { firestoreService } from 'services'
+
 export const initialState = {
-  taskCount: 1,
-  tasks: [
-    {
-      id: 0,
-      task: 'Walk',
-      categoryId: 0,
-      createdAt: 0,
-      editedAt: 0,
-      checked: false
-    }
-  ],
-  categories: [
-    { id: 0, name: 'Home', createdAt: 0, editedAt: 0, numOfTasks: 8 }
-  ]
+  taskCount: 0,
+  tasks: [],
+  categories: []
 }
 
 export const reducer = (state, action) => {
@@ -20,17 +11,17 @@ export const reducer = (state, action) => {
   const { type, payload } = action
   switch (action.type) {
     case 'addTask': {
-      const newCount = state.taskCount + 1
       const newId = Math.random()
       const newTask = {
         id: newId,
-        task: action.task
+        task: action.task,
+        categotyName: action.categotyName
       }
 
       return {
         tasks: [...state.tasks, newTask],
         categories: [...state?.categories],
-        taskCount: newCount
+        taskCount: newTask.length
       }
     }
 
@@ -114,6 +105,7 @@ export const reducer = (state, action) => {
 
     case 'updateData': {
       let newState = { ...state }
+
       newState = {
         ...newState,
         tasks: payload.dataTask,

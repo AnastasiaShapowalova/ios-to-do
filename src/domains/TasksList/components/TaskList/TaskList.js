@@ -2,11 +2,12 @@ import { Col, Row } from 'components'
 import { TaskSimpleView } from '../'
 
 const TaskList = (props) => {
-  const { state, dispatch } = props
-  console.log('state --->', state)
+  const { tasks, dispatch } = props
+  console.log('state --->')
+
   return (
     <>
-      {state.tasks?.map((el, index) => (
+      {tasks?.map((el, index) => (
         <Row key={index}>
           <Col>
             <TaskSimpleView

@@ -7,9 +7,7 @@ import {
   useSetEditTask,
   useSetTask,
   useShowForm,
-  useSelectedCategory,
-  useTask,
-  useCategory
+  useSelectedCategory
 } from './hook'
 import firestoreService from 'services/firestoreService'
 
@@ -21,9 +19,6 @@ const StoreProvider = ({ children }) => {
   const { AddCategory, isSetCategory } = useSetCategory()
   const { showForm, setShowForm } = useShowForm()
   const { selectedCategory, setSelectedCategory } = useSelectedCategory()
-
-  const { text } = useTask()
-  const { category } = useCategory(text)
 
   useEffect(() => {
     const getData = async () => {
@@ -51,14 +46,12 @@ const StoreProvider = ({ children }) => {
         setTask,
         AddTask,
         setNewTask,
-        category,
         AddCategory,
         isSetCategory,
         showForm,
         setShowForm,
         selectedCategory,
-        setSelectedCategory,
-        text
+        setSelectedCategory
       }}>
       {children}
     </StoreContext.Provider>

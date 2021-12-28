@@ -3,19 +3,19 @@ import { Button, Col, Row, Text, Checkbox, Input } from 'components'
 import { IoCloseOutline } from 'react-icons/io5'
 import { TaskWrapper } from './TaskSimpleView.style'
 import { BsFlagFill } from 'react-icons/bs'
+import { useStore } from 'context'
 
 const TaskSimpleView = (props) => {
   const { todo, removeTask, editTask } = props
-
+  const { state } = useStore()
   const [editable, isEditable] = useState(false)
-  const [checked, setChecked] = useState(false)
 
   return (
     <>
       {!editable ? (
         <Row>
           <Col className="direction-row">
-            <Checkbox color="green" onClick={() => setChecked(!checked)} />
+            <Checkbox color="green" s />
             <TaskWrapper className="display-flex">
               <Text
                 className="flex-basis pb-xs"
