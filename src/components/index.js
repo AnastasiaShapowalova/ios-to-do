@@ -10,6 +10,7 @@ import { Title } from './Title'
 import { Text } from './Text'
 import { Checkbox } from './Checkbox'
 import { Container, Row, Col } from './Grid'
+import { SwitcherList } from './Switcher'
 
 export {
   SearchInput,
@@ -25,5 +26,6 @@ export {
   Checkbox,
   Container,
   Row,
-  Col
+  Col,
+  SwitcherList
 }

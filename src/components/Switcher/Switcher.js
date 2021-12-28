@@ -2,10 +2,10 @@ import { Title, IconModule, Text } from '..'
 import { HeadingWrapper, SwitcherStyled } from './Switcher.style'
 
 const Switcher = (props) => {
-  const { icon, color, children } = props
+  const { icon, color, name, onClick } = props
 
   return (
-    <SwitcherStyled>
+    <SwitcherStyled data-textId="Switcher" onClick={onClick}>
       <HeadingWrapper>
         <IconModule changeable icon={icon} color={color} />
         <Title variant="h5" color="gray-lighten">
@@ -13,7 +13,7 @@ const Switcher = (props) => {
         </Title>
       </HeadingWrapper>
       <Text className="overflow-ellipsis" size="sm" color="gray-lighten">
-        {children}
+        {name}
       </Text>
     </SwitcherStyled>
   )

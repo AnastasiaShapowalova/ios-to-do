@@ -1,31 +1,44 @@
-import { useState } from 'react'
-import { Input, Checkbox, Col, Row } from 'components'
+import { Input, Checkbox, Col, Row, Button } from 'components'
 import { TaskSimpleFormWrapper, InputWrapper } from './TaskSimpleForm.style'
-import { useStore } from 'context/hook/'
+import { useSetTask, useStore } from 'context/hook'
+import { useState } from 'react'
+import { BsFlagFill } from 'react-icons/bs'
 
-const TaskSimpleForm = () => {
-  const { addTask } = useStore()
-  const [task, setTask] = useState('')
-  const myFunction = (e) => {
-    const newTask = task.trim()
-    if (e.key === 'Enter' && newTask.length >= 1) {
-      addTask({ id: Math.random(), task: newTask })
-      setTask('')
-    }
-  }
+const TaskSimpleForm = (props) => {
+  const { addTask } = props
+
+  const { AddTask, task, setNewTask } = useSetTask(addTask)
+
+  const [text, setText] = useState('')
+  // const [day, setDay] = useState(new Date())
 
   return (
-    <TaskSimpleFormWrapper onKeyPress={myFunction} className="direction-column">
+    <TaskSimpleFormWrapper onKeyPress={AddTask} className="direction-column">
       <Row>
         <Col className="direction-row">
           <Checkbox color="green" />
           <InputWrapper className="pt-sm pb-md">
             <Input
+              type="text"
               value={task}
-              onChange={(e) => setTask(e.target.value)}
+              onChange={(e) => setNewTask(e)}
               autoFocus
             />
-            <Input variant="input-isMuted" placeholder="Notes" />
+            <Input
+              type="text"
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+              variant="input-isMuted"
+              placeholder="Notes"
+            />
+            {/* <Input type="date" /> */}
+            <Button
+              icon={<BsFlagFill />}
+              size="md"
+              color="orange"
+              shape="rounded"
+              variant="button-isFilled"
+            />
           </InputWrapper>
         </Col>
       </Row>

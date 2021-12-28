@@ -1,15 +1,22 @@
 import AppLayout from '../../components/AppLayout/AppLayout'
 import { TasksAll } from '../'
 import { Sidebar } from '../../components'
+import { Routes, BrowserRouter, Route } from 'react-router-dom'
 
 const Navigator = () => {
   return (
-    <AppLayout
-      data-text-id="Navigator"
-      className="AppLayout"
-      left={<Sidebar />}
-      right={<TasksAll />}
-    />
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <AppLayout
+              left={<Sidebar />}
+              right={<TasksAll color="blue" title="No remainders" />}
+            />
+          }></Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

@@ -16,26 +16,27 @@ import {
 } from 'firebase/firestore'
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyBu0iJfJgymYR20tSR0ffX_L784xnJHqwY',
-  authDomain: 'todo-list-f1ee8.firebaseapp.com',
-  projectId: 'todo-list-f1ee8',
-  storageBucket: 'todo-list-f1ee8.appspot.com',
-  messagingSenderId: '262012259881',
-  appId: '1:262012259881:web:c5bbb17dfe5774d3d8d638'
+  apiKey: 'AIzaSyC58Zw3BB3NoLDCVg1fYyPcx0e8CTtLtX0',
+  authDomain: 'todoshka-ios.firebaseapp.com',
+  projectId: 'todoshka-ios',
+  storageBucket: 'todoshka-ios.appspot.com',
+  messagingSenderId: '923226935685',
+  appId: '1:923226935685:web:81a707c25982c3daedf4ec',
+  measurementId: 'G-CGKK04QV9P'
 }
 
-// Initialize Firebase
 initializeApp(firebaseConfig)
 
 const db = getFirestore()
 
 const createDocument = async (collectionPath, id, documentData) => {
+  console.log('collectionPath ----> ', collectionPath)
+  console.log('id ----> ', id)
+  console.log('documentData ----> ', documentData)
   const ref = doc(db, collectionPath, id)
   const result = await setDoc(ref, documentData)
   return result
 }
-
-const generateId = (path) => doc(collection(db, path)).id
 
 const updateDocument = async (collectionPath, id, documentData) => {
   const ref = doc(db, collectionPath, id)
@@ -82,7 +83,6 @@ const deleteDocument = async (collectionPath, id) => {
 
 const firestoreService = {
   createDocument,
-  generateId,
   updateDocument,
   getDocument,
   queryDocuments,

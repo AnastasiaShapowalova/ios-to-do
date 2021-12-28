@@ -8,7 +8,7 @@ const SearchInput = () => {
   return (
     <SearchInputWrapper size="md" fill="false" outline="false">
       <BsSearch className="mr-md" />
-      <Input placeholder="Search" type="search"></Input>
+      <Input placeholder="Search"></Input>
       <Button
         shape="rounded"
         size="lg"
