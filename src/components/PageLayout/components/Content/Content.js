@@ -10,19 +10,13 @@ const Content = ({ selectedCategory }) => {
   const addTask = (task) =>
     dispatch({ type: 'addTask', task: task, categotyName: selectedCategory })
 
-  console.log(state)
-
-  // let newTask = []
-  // let i = 0
-  // state.tasks.forEach(function (tasks) {
-  //   if (tasks.categotyName === selectedCategory) {
-  //     console.log(tasks.categotyName)
-  //     newTask[i] = tasks
-  //     i++
-  //   }
-  // })
-  // console.log(newTask.length)
-
+  const createTask = (task, taskId, categotyName) => {
+    firestoreService.createDocument('task', taskId, {
+      id: taskId,
+      task: task,
+      categotyName: categotyName
+    })
+  }
   return (
     <>
       <Row>
@@ -33,7 +27,7 @@ const Content = ({ selectedCategory }) => {
       {showForm && (
         <Row>
           <Col>
-            <TaskSimpleForm addTask={addTask} />
+            <TaskSimpleForm addTask={addTask} createTask={createTask} />
           </Col>
         </Row>
       )}

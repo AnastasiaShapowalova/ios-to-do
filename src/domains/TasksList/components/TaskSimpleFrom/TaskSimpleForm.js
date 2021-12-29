@@ -5,12 +5,16 @@ import { useState } from 'react'
 import { BsFlagFill } from 'react-icons/bs'
 
 const TaskSimpleForm = (props) => {
-  const { addTask } = props
+  const { addTask, createTask } = props
+  const { selectedCategory } = useStore()
 
-  const { AddTask, task, setNewTask } = useSetTask(addTask)
+  const { AddTask, task, setNewTask } = useSetTask(
+    addTask,
+    createTask,
+    selectedCategory
+  )
 
   const [text, setText] = useState('')
-  // const [day, setDay] = useState(new Date())
 
   return (
     <TaskSimpleFormWrapper onKeyPress={AddTask} className="direction-column">
