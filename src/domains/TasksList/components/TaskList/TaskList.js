@@ -1,10 +1,10 @@
 import { Col, Row } from 'components'
 import { TaskSimpleView } from '../'
 import { firestoreService } from 'services'
+import { useStore } from 'context'
 
 const TaskList = (props) => {
   const { tasks, dispatch } = props
-  console.log('state --->')
 
   return (
     <>
@@ -17,9 +17,9 @@ const TaskList = (props) => {
                 dispatch({ type: 'removeTask', id: el.id, task: task })
                 firestoreService.deleteDocument('task', el.id)
               }}
-              editTask={(task) =>
+              editTask={(task) => {
                 dispatch({ type: 'editTask', id: el.id, task: task })
-              }></TaskSimpleView>
+              }}></TaskSimpleView>
           </Col>
         </Row>
       ))}

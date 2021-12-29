@@ -11,9 +11,8 @@ export const reducer = (state, action) => {
   const { type, payload } = action
   switch (action.type) {
     case 'addTask': {
-      const newId = Math.random()
       const newTask = {
-        id: newId,
+        id: firestoreService.getId('task'),
         task: action.task,
         categotyName: action.categotyName
       }
@@ -58,9 +57,8 @@ export const reducer = (state, action) => {
 
     // category
     case 'addCategory': {
-      const categoryId = state.categories.id + 1
       const newCategory = {
-        id: categoryId,
+        id: firestoreService.getId('category'),
         name: action.category
       }
 

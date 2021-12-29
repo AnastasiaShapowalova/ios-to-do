@@ -39,6 +39,9 @@ const createDocument = async (collectionPath, id, documentData) => {
 }
 
 const updateDocument = async (collectionPath, id, documentData) => {
+  console.log('collectionPath ----> ', typeof collectionPath)
+  console.log('id ----> ', id)
+  console.log('documentData ----> ', documentData)
   const ref = doc(db, collectionPath, id)
   const result = await updateDoc(ref, documentData)
   return result

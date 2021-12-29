@@ -4,11 +4,26 @@ import { IoCloseOutline } from 'react-icons/io5'
 import { TaskWrapper } from './TaskSimpleView.style'
 import { BsFlagFill } from 'react-icons/bs'
 import { useStore } from 'context'
+import { firestoreService } from 'services'
 
 const TaskSimpleView = (props) => {
   const { todo, removeTask, editTask } = props
   const { state } = useStore()
   const [editable, isEditable] = useState(false)
+  const { selectedCategory } = useStore()
+
+  let updateTask = (editedTask, taskId) => {
+    firestoreService.updateDocument('task', taskId, {
+      id: taskId,
+      task: editedTask
+    })
+  }
+
+  const setEdit = () => {
+    isEditable(!editable)
+    console.log(todo.task, todo.id, selectedCategory)
+    updateTask(todo.task, todo.id)
+  }
 
   return (
     <>
@@ -48,9 +63,7 @@ const TaskSimpleView = (props) => {
                 className="pb-xs"
                 value={todo?.task}
                 onChange={(e) => editTask(e.target.value)}
-                onBlur={() => {
-                  isEditable(!editable)
-                }}
+                onBlur={() => setEdit()}
                 autoFocus
               />
               <Button
