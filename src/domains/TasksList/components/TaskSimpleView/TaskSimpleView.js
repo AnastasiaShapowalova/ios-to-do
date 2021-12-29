@@ -3,14 +3,11 @@ import { Button, Col, Row, Text, Checkbox, Input } from 'components'
 import { IoCloseOutline } from 'react-icons/io5'
 import { TaskWrapper } from './TaskSimpleView.style'
 import { BsFlagFill } from 'react-icons/bs'
-import { useStore } from 'context'
 import { firestoreService } from 'services'
 
 const TaskSimpleView = (props) => {
   const { todo, removeTask, editTask } = props
-  const { state } = useStore()
   const [editable, isEditable] = useState(false)
-  const { selectedCategory } = useStore()
 
   let updateTask = (editedTask, taskId) => {
     firestoreService.updateDocument('task', taskId, {
@@ -21,7 +18,6 @@ const TaskSimpleView = (props) => {
 
   const setEdit = () => {
     isEditable(!editable)
-    console.log(todo.task, todo.id, selectedCategory)
     updateTask(todo.task, todo.id)
   }
 

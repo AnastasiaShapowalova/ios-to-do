@@ -8,12 +8,25 @@ import {
 } from './CategorySimpleView.style'
 import { Link } from 'react-router-dom'
 import { useStore } from 'context'
+import { firestoreService } from 'services'
 
 const CategorySimpleView = (props) => {
   const { category, removeCategory, editCategory, count } = props
 
   const [edited, isEdited] = useState(false)
   const { setSelectedCategory } = useStore()
+
+  let updateTask = (editedCategoryId, categoryId) => {
+    firestoreService.updateDocument('category', categoryId, {
+      id: categoryId,
+      name: editedCategoryId
+    })
+  }
+
+  const setEdit = () => {
+    isEdited(!edited)
+    updateTask(category.name, category.id)
+  }
 
   return (
     <>
@@ -46,7 +59,7 @@ const CategorySimpleView = (props) => {
               value={category?.name}
               onChange={(e) => editCategory(e.target.value)}
               onBlur={() => {
-                isEdited(!edited)
+                setEdit()
               }}
               autoFocus
             />

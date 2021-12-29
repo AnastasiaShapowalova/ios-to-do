@@ -1,7 +1,6 @@
 import { Col, Row } from 'components'
 import { TaskSimpleView } from '../'
 import { firestoreService } from 'services'
-import { useStore } from 'context'
 
 const TaskList = (props) => {
   const { tasks, dispatch } = props
