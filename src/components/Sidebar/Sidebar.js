@@ -20,8 +20,6 @@ const Sidebar = () => {
       id: categoryId,
       name: category
     })
-
-    // setCategoryName('')
   }
 
   return (
