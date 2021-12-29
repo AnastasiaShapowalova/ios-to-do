@@ -1,5 +1,6 @@
 import { useStore } from 'context'
 import { CategorySimpleView } from '..'
+import { firestoreService } from 'services'
 
 const CategoryList = () => {
   const { state, dispatch } = useStore()
@@ -10,9 +11,10 @@ const CategoryList = () => {
         <CategorySimpleView
           key={index}
           category={el}
-          removeCategory={(name) =>
+          removeCategory={(name) => {
             dispatch({ type: 'removeCategory', name: name, id: el.id })
-          }
+            firestoreService.deleteDocument('category', el.id)
+          }}
           editCategory={(name) =>
             dispatch({ type: 'editCategory', name: name, id: el.id })
           }></CategorySimpleView>

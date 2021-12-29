@@ -4,7 +4,7 @@ import { useStore } from 'context/hook'
 import firestoreService from 'services/firestoreService'
 
 const Content = ({ selectedCategory }) => {
-  const { dispatch, state, showForm, newTask } = useStore()
+  const { dispatch, showForm, newTask } = useStore()
 
   console.log(selectedCategory)
   const addTask = (task) =>
