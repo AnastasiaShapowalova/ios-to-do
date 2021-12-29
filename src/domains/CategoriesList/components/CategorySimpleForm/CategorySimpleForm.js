@@ -4,11 +4,16 @@ import { CategorySimpleFormWrapper } from './CategorySimpleForm.style'
 import { useSetCategory } from 'context/hook'
 
 const CategorySimpleForm = (props) => {
-  const { addCategory, onBlur } = props
-  const { category, AddCategory, isSetCategory } = useSetCategory(addCategory)
+  const { addCategory, onBlur, createCategory } = props
+  const { category, AddCategory, isSetCategory } = useSetCategory(
+    addCategory,
+    createCategory
+  )
 
   return (
-    <CategorySimpleFormWrapper onKeyPress={AddCategory} onBlur={onBlur}>
+    <CategorySimpleFormWrapper
+      onKeyPress={(event) => AddCategory(event)}
+      onBlur={onBlur}>
       <IconModule icon={<AiOutlineUnorderedList />} />
       <Input
         value={category}
