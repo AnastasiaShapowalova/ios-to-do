@@ -1,14 +1,15 @@
-import { useState } from 'react'
-import { Button, Text, IconModule, Input } from '../../../../components'
-import { IoCloseOutline } from 'react-icons/io5'
-import { AiOutlineUnorderedList } from 'react-icons/ai'
+import { Button, IconModule, Input, Text } from '../../../../components'
 import {
-  FormWrapper,
-  CategorySimpleViewWrapper
+  CategorySimpleViewWrapper,
+  FormWrapper
 } from './CategorySimpleView.style'
+
+import { AiOutlineUnorderedList } from 'react-icons/ai'
+import { IoCloseOutline } from 'react-icons/io5'
 import { Link } from 'react-router-dom'
+import { updateDocument } from 'services/firestore'
+import { useState } from 'react'
 import { useStore } from 'context'
-import { firestoreService } from 'services'
 
 const CategorySimpleView = (props) => {
   const { category, removeCategory, editCategory, count } = props
@@ -17,7 +18,7 @@ const CategorySimpleView = (props) => {
   const { setSelectedCategory } = useStore()
 
   let updateTask = (editedCategoryId, categoryId) => {
-    firestoreService.updateDocument('category', categoryId, {
+    updateDocument('category', categoryId, {
       id: categoryId,
       name: editedCategoryId
     })

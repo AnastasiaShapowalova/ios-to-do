@@ -1,5 +1,5 @@
+import { getId } from 'services/firestore'
 import { useState } from 'react'
-import { firestoreService } from 'services'
 
 const useSetCategory = (addCategory, createCategory) => {
   const [category, setCategory] = useState('')
@@ -11,7 +11,7 @@ const useSetCategory = (addCategory, createCategory) => {
     const newCategory = category.trim()
     if (event.key === 'Enter' && newCategory.length >= 1) {
       addCategory(newCategory)
-      createCategory(newCategory, firestoreService.getId('category'))
+      createCategory(newCategory, getId('category'))
       console.log(`category: ${newCategory}`)
       setCategory('')
     }

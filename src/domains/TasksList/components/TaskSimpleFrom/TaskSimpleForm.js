@@ -1,8 +1,9 @@
-import { Input, Checkbox, Col, Row, Button } from 'components'
-import { TaskSimpleFormWrapper, InputWrapper } from './TaskSimpleForm.style'
+import { Button, Checkbox, Col, Input, Row } from 'components'
+import { InputWrapper, TaskSimpleFormWrapper } from './TaskSimpleForm.style'
 import { useSetTask, useStore } from 'context/hook'
-import { useState } from 'react'
+
 import { BsFlagFill } from 'react-icons/bs'
+import { useState } from 'react'
 
 const TaskSimpleForm = (props) => {
   const { addTask, createTask } = props

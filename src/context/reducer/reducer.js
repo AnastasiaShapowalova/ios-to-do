@@ -1,4 +1,4 @@
-import { firestoreService } from 'services'
+import { getId } from 'services/firestore'
 
 export const initialState = {
   taskCount: 0,
@@ -12,7 +12,7 @@ export const reducer = (state, action) => {
   switch (action.type) {
     case 'addTask': {
       const newTask = {
-        id: firestoreService.getId('task'),
+        id: getId('task'),
         task: action.task,
         categotyName: action.categotyName
       }
@@ -58,7 +58,7 @@ export const reducer = (state, action) => {
     // category
     case 'addCategory': {
       const newCategory = {
-        id: firestoreService.getId('category'),
+        id: getId('category'),
         name: action.category
       }
 

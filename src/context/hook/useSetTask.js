@@ -1,5 +1,5 @@
+import { getId } from 'services/firestore'
 import { useState } from 'react'
-import { firestoreService } from 'services'
 
 const useSetTask = (addTask, createTask, selectedCategory) => {
   const [task, setTask] = useState('')
@@ -11,7 +11,7 @@ const useSetTask = (addTask, createTask, selectedCategory) => {
     const newTask = task.trim()
     if (event.key === 'Enter' && newTask.length >= 1) {
       addTask(newTask)
-      createTask(newTask, firestoreService.getId('task'), selectedCategory)
+      createTask(newTask, getId('task'), selectedCategory)
       setTask('')
     }
   }

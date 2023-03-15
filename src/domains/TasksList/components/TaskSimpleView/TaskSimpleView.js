@@ -1,16 +1,17 @@
-import { useState } from 'react'
-import { Button, Col, Row, Text, Checkbox, Input } from 'components'
+import { Button, Checkbox, Col, Input, Row, Text } from 'components'
+
+import { BsFlagFill } from 'react-icons/bs'
 import { IoCloseOutline } from 'react-icons/io5'
 import { TaskWrapper } from './TaskSimpleView.style'
-import { BsFlagFill } from 'react-icons/bs'
-import { firestoreService } from 'services'
+import { updateDocument } from 'services/firestore'
+import { useState } from 'react'
 
 const TaskSimpleView = (props) => {
   const { todo, removeTask, editTask } = props
   const [editable, isEditable] = useState(false)
 
   let updateTask = (editedTask, taskId) => {
-    firestoreService.updateDocument('task', taskId, {
+    updateDocument('task', taskId, {
       id: taskId,
       task: editedTask
     })

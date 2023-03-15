@@ -1,7 +1,8 @@
+import { Col, Row } from '../../..'
 import { TaskList, TaskSimpleForm } from '../../../../domains'
-import { Row, Col } from '../../..'
+
+import { createDocument } from 'services/firestore'
 import { useStore } from 'context/hook'
-import firestoreService from 'services/firestoreService'
 
 const Content = ({ selectedCategory }) => {
   const { dispatch, showForm, newTask } = useStore()
@@ -11,7 +12,8 @@ const Content = ({ selectedCategory }) => {
     dispatch({ type: 'addTask', task: task, categotyName: selectedCategory })
 
   const createTask = (task, taskId, categotyName) => {
-    firestoreService.createDocument('task', taskId, {
+    console.log(task, taskId, categotyName)
+    createDocument('task', taskId, {
       id: taskId,
       task: task,
       categotyName: categotyName

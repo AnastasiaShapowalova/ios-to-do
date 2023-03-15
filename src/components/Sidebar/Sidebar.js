@@ -1,11 +1,12 @@
-import { useState } from 'react'
-import { Col, Row, SearchInput, SwitcherList } from '..'
-import { CategoryList, CategorySimpleForm } from '../../domains'
 import { Button, Title } from '../'
+import { ButtonWrapper, SidebarWrapper, TitleWrapper } from './Sidebar.style'
+import { CategoryList, CategorySimpleForm } from '../../domains'
+import { Col, Row, SearchInput, SwitcherList } from '..'
+
 import { IoMdAddCircleOutline } from 'react-icons/io'
-import { TitleWrapper, ButtonWrapper, SidebarWrapper } from './Sidebar.style'
+import { createDocument } from 'services/firestore'
+import { useState } from 'react'
 import { useStore } from 'context/hook'
-import firestoreService from 'services/firestoreService'
 
 const Sidebar = () => {
   const { dispatch } = useStore()
@@ -16,7 +17,7 @@ const Sidebar = () => {
   }
 
   const createCategory = (category, categoryId) => {
-    firestoreService.createDocument('category', categoryId, {
+    createDocument('category', categoryId, {
       id: categoryId,
       name: category
     })
