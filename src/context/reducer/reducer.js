@@ -7,7 +7,6 @@ export const initialState = {
 }
 
 export const reducer = (state, action) => {
-  console.log(action)
   const { type, payload } = action
   switch (action.type) {
     case 'addTask': {
@@ -40,7 +39,6 @@ export const reducer = (state, action) => {
     }
 
     case 'editTask': {
-      console.log('action ---->', action)
       const taskId = state.tasks.findIndex((task) => task.id === action.id)
       const newTask = Object.assign([], state.tasks[taskId])
       newTask.task = action.task
@@ -109,7 +107,6 @@ export const reducer = (state, action) => {
         tasks: payload.dataTask,
         categories: payload.dataCategory
       }
-      console.log('newState ', newState)
       return { ...newState }
     }
 

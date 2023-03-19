@@ -11,7 +11,7 @@ const useSetTask = (addTask, createTask, selectedCategory) => {
     const newTask = task.trim()
     if (event.key === 'Enter' && newTask.length >= 1) {
       addTask(newTask)
-      createTask(newTask, getId('task'), selectedCategory)
+      createTask(newTask, getId('tasks'), selectedCategory)
       setTask('')
     }
   }

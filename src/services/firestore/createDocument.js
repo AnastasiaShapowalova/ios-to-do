@@ -12,8 +12,13 @@ import { getId } from 'services/firestore'
  */
 const createDocument = async (collectionPath, documentData, id) => {
   const _id = id || getId(collectionPath)
-  const ref = doc(firestore, collectionPath, _id)
-  await setDoc(ref, { ...documentData, _id, _createdAt: serverTimestamp() })
+  const ref = doc(firestore, collectionPath, _id.toString())
+  await setDoc(ref, {
+    ...documentData,
+    id,
+    _createdAt: serverTimestamp(),
+    status: 'To do'
+  })
 
   return { id: _id }
 }

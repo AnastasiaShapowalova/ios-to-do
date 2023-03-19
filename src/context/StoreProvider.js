@@ -20,25 +20,22 @@ const StoreProvider = ({ children }) => {
   const { AddCategory, isSetCategory } = useSetCategory()
   const { showForm, setShowForm } = useShowForm()
   const { selectedCategory, setSelectedCategory } = useSelectedCategory()
-
+  console.log(task)
   let newTask = []
   let i = 0
   state.tasks.forEach(function (tasks) {
     if (tasks.categotyName === selectedCategory) {
-      console.log(tasks.categotyName)
       newTask[i] = tasks
       i++
     }
   })
-  console.log(newTask.length)
 
   useEffect(() => {
     const getData = async () => {
-      const dataTask = await getDocument('task')
+      const dataTask = await getDocument('tasks')
       const dataCategory = await getDocument('category')
 
       dispatch({ type: 'updateData', payload: { dataTask, dataCategory } })
-      console.log(dataTask)
     }
 
     getData()

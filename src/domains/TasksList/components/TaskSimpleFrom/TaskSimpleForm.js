@@ -33,6 +33,11 @@ const TaskSimpleForm = (props) => {
               type="text"
               value={text}
               onChange={(e) => setText(e.target.value)}
+              onKeyPress={(e) => {
+                if (e.key === 'Enter') {
+                  createTask()
+                }
+              }}
               variant="input-isMuted"
               placeholder="Notes"
             />

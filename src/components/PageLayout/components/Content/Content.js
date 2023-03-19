@@ -7,17 +7,19 @@ import { useStore } from 'context/hook'
 const Content = ({ selectedCategory }) => {
   const { dispatch, showForm, newTask } = useStore()
 
-  console.log(selectedCategory)
   const addTask = (task) =>
     dispatch({ type: 'addTask', task: task, categotyName: selectedCategory })
 
   const createTask = (task, taskId, categotyName) => {
-    console.log(task, taskId, categotyName)
-    createDocument('task', taskId, {
-      id: taskId,
-      task: task,
-      categotyName: categotyName
-    })
+    createDocument(
+      'tasks',
+      {
+        id: taskId,
+        task: task,
+        categotyName: categotyName || 'No category'
+      },
+      taskId
+    )
   }
   return (
     <>

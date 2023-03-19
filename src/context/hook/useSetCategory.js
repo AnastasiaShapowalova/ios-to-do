@@ -12,7 +12,6 @@ const useSetCategory = (addCategory, createCategory) => {
     if (event.key === 'Enter' && newCategory.length >= 1) {
       addCategory(newCategory)
       createCategory(newCategory, getId('category'))
-      console.log(`category: ${newCategory}`)
       setCategory('')
     }
   }
